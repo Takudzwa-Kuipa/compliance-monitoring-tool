@@ -1,0 +1,1201 @@
+Control,Status,Risk Score,Department,Owner,Created Date,Resolved Date,Framework,Control Description,Evidence,SLA Days,Access Type,MTTR Days
+C0001,Completed,7,Risk,Jane,2025-02-16,2025-03-11,PCI-DSS,Patch Management,vuln_scan_report.pdf,30,Database,23.0
+C0002,In Progress,1,HR,Brian,2025-03-28,,PCI-DSS,Encryption Control,vuln_scan_report.pdf,30,Database,
+C0003,In Progress,6,Operations,Brian,2025-03-09,,PCI-DSS,Vulnerability Scan,incident_log.txt,14,Database,
+C0004,Failed,3,IT,John,2025-01-18,2025-02-04,HIPAA,Firewall Configuration,firewall_config.png,14,Application,17.0
+C0005,Completed,7,Risk,Mary,2025-01-21,2025-02-04,NIST,Firewall Configuration,vuln_scan_report.pdf,30,Database,14.0
+C0006,Completed,2,Risk,Alice,2025-03-27,2025-04-20,PCI-DSS,Firewall Configuration,incident_log.txt,30,Database,24.0
+C0007,Completed,2,IT,Brian,2025-01-23,2025-02-03,HIPAA,Incident Response,vuln_scan_report.pdf,30,Database,11.0
+C0008,In Progress,4,Risk,Mary,2025-03-05,,PCI-DSS,User Access Review,vuln_scan_report.pdf,7,Admin System,
+C0009,Failed,1,IT,Mark,2025-03-08,2025-03-27,PCI-DSS,Encryption Control,vuln_scan_report.pdf,7,Application,19.0
+C0010,In Progress,3,Operations,David,2025-02-09,,NIST,Patch Management,access_review.xlsx,7,Admin System,
+C0011,Completed,9,HR,Brian,2025-01-10,2025-01-12,PCI-DSS,Firewall Configuration,firewall_config.png,14,Admin System,2.0
+C0012,In Progress,7,IT,Mark,2025-03-30,,PCI-DSS,Encryption Control,incident_log.txt,30,Application,
+C0013,In Progress,7,Finance,Alice,2025-02-21,,HIPAA,Firewall Configuration,incident_log.txt,14,Admin System,
+C0014,Completed,4,IT,David,2025-03-13,2025-03-16,HIPAA,Firewall Configuration,firewall_config.png,14,Database,3.0
+C0015,Completed,2,Risk,David,2025-03-16,2025-03-27,NIST,Patch Management,firewall_config.png,14,Database,11.0
+C0016,Completed,4,Operations,Alice,2025-03-02,2025-03-08,HIPAA,Vulnerability Scan,firewall_config.png,30,Database,6.0
+C0017,Completed,6,Operations,Brian,2025-03-05,2025-03-19,HIPAA,Vulnerability Scan,firewall_config.png,7,Database,14.0
+C0018,Failed,3,IT,John,2025-01-05,2025-01-24,NIST,Vulnerability Scan,log_patch_001.pdf,30,Application,19.0
+C0019,Completed,1,HR,Alice,2025-02-22,2025-03-10,PCI-DSS,Incident Response,incident_log.txt,30,Admin System,16.0
+C0020,Completed,8,Finance,Alice,2025-02-24,2025-03-17,NIST,User Access Review,log_patch_001.pdf,14,Admin System,21.0
+C0021,Failed,5,Operations,Alice,2025-02-06,2025-02-28,HIPAA,Incident Response,vuln_scan_report.pdf,14,Database,22.0
+C0022,Completed,5,Risk,David,2025-02-25,2025-03-21,NIST,Encryption Control,vuln_scan_report.pdf,14,Database,24.0
+C0023,Completed,4,Risk,Jane,2025-02-28,2025-03-07,PCI-DSS,Incident Response,incident_log.txt,7,Admin System,7.0
+C0024,Completed,6,HR,Mary,2025-03-10,2025-03-18,NIST,Encryption Control,vuln_scan_report.pdf,7,Application,8.0
+C0025,Completed,3,Operations,Mark,2025-03-14,2025-04-02,HIPAA,Encryption Control,firewall_config.png,7,Admin System,19.0
+C0026,In Progress,9,IT,John,2025-02-28,,HIPAA,User Access Review,log_patch_001.pdf,30,Database,
+C0027,Completed,5,Risk,Brian,2025-01-02,2025-01-22,NIST,Patch Management,firewall_config.png,14,Database,20.0
+C0028,Failed,3,HR,Brian,2025-03-06,2025-03-22,PCI-DSS,User Access Review,vuln_scan_report.pdf,30,Application,16.0
+C0029,Failed,1,Operations,Mark,2025-03-01,2025-03-23,NIST,Vulnerability Scan,log_patch_001.pdf,7,Admin System,22.0
+C0030,Completed,6,Operations,Mary,2025-02-20,2025-02-27,PCI-DSS,Vulnerability Scan,firewall_config.png,14,Application,7.0
+C0031,Failed,2,Operations,Alice,2025-01-30,2025-02-08,PCI-DSS,Incident Response,incident_log.txt,7,Application,9.0
+C0032,Completed,3,Operations,Jane,2025-01-11,2025-01-24,NIST,Encryption Control,firewall_config.png,14,Database,13.0
+C0033,Completed,1,Operations,John,2025-03-17,2025-03-18,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,14,Admin System,1.0
+C0034,In Progress,9,Risk,Brian,2025-02-08,,HIPAA,Firewall Configuration,log_patch_001.pdf,30,Database,
+C0035,In Progress,8,HR,Mark,2025-03-31,,NIST,Encryption Control,incident_log.txt,30,Admin System,
+C0036,In Progress,2,Operations,Susan,2025-03-18,,PCI-DSS,User Access Review,log_patch_001.pdf,7,Database,
+C0037,Completed,8,Finance,Jane,2025-03-13,2025-03-21,HIPAA,Patch Management,incident_log.txt,30,Database,8.0
+C0038,Completed,9,Finance,Mark,2025-03-04,2025-03-28,NIST,User Access Review,log_patch_001.pdf,30,Admin System,24.0
+C0039,Failed,1,HR,Jane,2025-03-05,2025-03-27,HIPAA,Encryption Control,vuln_scan_report.pdf,30,Admin System,22.0
+C0040,Completed,5,IT,Brian,2025-03-02,2025-03-06,HIPAA,Encryption Control,incident_log.txt,14,Database,4.0
+C0041,Completed,8,IT,Alice,2025-02-23,2025-02-26,HIPAA,Patch Management,access_review.xlsx,30,Admin System,3.0
+C0042,Completed,2,IT,Susan,2025-03-14,2025-03-17,PCI-DSS,Incident Response,log_patch_001.pdf,7,Database,3.0
+C0043,Completed,4,Finance,Mary,2025-02-27,2025-03-21,NIST,Incident Response,log_patch_001.pdf,14,Admin System,22.0
+C0044,In Progress,7,IT,John,2025-03-26,,NIST,Patch Management,firewall_config.png,14,Database,
+C0045,Completed,3,Risk,Mary,2025-02-25,2025-03-10,PCI-DSS,Incident Response,incident_log.txt,30,Database,13.0
+C0046,Failed,5,Operations,Mary,2025-02-03,2025-02-11,NIST,Firewall Configuration,access_review.xlsx,14,Database,8.0
+C0047,Completed,8,Finance,Mark,2025-01-31,2025-02-07,HIPAA,Incident Response,vuln_scan_report.pdf,7,Application,7.0
+C0048,Failed,3,HR,Jane,2025-02-21,2025-02-22,NIST,Incident Response,firewall_config.png,7,Admin System,1.0
+C0049,Failed,4,HR,John,2025-03-30,2025-04-15,PCI-DSS,Incident Response,access_review.xlsx,14,Database,16.0
+C0050,Completed,9,Operations,John,2025-03-17,2025-03-23,HIPAA,Firewall Configuration,incident_log.txt,30,Application,6.0
+C0051,In Progress,7,Finance,Brian,2025-01-01,,PCI-DSS,Incident Response,access_review.xlsx,30,Database,
+C0052,In Progress,1,IT,Brian,2025-02-24,,HIPAA,Vulnerability Scan,log_patch_001.pdf,14,Application,
+C0053,In Progress,4,IT,John,2025-01-22,,HIPAA,Firewall Configuration,log_patch_001.pdf,7,Database,
+C0054,In Progress,4,Risk,Susan,2025-02-09,,NIST,Patch Management,firewall_config.png,14,Database,
+C0055,Failed,9,Risk,David,2025-01-01,2025-01-08,HIPAA,User Access Review,incident_log.txt,30,Application,7.0
+C0056,In Progress,6,IT,Brian,2025-03-06,,PCI-DSS,Patch Management,incident_log.txt,30,Application,
+C0057,Completed,9,HR,David,2025-03-04,2025-03-16,NIST,User Access Review,access_review.xlsx,14,Admin System,12.0
+C0058,Completed,6,HR,Mark,2025-02-23,2025-03-18,PCI-DSS,Patch Management,firewall_config.png,7,Admin System,23.0
+C0059,Completed,6,Risk,Susan,2025-02-11,2025-02-20,HIPAA,Vulnerability Scan,incident_log.txt,14,Application,9.0
+C0060,Completed,5,Operations,John,2025-01-21,2025-02-01,PCI-DSS,User Access Review,log_patch_001.pdf,7,Admin System,11.0
+C0061,Completed,5,IT,Susan,2025-03-20,2025-03-30,PCI-DSS,User Access Review,access_review.xlsx,7,Application,10.0
+C0062,Completed,2,Risk,Brian,2025-03-22,2025-04-12,HIPAA,Encryption Control,vuln_scan_report.pdf,14,Admin System,21.0
+C0063,In Progress,8,Risk,Mary,2025-01-22,,NIST,User Access Review,log_patch_001.pdf,14,Database,
+C0064,Completed,8,IT,Mark,2025-02-07,2025-02-08,PCI-DSS,User Access Review,firewall_config.png,7,Admin System,1.0
+C0065,Completed,1,IT,John,2025-03-21,2025-04-08,HIPAA,Encryption Control,incident_log.txt,7,Database,18.0
+C0066,Failed,8,HR,Alice,2025-01-08,2025-01-12,NIST,Incident Response,log_patch_001.pdf,7,Database,4.0
+C0067,Completed,5,Operations,Mark,2025-03-03,2025-03-08,NIST,Incident Response,vuln_scan_report.pdf,7,Admin System,5.0
+C0068,In Progress,2,Operations,Jane,2025-02-16,,NIST,Encryption Control,vuln_scan_report.pdf,30,Application,
+C0069,Completed,2,IT,David,2025-01-17,2025-01-26,PCI-DSS,Firewall Configuration,firewall_config.png,14,Database,9.0
+C0070,In Progress,6,Finance,Susan,2025-01-17,,PCI-DSS,User Access Review,log_patch_001.pdf,7,Database,
+C0071,In Progress,9,Risk,John,2025-03-31,,PCI-DSS,User Access Review,access_review.xlsx,14,Admin System,
+C0072,Completed,1,Risk,Mark,2025-01-13,2025-01-30,NIST,Encryption Control,log_patch_001.pdf,7,Application,17.0
+C0073,Completed,6,IT,Susan,2025-01-17,2025-01-20,PCI-DSS,Encryption Control,vuln_scan_report.pdf,14,Application,3.0
+C0074,In Progress,9,Finance,John,2025-02-07,,HIPAA,Firewall Configuration,firewall_config.png,14,Admin System,
+C0075,In Progress,8,HR,Brian,2025-03-22,,PCI-DSS,Vulnerability Scan,firewall_config.png,7,Application,
+C0076,In Progress,6,IT,Mark,2025-03-19,,PCI-DSS,Incident Response,access_review.xlsx,7,Admin System,
+C0077,In Progress,3,IT,Brian,2025-02-14,,NIST,Patch Management,firewall_config.png,14,Admin System,
+C0078,Completed,8,Risk,Mark,2025-01-06,2025-01-22,PCI-DSS,Vulnerability Scan,firewall_config.png,14,Admin System,16.0
+C0079,Completed,9,IT,Brian,2025-02-04,2025-02-09,HIPAA,Incident Response,firewall_config.png,14,Database,5.0
+C0080,Completed,1,IT,Jane,2025-01-14,2025-01-30,NIST,User Access Review,firewall_config.png,30,Database,16.0
+C0081,In Progress,9,IT,Susan,2025-03-13,,HIPAA,Vulnerability Scan,firewall_config.png,7,Database,
+C0082,Failed,6,Risk,Alice,2025-03-02,2025-03-05,NIST,Encryption Control,vuln_scan_report.pdf,30,Admin System,3.0
+C0083,Completed,6,HR,Mark,2025-01-15,2025-02-04,NIST,Firewall Configuration,log_patch_001.pdf,30,Database,20.0
+C0084,Completed,4,HR,Jane,2025-02-23,2025-03-10,PCI-DSS,Incident Response,incident_log.txt,7,Database,15.0
+C0085,Completed,1,IT,Mark,2025-01-27,2025-01-30,HIPAA,Firewall Configuration,firewall_config.png,7,Database,3.0
+C0086,Completed,8,Risk,Brian,2025-01-13,2025-02-02,NIST,Incident Response,incident_log.txt,30,Admin System,20.0
+C0087,In Progress,2,HR,John,2025-01-31,,PCI-DSS,Vulnerability Scan,incident_log.txt,7,Admin System,
+C0088,Failed,1,HR,Mark,2025-02-04,2025-02-18,NIST,User Access Review,vuln_scan_report.pdf,14,Admin System,14.0
+C0089,In Progress,2,HR,Jane,2025-03-01,,NIST,Patch Management,firewall_config.png,14,Database,
+C0090,Completed,1,Risk,Brian,2025-01-06,2025-01-22,NIST,Firewall Configuration,incident_log.txt,30,Application,16.0
+C0091,Completed,1,Risk,Mary,2025-03-10,2025-03-27,NIST,Firewall Configuration,firewall_config.png,30,Database,17.0
+C0092,In Progress,9,IT,Brian,2025-03-27,,NIST,Patch Management,access_review.xlsx,7,Database,
+C0093,In Progress,1,Operations,Susan,2025-02-27,,NIST,Firewall Configuration,access_review.xlsx,7,Admin System,
+C0094,Failed,4,HR,Alice,2025-02-18,2025-03-14,PCI-DSS,Firewall Configuration,access_review.xlsx,30,Admin System,24.0
+C0095,In Progress,6,Operations,Mary,2025-01-23,,NIST,Incident Response,incident_log.txt,30,Database,
+C0096,Completed,7,Risk,Susan,2025-03-30,2025-04-19,HIPAA,Incident Response,access_review.xlsx,14,Database,20.0
+C0097,Failed,2,Risk,Susan,2025-02-03,2025-02-26,PCI-DSS,Patch Management,vuln_scan_report.pdf,14,Application,23.0
+C0098,Completed,6,Risk,Susan,2025-01-26,2025-02-13,HIPAA,User Access Review,vuln_scan_report.pdf,7,Application,18.0
+C0099,Completed,7,Operations,John,2025-02-16,2025-03-06,NIST,Vulnerability Scan,incident_log.txt,14,Admin System,18.0
+C0100,Completed,2,Risk,Susan,2025-01-05,2025-01-27,HIPAA,Vulnerability Scan,firewall_config.png,7,Application,22.0
+C0101,Completed,2,IT,John,2025-03-31,2025-04-14,NIST,Firewall Configuration,log_patch_001.pdf,7,Application,14.0
+C0102,Failed,7,Risk,Susan,2025-01-20,2025-02-07,NIST,User Access Review,firewall_config.png,7,Admin System,18.0
+C0103,Completed,1,Finance,David,2025-01-06,2025-01-21,PCI-DSS,Patch Management,firewall_config.png,14,Application,15.0
+C0104,Failed,8,Operations,Jane,2025-03-11,2025-03-26,PCI-DSS,Patch Management,firewall_config.png,30,Database,15.0
+C0105,In Progress,3,Finance,Mary,2025-02-28,,NIST,Incident Response,firewall_config.png,30,Application,
+C0106,Completed,6,Risk,David,2025-03-05,2025-03-11,PCI-DSS,Firewall Configuration,log_patch_001.pdf,14,Admin System,6.0
+C0107,Completed,9,IT,Susan,2025-01-18,2025-02-02,HIPAA,Encryption Control,access_review.xlsx,30,Database,15.0
+C0108,In Progress,6,HR,Mary,2025-01-04,,PCI-DSS,Patch Management,firewall_config.png,7,Application,
+C0109,Completed,9,Risk,Mary,2025-01-17,2025-02-04,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,30,Database,18.0
+C0110,Completed,7,IT,Mark,2025-01-14,2025-01-18,HIPAA,User Access Review,incident_log.txt,14,Database,4.0
+C0111,Completed,9,Operations,Alice,2025-03-19,2025-04-11,PCI-DSS,Incident Response,incident_log.txt,30,Application,23.0
+C0112,Completed,2,Finance,David,2025-01-13,2025-01-21,NIST,Vulnerability Scan,vuln_scan_report.pdf,7,Application,8.0
+C0113,In Progress,8,Finance,Alice,2025-01-07,,HIPAA,User Access Review,firewall_config.png,7,Admin System,
+C0114,In Progress,8,Finance,Mary,2025-02-13,,NIST,Patch Management,log_patch_001.pdf,14,Admin System,
+C0115,Failed,2,Operations,John,2025-01-15,2025-01-30,HIPAA,Patch Management,access_review.xlsx,14,Database,15.0
+C0116,In Progress,4,IT,Mary,2025-01-19,,NIST,User Access Review,incident_log.txt,14,Admin System,
+C0117,In Progress,7,Operations,Alice,2025-03-04,,NIST,Patch Management,access_review.xlsx,7,Database,
+C0118,Completed,4,Finance,David,2025-02-04,2025-02-07,PCI-DSS,Firewall Configuration,log_patch_001.pdf,30,Database,3.0
+C0119,In Progress,4,Risk,Susan,2025-03-22,,NIST,Patch Management,incident_log.txt,30,Admin System,
+C0120,Failed,6,HR,Mark,2025-02-04,2025-02-19,PCI-DSS,Incident Response,access_review.xlsx,14,Admin System,15.0
+C0121,In Progress,6,Operations,Mark,2025-01-19,,HIPAA,Firewall Configuration,log_patch_001.pdf,30,Admin System,
+C0122,In Progress,3,Operations,Mark,2025-01-20,,NIST,Encryption Control,access_review.xlsx,30,Application,
+C0123,Completed,9,IT,Susan,2025-02-04,2025-02-17,NIST,Patch Management,firewall_config.png,14,Database,13.0
+C0124,Completed,2,IT,Mark,2025-02-01,2025-02-10,HIPAA,Patch Management,log_patch_001.pdf,14,Database,9.0
+C0125,Completed,6,Operations,David,2025-02-17,2025-02-19,HIPAA,Incident Response,access_review.xlsx,7,Database,2.0
+C0126,Completed,7,Finance,Susan,2025-02-13,2025-03-09,NIST,Incident Response,firewall_config.png,7,Admin System,24.0
+C0127,In Progress,9,HR,Mark,2025-01-24,,HIPAA,Vulnerability Scan,firewall_config.png,7,Admin System,
+C0128,In Progress,3,IT,Susan,2025-03-02,,PCI-DSS,User Access Review,log_patch_001.pdf,7,Admin System,
+C0129,Completed,3,Finance,Alice,2025-01-17,2025-01-25,HIPAA,User Access Review,vuln_scan_report.pdf,30,Admin System,8.0
+C0130,Failed,7,Risk,Jane,2025-03-12,2025-04-01,HIPAA,User Access Review,incident_log.txt,30,Admin System,20.0
+C0131,Completed,4,IT,Jane,2025-02-19,2025-03-08,NIST,Incident Response,log_patch_001.pdf,7,Application,17.0
+C0132,Completed,8,Finance,David,2025-03-06,2025-03-19,PCI-DSS,User Access Review,firewall_config.png,7,Admin System,13.0
+C0133,Completed,7,Finance,Brian,2025-02-01,2025-02-02,HIPAA,User Access Review,firewall_config.png,14,Database,1.0
+C0134,Completed,5,HR,John,2025-02-05,2025-02-07,PCI-DSS,Encryption Control,log_patch_001.pdf,30,Admin System,2.0
+C0135,In Progress,7,HR,Mark,2025-01-13,,PCI-DSS,User Access Review,vuln_scan_report.pdf,30,Database,
+C0136,Completed,3,Risk,John,2025-03-11,2025-03-26,PCI-DSS,Patch Management,incident_log.txt,7,Admin System,15.0
+C0137,Failed,2,Finance,Susan,2025-02-27,2025-03-11,NIST,Vulnerability Scan,access_review.xlsx,30,Admin System,12.0
+C0138,In Progress,6,Finance,John,2025-01-14,,HIPAA,Incident Response,log_patch_001.pdf,14,Database,
+C0139,Completed,2,HR,David,2025-02-06,2025-02-20,NIST,Firewall Configuration,incident_log.txt,14,Database,14.0
+C0140,In Progress,3,IT,David,2025-03-20,,HIPAA,Vulnerability Scan,incident_log.txt,30,Database,
+C0141,In Progress,6,IT,Mary,2025-03-09,,HIPAA,Encryption Control,firewall_config.png,7,Database,
+C0142,Completed,5,Operations,Jane,2025-02-09,2025-02-11,NIST,Incident Response,access_review.xlsx,30,Application,2.0
+C0143,Completed,8,HR,Mark,2025-02-28,2025-03-18,PCI-DSS,Incident Response,log_patch_001.pdf,14,Database,18.0
+C0144,Completed,9,Operations,Mary,2025-03-21,2025-04-12,PCI-DSS,Patch Management,firewall_config.png,7,Admin System,22.0
+C0145,Completed,3,HR,John,2025-01-16,2025-01-23,HIPAA,Vulnerability Scan,firewall_config.png,30,Admin System,7.0
+C0146,Completed,3,Risk,Brian,2025-03-03,2025-03-26,NIST,Vulnerability Scan,vuln_scan_report.pdf,7,Application,23.0
+C0147,Failed,3,Finance,Mary,2025-01-04,2025-01-10,PCI-DSS,User Access Review,incident_log.txt,7,Database,6.0
+C0148,Failed,6,Risk,Mary,2025-02-14,2025-02-28,PCI-DSS,Patch Management,log_patch_001.pdf,14,Admin System,14.0
+C0149,Completed,1,HR,David,2025-03-31,2025-04-08,HIPAA,User Access Review,log_patch_001.pdf,7,Application,8.0
+C0150,Completed,7,Finance,Brian,2025-01-28,2025-02-19,HIPAA,User Access Review,log_patch_001.pdf,30,Admin System,22.0
+C0151,In Progress,1,IT,Susan,2025-03-07,,NIST,Incident Response,firewall_config.png,7,Application,
+C0152,Completed,5,IT,John,2025-01-31,2025-02-02,HIPAA,Vulnerability Scan,vuln_scan_report.pdf,7,Application,2.0
+C0153,Completed,8,Operations,Mary,2025-01-03,2025-01-20,PCI-DSS,User Access Review,access_review.xlsx,30,Database,17.0
+C0154,Completed,4,HR,Brian,2025-01-08,2025-01-13,PCI-DSS,Encryption Control,firewall_config.png,14,Application,5.0
+C0155,In Progress,5,HR,Jane,2025-01-24,,PCI-DSS,Encryption Control,access_review.xlsx,14,Admin System,
+C0156,Completed,4,IT,Mark,2025-01-15,2025-01-29,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,30,Admin System,14.0
+C0157,Failed,4,Risk,Brian,2025-02-12,2025-03-08,NIST,Encryption Control,incident_log.txt,30,Database,24.0
+C0158,In Progress,8,Finance,Jane,2025-01-31,,NIST,Incident Response,log_patch_001.pdf,14,Database,
+C0159,Completed,2,Risk,John,2025-03-14,2025-04-03,HIPAA,Patch Management,access_review.xlsx,7,Application,20.0
+C0160,In Progress,1,Risk,Brian,2025-02-14,,HIPAA,Firewall Configuration,firewall_config.png,30,Database,
+C0161,Completed,3,IT,Jane,2025-03-07,2025-03-28,HIPAA,User Access Review,access_review.xlsx,7,Admin System,21.0
+C0162,Failed,9,IT,Brian,2025-01-08,2025-01-29,NIST,Firewall Configuration,incident_log.txt,30,Admin System,21.0
+C0163,Failed,4,IT,Brian,2025-03-12,2025-04-03,PCI-DSS,Patch Management,log_patch_001.pdf,14,Database,22.0
+C0164,Failed,5,Operations,Mark,2025-02-26,2025-03-01,HIPAA,Patch Management,access_review.xlsx,7,Database,3.0
+C0165,Completed,2,Risk,Jane,2025-03-21,2025-03-26,PCI-DSS,Incident Response,incident_log.txt,7,Database,5.0
+C0166,In Progress,4,HR,Jane,2025-01-30,,HIPAA,Encryption Control,firewall_config.png,30,Application,
+C0167,Completed,2,Finance,Mary,2025-03-15,2025-03-31,HIPAA,Encryption Control,vuln_scan_report.pdf,7,Application,16.0
+C0168,Completed,2,Operations,John,2025-01-18,2025-02-05,HIPAA,Patch Management,firewall_config.png,30,Admin System,18.0
+C0169,Completed,4,HR,Mark,2025-03-10,2025-03-27,HIPAA,Incident Response,log_patch_001.pdf,14,Application,17.0
+C0170,Failed,6,Risk,Brian,2025-02-08,2025-02-19,HIPAA,Incident Response,firewall_config.png,7,Application,11.0
+C0171,Failed,7,IT,Brian,2025-03-01,2025-03-18,PCI-DSS,Vulnerability Scan,firewall_config.png,30,Application,17.0
+C0172,Completed,3,Risk,Mary,2025-02-12,2025-02-28,HIPAA,User Access Review,firewall_config.png,7,Application,16.0
+C0173,Failed,3,Finance,John,2025-02-14,2025-03-09,PCI-DSS,Encryption Control,firewall_config.png,30,Admin System,23.0
+C0174,Completed,6,Operations,David,2025-01-23,2025-01-25,NIST,Patch Management,log_patch_001.pdf,30,Database,2.0
+C0175,Failed,3,Operations,Mark,2025-03-10,2025-03-14,HIPAA,Vulnerability Scan,incident_log.txt,30,Admin System,4.0
+C0176,Completed,2,Finance,Mary,2025-01-06,2025-01-27,PCI-DSS,Firewall Configuration,access_review.xlsx,14,Application,21.0
+C0177,Failed,8,HR,John,2025-02-25,2025-03-04,NIST,Encryption Control,vuln_scan_report.pdf,7,Database,7.0
+C0178,Completed,5,HR,Mark,2025-01-04,2025-01-06,NIST,User Access Review,access_review.xlsx,14,Database,2.0
+C0179,In Progress,1,Operations,Brian,2025-01-23,,NIST,Incident Response,access_review.xlsx,30,Database,
+C0180,Completed,3,Operations,John,2025-01-06,2025-01-12,PCI-DSS,Patch Management,vuln_scan_report.pdf,30,Admin System,6.0
+C0181,Completed,8,IT,John,2025-02-01,2025-02-18,HIPAA,Encryption Control,log_patch_001.pdf,14,Database,17.0
+C0182,Completed,4,HR,Susan,2025-01-18,2025-01-25,HIPAA,Firewall Configuration,vuln_scan_report.pdf,14,Admin System,7.0
+C0183,In Progress,7,Finance,John,2025-01-15,,PCI-DSS,User Access Review,log_patch_001.pdf,7,Admin System,
+C0184,In Progress,2,HR,David,2025-02-09,,HIPAA,User Access Review,access_review.xlsx,30,Application,
+C0185,Completed,7,IT,John,2025-03-14,2025-03-19,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,14,Application,5.0
+C0186,Failed,5,Operations,David,2025-03-15,2025-03-20,HIPAA,Encryption Control,incident_log.txt,30,Database,5.0
+C0187,In Progress,5,Operations,Brian,2025-03-25,,NIST,Firewall Configuration,vuln_scan_report.pdf,30,Database,
+C0188,Failed,6,IT,David,2025-01-06,2025-01-26,HIPAA,User Access Review,incident_log.txt,7,Application,20.0
+C0189,Failed,9,Finance,Mark,2025-03-04,2025-03-20,PCI-DSS,Patch Management,access_review.xlsx,7,Admin System,16.0
+C0190,Completed,6,Operations,Brian,2025-03-08,2025-03-27,PCI-DSS,User Access Review,vuln_scan_report.pdf,7,Admin System,19.0
+C0191,Completed,8,Risk,Brian,2025-01-11,2025-01-20,NIST,Firewall Configuration,access_review.xlsx,14,Application,9.0
+C0192,In Progress,7,Operations,David,2025-02-12,,PCI-DSS,Incident Response,incident_log.txt,30,Admin System,
+C0193,In Progress,9,Risk,Jane,2025-01-17,,HIPAA,Incident Response,access_review.xlsx,14,Application,
+C0194,Failed,4,IT,Mary,2025-01-04,2025-01-09,HIPAA,Vulnerability Scan,vuln_scan_report.pdf,14,Application,5.0
+C0195,Completed,2,IT,Alice,2025-03-04,2025-03-12,NIST,Encryption Control,vuln_scan_report.pdf,7,Database,8.0
+C0196,Completed,7,Operations,Jane,2025-03-09,2025-03-18,PCI-DSS,Firewall Configuration,access_review.xlsx,30,Database,9.0
+C0197,In Progress,6,HR,John,2025-03-22,,NIST,Vulnerability Scan,vuln_scan_report.pdf,30,Application,
+C0198,In Progress,1,Risk,Susan,2025-02-10,,HIPAA,User Access Review,vuln_scan_report.pdf,7,Database,
+C0199,In Progress,9,Finance,Alice,2025-03-24,,NIST,User Access Review,access_review.xlsx,30,Application,
+C0200,In Progress,9,Operations,John,2025-01-05,,PCI-DSS,Incident Response,incident_log.txt,7,Admin System,
+C0201,Failed,2,Finance,Jane,2025-02-01,2025-02-06,NIST,Vulnerability Scan,vuln_scan_report.pdf,14,Admin System,5.0
+C0202,Completed,3,Operations,Jane,2025-03-27,2025-04-06,PCI-DSS,Incident Response,vuln_scan_report.pdf,14,Admin System,10.0
+C0203,Completed,5,HR,John,2025-03-11,2025-03-13,PCI-DSS,Patch Management,vuln_scan_report.pdf,7,Admin System,2.0
+C0204,In Progress,5,HR,Brian,2025-02-04,,HIPAA,Incident Response,vuln_scan_report.pdf,14,Application,
+C0205,Failed,1,HR,John,2025-01-22,2025-01-31,HIPAA,Patch Management,access_review.xlsx,14,Admin System,9.0
+C0206,Completed,8,HR,Susan,2025-03-06,2025-03-17,HIPAA,User Access Review,incident_log.txt,7,Admin System,11.0
+C0207,Completed,8,IT,Jane,2025-03-25,2025-03-29,PCI-DSS,Vulnerability Scan,incident_log.txt,14,Admin System,4.0
+C0208,Failed,4,IT,John,2025-01-22,2025-02-13,NIST,Patch Management,log_patch_001.pdf,30,Admin System,22.0
+C0209,Completed,7,Risk,David,2025-01-11,2025-02-02,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,14,Application,22.0
+C0210,Completed,3,Finance,Alice,2025-03-18,2025-04-09,HIPAA,Vulnerability Scan,vuln_scan_report.pdf,7,Admin System,22.0
+C0211,Failed,6,Operations,David,2025-01-03,2025-01-05,HIPAA,Patch Management,log_patch_001.pdf,30,Database,2.0
+C0212,Failed,9,Operations,Susan,2025-01-09,2025-02-01,NIST,Encryption Control,incident_log.txt,30,Database,23.0
+C0213,Failed,1,IT,John,2025-03-01,2025-03-07,HIPAA,Incident Response,firewall_config.png,14,Database,6.0
+C0214,Completed,5,Operations,Mark,2025-03-17,2025-03-31,HIPAA,Patch Management,firewall_config.png,30,Database,14.0
+C0215,In Progress,4,IT,Susan,2025-03-28,,HIPAA,User Access Review,incident_log.txt,7,Database,
+C0216,Completed,8,Risk,Brian,2025-01-14,2025-01-15,NIST,Vulnerability Scan,vuln_scan_report.pdf,30,Database,1.0
+C0217,Completed,1,Finance,David,2025-01-18,2025-02-05,PCI-DSS,Firewall Configuration,firewall_config.png,14,Application,18.0
+C0218,In Progress,9,Risk,David,2025-03-14,,HIPAA,Patch Management,access_review.xlsx,14,Database,
+C0219,Failed,6,HR,Mary,2025-01-23,2025-01-30,NIST,Incident Response,access_review.xlsx,30,Admin System,7.0
+C0220,In Progress,4,HR,John,2025-03-15,,HIPAA,Vulnerability Scan,log_patch_001.pdf,7,Database,
+C0221,Failed,9,HR,Brian,2025-03-24,2025-03-25,NIST,Encryption Control,incident_log.txt,7,Application,1.0
+C0222,Failed,5,Risk,Mark,2025-02-16,2025-02-17,HIPAA,User Access Review,incident_log.txt,14,Database,1.0
+C0223,Completed,5,Operations,David,2025-03-10,2025-03-11,NIST,Encryption Control,firewall_config.png,14,Admin System,1.0
+C0224,Completed,5,Finance,David,2025-02-16,2025-03-12,HIPAA,Firewall Configuration,vuln_scan_report.pdf,7,Admin System,24.0
+C0225,Completed,1,HR,Brian,2025-03-28,2025-04-01,PCI-DSS,Patch Management,incident_log.txt,30,Application,4.0
+C0226,Completed,1,HR,Susan,2025-01-30,2025-02-03,HIPAA,Vulnerability Scan,firewall_config.png,30,Application,4.0
+C0227,In Progress,8,HR,Susan,2025-01-25,,NIST,Patch Management,firewall_config.png,30,Application,
+C0228,Completed,8,Finance,John,2025-01-28,2025-02-15,HIPAA,Incident Response,incident_log.txt,30,Application,18.0
+C0229,In Progress,6,HR,Jane,2025-01-25,,PCI-DSS,Patch Management,firewall_config.png,7,Database,
+C0230,Failed,4,Finance,Mary,2025-03-15,2025-03-26,HIPAA,User Access Review,log_patch_001.pdf,14,Database,11.0
+C0231,In Progress,2,HR,David,2025-03-19,,NIST,Firewall Configuration,log_patch_001.pdf,14,Admin System,
+C0232,Failed,2,Risk,Jane,2025-02-27,2025-02-28,NIST,Encryption Control,incident_log.txt,30,Application,1.0
+C0233,Failed,9,Risk,Jane,2025-02-10,2025-02-20,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,7,Application,10.0
+C0234,Completed,5,Finance,Mary,2025-01-25,2025-02-03,NIST,Vulnerability Scan,log_patch_001.pdf,7,Database,9.0
+C0235,Completed,4,Risk,Jane,2025-03-19,2025-04-11,HIPAA,Patch Management,log_patch_001.pdf,30,Application,23.0
+C0236,In Progress,1,Finance,Jane,2025-02-17,,HIPAA,Vulnerability Scan,incident_log.txt,30,Admin System,
+C0237,Completed,7,Risk,Susan,2025-01-10,2025-01-14,HIPAA,Encryption Control,access_review.xlsx,30,Admin System,4.0
+C0238,Completed,3,Risk,Susan,2025-03-16,2025-03-22,NIST,Vulnerability Scan,firewall_config.png,14,Application,6.0
+C0239,Failed,6,Finance,Alice,2025-01-11,2025-01-27,HIPAA,Incident Response,log_patch_001.pdf,30,Admin System,16.0
+C0240,Completed,5,Operations,Mark,2025-03-26,2025-03-28,HIPAA,Firewall Configuration,access_review.xlsx,14,Admin System,2.0
+C0241,In Progress,5,Risk,John,2025-01-21,,HIPAA,Encryption Control,vuln_scan_report.pdf,7,Database,
+C0242,In Progress,5,HR,Jane,2025-03-27,,PCI-DSS,Encryption Control,access_review.xlsx,7,Admin System,
+C0243,In Progress,1,Operations,Alice,2025-02-14,,NIST,Encryption Control,incident_log.txt,14,Application,
+C0244,Completed,1,Finance,Mark,2025-01-07,2025-01-30,NIST,User Access Review,vuln_scan_report.pdf,14,Application,23.0
+C0245,Completed,3,Operations,Alice,2025-03-22,2025-04-09,NIST,Firewall Configuration,vuln_scan_report.pdf,14,Admin System,18.0
+C0246,In Progress,4,IT,Alice,2025-03-05,,PCI-DSS,Vulnerability Scan,access_review.xlsx,14,Application,
+C0247,Completed,5,IT,John,2025-03-05,2025-03-15,NIST,Encryption Control,incident_log.txt,30,Database,10.0
+C0248,In Progress,2,Risk,John,2025-01-02,,PCI-DSS,Firewall Configuration,log_patch_001.pdf,7,Admin System,
+C0249,In Progress,8,Risk,Brian,2025-03-17,,PCI-DSS,Encryption Control,access_review.xlsx,30,Admin System,
+C0250,In Progress,2,HR,Mary,2025-02-11,,NIST,Incident Response,log_patch_001.pdf,14,Admin System,
+C0251,Completed,9,Operations,Mary,2025-03-23,2025-04-16,HIPAA,Incident Response,access_review.xlsx,30,Application,24.0
+C0252,Completed,2,IT,Brian,2025-02-23,2025-03-19,HIPAA,Incident Response,log_patch_001.pdf,30,Application,24.0
+C0253,In Progress,9,Risk,Brian,2025-03-16,,NIST,Patch Management,access_review.xlsx,7,Admin System,
+C0254,Completed,7,Operations,Susan,2025-01-16,2025-02-02,NIST,Encryption Control,vuln_scan_report.pdf,30,Application,17.0
+C0255,Completed,8,Risk,Mark,2025-01-18,2025-01-31,PCI-DSS,Patch Management,firewall_config.png,7,Application,13.0
+C0256,Failed,2,Risk,Alice,2025-02-28,2025-03-24,NIST,Firewall Configuration,vuln_scan_report.pdf,14,Admin System,24.0
+C0257,In Progress,7,IT,Jane,2025-03-31,,PCI-DSS,Patch Management,log_patch_001.pdf,30,Admin System,
+C0258,Failed,6,IT,Brian,2025-01-16,2025-02-03,NIST,Firewall Configuration,incident_log.txt,14,Application,18.0
+C0259,Failed,4,Risk,David,2025-01-06,2025-01-28,HIPAA,Firewall Configuration,vuln_scan_report.pdf,7,Admin System,22.0
+C0260,Completed,7,Finance,Mary,2025-02-26,2025-03-11,HIPAA,Firewall Configuration,firewall_config.png,14,Admin System,13.0
+C0261,Failed,4,Risk,Brian,2025-02-16,2025-03-05,NIST,Vulnerability Scan,log_patch_001.pdf,14,Admin System,17.0
+C0262,In Progress,2,Risk,David,2025-02-17,,PCI-DSS,Patch Management,vuln_scan_report.pdf,7,Admin System,
+C0263,Completed,7,HR,David,2025-02-11,2025-02-16,HIPAA,Vulnerability Scan,access_review.xlsx,14,Application,5.0
+C0264,Failed,8,HR,David,2025-03-17,2025-03-28,PCI-DSS,Encryption Control,incident_log.txt,14,Admin System,11.0
+C0265,In Progress,2,HR,Susan,2025-03-01,,NIST,Patch Management,log_patch_001.pdf,14,Database,
+C0266,In Progress,5,Finance,Susan,2025-03-18,,NIST,Encryption Control,vuln_scan_report.pdf,30,Admin System,
+C0267,Failed,1,Finance,Jane,2025-01-04,2025-01-11,HIPAA,Encryption Control,log_patch_001.pdf,14,Database,7.0
+C0268,In Progress,7,Risk,Jane,2025-01-02,,NIST,Firewall Configuration,access_review.xlsx,7,Admin System,
+C0269,Completed,8,HR,David,2025-03-31,2025-04-10,HIPAA,Patch Management,firewall_config.png,30,Database,10.0
+C0270,Completed,6,Finance,Mark,2025-02-28,2025-03-17,PCI-DSS,Encryption Control,vuln_scan_report.pdf,30,Database,17.0
+C0271,In Progress,5,IT,Susan,2025-01-27,,HIPAA,Incident Response,log_patch_001.pdf,7,Admin System,
+C0272,In Progress,6,Risk,Alice,2025-01-27,,HIPAA,Encryption Control,log_patch_001.pdf,14,Admin System,
+C0273,In Progress,2,Operations,David,2025-03-20,,PCI-DSS,Incident Response,log_patch_001.pdf,30,Admin System,
+C0274,In Progress,1,Risk,Alice,2025-03-13,,HIPAA,Patch Management,firewall_config.png,30,Database,
+C0275,Failed,7,Operations,Alice,2025-01-07,2025-01-22,HIPAA,Vulnerability Scan,log_patch_001.pdf,30,Application,15.0
+C0276,Failed,7,HR,David,2025-03-04,2025-03-22,NIST,Patch Management,incident_log.txt,14,Application,18.0
+C0277,In Progress,2,Operations,Mary,2025-02-15,,PCI-DSS,Vulnerability Scan,incident_log.txt,30,Admin System,
+C0278,Failed,2,HR,Mark,2025-03-04,2025-03-27,HIPAA,Vulnerability Scan,log_patch_001.pdf,7,Application,23.0
+C0279,In Progress,1,IT,David,2025-01-12,,PCI-DSS,Patch Management,incident_log.txt,14,Application,
+C0280,In Progress,8,Operations,Jane,2025-01-13,,PCI-DSS,Encryption Control,vuln_scan_report.pdf,7,Admin System,
+C0281,In Progress,8,Risk,David,2025-02-12,,HIPAA,User Access Review,incident_log.txt,7,Database,
+C0282,Completed,1,HR,Susan,2025-01-17,2025-02-08,NIST,Encryption Control,log_patch_001.pdf,30,Admin System,22.0
+C0283,Completed,8,Risk,David,2025-03-04,2025-03-23,PCI-DSS,Encryption Control,access_review.xlsx,30,Application,19.0
+C0284,Completed,9,Finance,Mary,2025-03-22,2025-03-24,HIPAA,Firewall Configuration,vuln_scan_report.pdf,30,Database,2.0
+C0285,Failed,4,HR,Susan,2025-02-05,2025-02-09,PCI-DSS,Firewall Configuration,firewall_config.png,7,Application,4.0
+C0286,Completed,1,Operations,Jane,2025-03-26,2025-03-29,NIST,Encryption Control,log_patch_001.pdf,14,Database,3.0
+C0287,Completed,1,HR,John,2025-01-08,2025-01-15,NIST,Incident Response,firewall_config.png,30,Application,7.0
+C0288,Failed,3,Risk,John,2025-03-10,2025-04-03,NIST,Vulnerability Scan,access_review.xlsx,30,Admin System,24.0
+C0289,Completed,5,IT,Alice,2025-03-31,2025-04-18,HIPAA,Firewall Configuration,firewall_config.png,7,Application,18.0
+C0290,Failed,5,HR,Mark,2025-03-21,2025-03-31,HIPAA,Encryption Control,log_patch_001.pdf,14,Application,10.0
+C0291,Completed,9,Operations,Alice,2025-02-05,2025-02-12,NIST,User Access Review,log_patch_001.pdf,7,Database,7.0
+C0292,Completed,2,Finance,Mary,2025-01-28,2025-02-05,HIPAA,Incident Response,access_review.xlsx,30,Application,8.0
+C0293,In Progress,2,IT,Brian,2025-02-16,,NIST,Patch Management,log_patch_001.pdf,7,Admin System,
+C0294,Completed,6,Finance,Jane,2025-03-17,2025-03-23,HIPAA,Encryption Control,access_review.xlsx,30,Admin System,6.0
+C0295,Completed,9,HR,Mark,2025-01-30,2025-02-21,NIST,Encryption Control,access_review.xlsx,14,Admin System,22.0
+C0296,Failed,1,Risk,Jane,2025-01-23,2025-01-24,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,7,Database,1.0
+C0297,In Progress,9,Risk,John,2025-01-16,,NIST,Incident Response,incident_log.txt,30,Database,
+C0298,Completed,9,Operations,Alice,2025-01-14,2025-01-18,NIST,Firewall Configuration,access_review.xlsx,30,Application,4.0
+C0299,Failed,9,Risk,Jane,2025-03-15,2025-03-29,HIPAA,Firewall Configuration,log_patch_001.pdf,30,Application,14.0
+C0300,Completed,5,IT,John,2025-03-12,2025-03-29,HIPAA,Firewall Configuration,incident_log.txt,30,Application,17.0
+C0301,Completed,9,Risk,Mary,2025-02-21,2025-03-13,HIPAA,Patch Management,access_review.xlsx,7,Database,20.0
+C0302,Failed,4,Operations,Mary,2025-02-06,2025-02-24,HIPAA,Incident Response,incident_log.txt,30,Database,18.0
+C0303,Failed,2,HR,Brian,2025-01-29,2025-02-09,HIPAA,Incident Response,vuln_scan_report.pdf,7,Application,11.0
+C0304,Failed,6,HR,Jane,2025-03-08,2025-03-29,HIPAA,Firewall Configuration,vuln_scan_report.pdf,30,Database,21.0
+C0305,In Progress,4,Risk,Brian,2025-01-15,,PCI-DSS,Firewall Configuration,incident_log.txt,7,Database,
+C0306,In Progress,6,Finance,Susan,2025-02-16,,NIST,Vulnerability Scan,access_review.xlsx,7,Admin System,
+C0307,Failed,3,HR,Mark,2025-02-15,2025-03-01,NIST,User Access Review,log_patch_001.pdf,30,Admin System,14.0
+C0308,Completed,6,Risk,Jane,2025-02-21,2025-03-02,NIST,User Access Review,firewall_config.png,30,Application,9.0
+C0309,In Progress,2,Operations,Mary,2025-01-19,,PCI-DSS,Encryption Control,log_patch_001.pdf,30,Application,
+C0310,Completed,2,Risk,Alice,2025-03-18,2025-04-02,NIST,Encryption Control,firewall_config.png,30,Admin System,15.0
+C0311,Completed,9,HR,John,2025-01-21,2025-02-02,PCI-DSS,Incident Response,firewall_config.png,14,Database,12.0
+C0312,Completed,7,Operations,David,2025-03-05,2025-03-15,PCI-DSS,Incident Response,access_review.xlsx,30,Application,10.0
+C0313,Completed,3,Risk,Brian,2025-02-06,2025-02-25,PCI-DSS,Patch Management,incident_log.txt,30,Application,19.0
+C0314,In Progress,1,IT,David,2025-01-27,,NIST,Patch Management,log_patch_001.pdf,30,Application,
+C0315,In Progress,8,Operations,Jane,2025-02-24,,PCI-DSS,User Access Review,incident_log.txt,7,Database,
+C0316,Failed,6,IT,Alice,2025-01-29,2025-02-22,NIST,Encryption Control,vuln_scan_report.pdf,30,Admin System,24.0
+C0317,Completed,7,Finance,Brian,2025-01-20,2025-02-08,NIST,User Access Review,access_review.xlsx,7,Application,19.0
+C0318,Completed,9,Operations,David,2025-01-25,2025-01-31,HIPAA,User Access Review,access_review.xlsx,7,Admin System,6.0
+C0319,Completed,5,IT,Mark,2025-03-11,2025-03-31,HIPAA,Encryption Control,vuln_scan_report.pdf,7,Admin System,20.0
+C0320,Completed,1,HR,Alice,2025-03-04,2025-03-28,PCI-DSS,Patch Management,log_patch_001.pdf,7,Database,24.0
+C0321,Failed,7,HR,John,2025-02-05,2025-02-11,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,14,Database,6.0
+C0322,In Progress,5,Finance,Mark,2025-01-02,,NIST,Vulnerability Scan,log_patch_001.pdf,30,Database,
+C0323,Failed,3,Operations,Alice,2025-01-22,2025-01-30,PCI-DSS,Vulnerability Scan,firewall_config.png,7,Database,8.0
+C0324,Completed,9,Operations,Susan,2025-01-16,2025-01-17,PCI-DSS,Encryption Control,access_review.xlsx,30,Database,1.0
+C0325,In Progress,1,Operations,Brian,2025-01-18,,NIST,Firewall Configuration,log_patch_001.pdf,7,Database,
+C0326,In Progress,1,Finance,Mary,2025-03-10,,PCI-DSS,Firewall Configuration,incident_log.txt,14,Application,
+C0327,Failed,1,Operations,John,2025-02-23,2025-03-17,PCI-DSS,Firewall Configuration,incident_log.txt,7,Admin System,22.0
+C0328,Failed,3,HR,Jane,2025-01-30,2025-02-16,NIST,Incident Response,access_review.xlsx,30,Database,17.0
+C0329,Completed,6,IT,Mark,2025-02-14,2025-03-03,NIST,Patch Management,vuln_scan_report.pdf,30,Application,17.0
+C0330,Completed,3,HR,Mark,2025-01-19,2025-02-12,HIPAA,Patch Management,vuln_scan_report.pdf,14,Admin System,24.0
+C0331,Completed,8,HR,David,2025-03-28,2025-04-12,NIST,Incident Response,log_patch_001.pdf,30,Database,15.0
+C0332,In Progress,2,IT,Brian,2025-02-03,,HIPAA,User Access Review,vuln_scan_report.pdf,30,Database,
+C0333,Completed,9,HR,Jane,2025-01-13,2025-01-20,PCI-DSS,Vulnerability Scan,access_review.xlsx,7,Application,7.0
+C0334,Completed,3,Finance,Mary,2025-02-12,2025-03-03,NIST,Firewall Configuration,log_patch_001.pdf,30,Admin System,19.0
+C0335,Completed,5,IT,Alice,2025-03-03,2025-03-25,NIST,Vulnerability Scan,firewall_config.png,7,Database,22.0
+C0336,Completed,8,HR,Mary,2025-01-22,2025-02-14,NIST,Firewall Configuration,vuln_scan_report.pdf,14,Admin System,23.0
+C0337,In Progress,2,Risk,Brian,2025-02-21,,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,30,Application,
+C0338,In Progress,6,HR,Brian,2025-02-21,,HIPAA,User Access Review,log_patch_001.pdf,7,Database,
+C0339,Completed,5,Finance,Susan,2025-02-05,2025-02-08,PCI-DSS,Vulnerability Scan,incident_log.txt,30,Admin System,3.0
+C0340,Completed,9,Operations,Susan,2025-03-14,2025-04-05,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,7,Application,22.0
+C0341,Completed,5,HR,Mary,2025-01-19,2025-01-30,NIST,Encryption Control,access_review.xlsx,14,Application,11.0
+C0342,Completed,2,Operations,Alice,2025-02-07,2025-02-27,HIPAA,Vulnerability Scan,vuln_scan_report.pdf,7,Database,20.0
+C0343,Completed,5,Risk,Mary,2025-03-11,2025-03-30,PCI-DSS,Encryption Control,firewall_config.png,30,Admin System,19.0
+C0344,Completed,4,HR,Brian,2025-03-20,2025-03-29,NIST,Patch Management,vuln_scan_report.pdf,7,Database,9.0
+C0345,Completed,7,IT,Brian,2025-02-26,2025-03-08,PCI-DSS,Incident Response,incident_log.txt,30,Database,10.0
+C0346,Failed,6,Operations,David,2025-01-20,2025-01-22,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,14,Admin System,2.0
+C0347,Failed,2,Risk,Susan,2025-01-09,2025-01-10,NIST,Patch Management,log_patch_001.pdf,7,Admin System,1.0
+C0348,Completed,5,IT,Jane,2025-02-01,2025-02-17,NIST,Encryption Control,vuln_scan_report.pdf,30,Admin System,16.0
+C0349,Completed,7,IT,Jane,2025-01-04,2025-01-22,HIPAA,Vulnerability Scan,incident_log.txt,30,Application,18.0
+C0350,Failed,7,IT,Jane,2025-02-19,2025-03-14,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,30,Application,23.0
+C0351,Failed,5,IT,David,2025-03-23,2025-04-09,NIST,User Access Review,access_review.xlsx,7,Admin System,17.0
+C0352,In Progress,9,HR,John,2025-01-05,,NIST,Patch Management,log_patch_001.pdf,7,Application,
+C0353,Failed,4,HR,Jane,2025-01-20,2025-01-26,HIPAA,Firewall Configuration,firewall_config.png,7,Database,6.0
+C0354,Completed,3,HR,Brian,2025-03-28,2025-04-11,HIPAA,Firewall Configuration,log_patch_001.pdf,14,Admin System,14.0
+C0355,Completed,4,Risk,David,2025-03-16,2025-04-08,NIST,User Access Review,access_review.xlsx,30,Database,23.0
+C0356,Failed,5,Risk,Mary,2025-02-06,2025-02-21,HIPAA,Encryption Control,vuln_scan_report.pdf,30,Admin System,15.0
+C0357,Completed,6,Risk,Susan,2025-01-22,2025-02-05,NIST,Firewall Configuration,log_patch_001.pdf,14,Database,14.0
+C0358,Failed,3,Finance,Susan,2025-02-27,2025-03-23,PCI-DSS,Firewall Configuration,log_patch_001.pdf,14,Admin System,24.0
+C0359,In Progress,2,Risk,Alice,2025-03-09,,HIPAA,Incident Response,log_patch_001.pdf,7,Database,
+C0360,Failed,4,HR,Mary,2025-02-13,2025-03-07,PCI-DSS,Patch Management,log_patch_001.pdf,7,Admin System,22.0
+C0361,Completed,5,HR,Alice,2025-02-03,2025-02-06,PCI-DSS,Encryption Control,access_review.xlsx,7,Admin System,3.0
+C0362,Failed,4,Finance,David,2025-03-18,2025-04-11,PCI-DSS,Vulnerability Scan,incident_log.txt,7,Application,24.0
+C0363,Completed,3,Finance,Mark,2025-02-11,2025-03-06,NIST,Patch Management,incident_log.txt,7,Database,23.0
+C0364,Failed,8,Risk,Jane,2025-01-09,2025-01-28,PCI-DSS,Encryption Control,log_patch_001.pdf,7,Application,19.0
+C0365,In Progress,4,Operations,John,2025-01-07,,PCI-DSS,Firewall Configuration,access_review.xlsx,14,Database,
+C0366,Completed,2,Finance,Mary,2025-03-09,2025-03-21,PCI-DSS,Incident Response,access_review.xlsx,14,Application,12.0
+C0367,In Progress,2,IT,Mary,2025-01-19,,NIST,Patch Management,log_patch_001.pdf,14,Admin System,
+C0368,In Progress,1,HR,Mary,2025-01-31,,PCI-DSS,Firewall Configuration,firewall_config.png,30,Application,
+C0369,Completed,4,IT,Alice,2025-02-04,2025-02-06,PCI-DSS,Encryption Control,log_patch_001.pdf,30,Application,2.0
+C0370,Completed,9,HR,David,2025-02-26,2025-03-01,HIPAA,Patch Management,firewall_config.png,7,Admin System,3.0
+C0371,Completed,7,HR,Mary,2025-03-26,2025-04-13,NIST,Vulnerability Scan,log_patch_001.pdf,14,Application,18.0
+C0372,Completed,7,Finance,Mark,2025-03-02,2025-03-03,PCI-DSS,Patch Management,firewall_config.png,30,Admin System,1.0
+C0373,Completed,7,Finance,Mary,2025-01-31,2025-02-20,HIPAA,Firewall Configuration,firewall_config.png,30,Database,20.0
+C0374,Failed,8,IT,Susan,2025-03-24,2025-04-14,NIST,Patch Management,log_patch_001.pdf,14,Application,21.0
+C0375,Completed,1,HR,Jane,2025-02-22,2025-02-28,NIST,Vulnerability Scan,firewall_config.png,30,Admin System,6.0
+C0376,Completed,8,IT,John,2025-02-01,2025-02-06,NIST,Incident Response,vuln_scan_report.pdf,30,Admin System,5.0
+C0377,In Progress,4,Operations,Jane,2025-03-07,,NIST,Incident Response,incident_log.txt,14,Application,
+C0378,Completed,4,IT,Susan,2025-02-28,2025-03-01,NIST,Firewall Configuration,access_review.xlsx,30,Database,1.0
+C0379,In Progress,4,Risk,Susan,2025-01-10,,NIST,Encryption Control,firewall_config.png,14,Application,
+C0380,Completed,6,IT,John,2025-01-02,2025-01-21,PCI-DSS,Firewall Configuration,firewall_config.png,30,Admin System,19.0
+C0381,Completed,7,Risk,Mark,2025-03-07,2025-03-08,PCI-DSS,Incident Response,access_review.xlsx,14,Database,1.0
+C0382,Failed,6,Risk,David,2025-03-01,2025-03-22,PCI-DSS,User Access Review,firewall_config.png,30,Application,21.0
+C0383,Failed,1,Risk,Susan,2025-03-29,2025-04-19,PCI-DSS,User Access Review,access_review.xlsx,30,Admin System,21.0
+C0384,In Progress,8,Operations,David,2025-01-17,,HIPAA,Patch Management,log_patch_001.pdf,14,Application,
+C0385,In Progress,7,IT,Susan,2025-01-16,,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,30,Database,
+C0386,In Progress,6,IT,Brian,2025-01-16,,NIST,Patch Management,vuln_scan_report.pdf,14,Database,
+C0387,Completed,6,Operations,John,2025-02-15,2025-03-03,PCI-DSS,User Access Review,incident_log.txt,14,Database,16.0
+C0388,Completed,5,HR,Susan,2025-02-08,2025-02-20,PCI-DSS,Incident Response,firewall_config.png,30,Database,12.0
+C0389,In Progress,6,Finance,Brian,2025-01-31,,NIST,Patch Management,incident_log.txt,7,Database,
+C0390,In Progress,9,IT,Jane,2025-03-29,,PCI-DSS,Firewall Configuration,log_patch_001.pdf,30,Application,
+C0391,In Progress,9,Finance,Alice,2025-01-01,,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,7,Database,
+C0392,Completed,8,Operations,Brian,2025-01-11,2025-02-02,PCI-DSS,Firewall Configuration,log_patch_001.pdf,7,Database,22.0
+C0393,Completed,9,HR,Mary,2025-03-26,2025-04-03,HIPAA,Vulnerability Scan,log_patch_001.pdf,30,Admin System,8.0
+C0394,In Progress,8,HR,Susan,2025-01-04,,PCI-DSS,Incident Response,firewall_config.png,7,Database,
+C0395,Completed,8,HR,Brian,2025-03-12,2025-03-28,NIST,Patch Management,log_patch_001.pdf,14,Admin System,16.0
+C0396,In Progress,1,Operations,David,2025-01-26,,NIST,Vulnerability Scan,vuln_scan_report.pdf,14,Admin System,
+C0397,In Progress,5,Risk,Alice,2025-02-19,,PCI-DSS,Firewall Configuration,incident_log.txt,7,Admin System,
+C0398,Completed,4,Risk,Mark,2025-01-12,2025-01-13,PCI-DSS,Patch Management,vuln_scan_report.pdf,14,Application,1.0
+C0399,In Progress,2,Finance,Susan,2025-03-22,,PCI-DSS,Patch Management,firewall_config.png,30,Application,
+C0400,In Progress,8,Risk,Mary,2025-03-16,,NIST,Firewall Configuration,vuln_scan_report.pdf,14,Admin System,
+C0401,Completed,3,Risk,Mark,2025-03-06,2025-03-10,NIST,User Access Review,access_review.xlsx,7,Application,4.0
+C0402,In Progress,4,HR,Brian,2025-02-16,,HIPAA,Vulnerability Scan,incident_log.txt,30,Database,
+C0403,Failed,7,HR,Mark,2025-02-22,2025-03-04,HIPAA,Firewall Configuration,access_review.xlsx,14,Application,10.0
+C0404,In Progress,9,Finance,Mark,2025-03-12,,HIPAA,Incident Response,access_review.xlsx,30,Database,
+C0405,Completed,2,IT,Alice,2025-01-02,2025-01-13,NIST,Encryption Control,firewall_config.png,7,Database,11.0
+C0406,In Progress,3,Finance,Jane,2025-01-24,,HIPAA,Firewall Configuration,log_patch_001.pdf,14,Application,
+C0407,Completed,4,Finance,Mark,2025-01-04,2025-01-21,PCI-DSS,Patch Management,access_review.xlsx,30,Application,17.0
+C0408,Completed,1,Operations,Mark,2025-01-19,2025-02-11,PCI-DSS,Patch Management,vuln_scan_report.pdf,30,Admin System,23.0
+C0409,In Progress,7,Operations,Susan,2025-01-26,,NIST,Firewall Configuration,log_patch_001.pdf,14,Application,
+C0410,Completed,2,Finance,Jane,2025-03-16,2025-03-23,HIPAA,Encryption Control,vuln_scan_report.pdf,30,Application,7.0
+C0411,Completed,5,Finance,Alice,2025-02-09,2025-02-21,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,30,Application,12.0
+C0412,In Progress,1,Finance,Mary,2025-02-19,,NIST,Encryption Control,log_patch_001.pdf,7,Database,
+C0413,In Progress,3,Risk,Brian,2025-02-12,,HIPAA,Encryption Control,log_patch_001.pdf,7,Database,
+C0414,Failed,2,Operations,Alice,2025-03-16,2025-04-06,PCI-DSS,Incident Response,vuln_scan_report.pdf,7,Database,21.0
+C0415,Failed,1,Finance,Alice,2025-03-08,2025-03-15,HIPAA,Vulnerability Scan,firewall_config.png,7,Admin System,7.0
+C0416,Completed,7,HR,John,2025-01-12,2025-01-24,NIST,Patch Management,incident_log.txt,7,Admin System,12.0
+C0417,Completed,5,HR,Alice,2025-03-08,2025-03-23,HIPAA,Patch Management,incident_log.txt,7,Admin System,15.0
+C0418,Completed,1,Risk,Jane,2025-01-27,2025-01-29,NIST,Encryption Control,firewall_config.png,14,Database,2.0
+C0419,Failed,6,Risk,John,2025-02-23,2025-03-09,HIPAA,Patch Management,log_patch_001.pdf,7,Application,14.0
+C0420,In Progress,5,IT,Brian,2025-03-07,,PCI-DSS,User Access Review,vuln_scan_report.pdf,30,Admin System,
+C0421,In Progress,3,IT,Mark,2025-02-18,,NIST,Encryption Control,incident_log.txt,14,Admin System,
+C0422,In Progress,7,IT,Susan,2025-01-16,,NIST,Patch Management,vuln_scan_report.pdf,30,Database,
+C0423,Completed,9,Risk,Susan,2025-01-02,2025-01-15,NIST,User Access Review,firewall_config.png,7,Admin System,13.0
+C0424,Completed,9,Risk,Brian,2025-03-01,2025-03-05,HIPAA,Incident Response,vuln_scan_report.pdf,7,Application,4.0
+C0425,Completed,9,Risk,Brian,2025-02-23,2025-03-09,HIPAA,Patch Management,firewall_config.png,30,Database,14.0
+C0426,Failed,2,HR,Jane,2025-01-30,2025-02-13,PCI-DSS,User Access Review,log_patch_001.pdf,30,Database,14.0
+C0427,Completed,3,Risk,David,2025-03-25,2025-04-10,NIST,Firewall Configuration,firewall_config.png,30,Application,16.0
+C0428,In Progress,7,HR,Mark,2025-02-07,,NIST,Vulnerability Scan,firewall_config.png,14,Application,
+C0429,Completed,5,IT,Brian,2025-01-28,2025-02-04,HIPAA,Firewall Configuration,incident_log.txt,7,Application,7.0
+C0430,Completed,2,IT,Alice,2025-01-25,2025-02-13,HIPAA,User Access Review,vuln_scan_report.pdf,30,Admin System,19.0
+C0431,Completed,3,IT,Jane,2025-01-10,2025-01-12,PCI-DSS,Encryption Control,incident_log.txt,7,Application,2.0
+C0432,In Progress,6,Finance,Susan,2025-03-01,,PCI-DSS,Encryption Control,access_review.xlsx,30,Database,
+C0433,Failed,7,Finance,Mary,2025-02-11,2025-02-21,HIPAA,Patch Management,firewall_config.png,7,Application,10.0
+C0434,Completed,9,Operations,Jane,2025-02-09,2025-02-27,NIST,Firewall Configuration,access_review.xlsx,14,Database,18.0
+C0435,Completed,1,Operations,Susan,2025-03-18,2025-04-04,PCI-DSS,Encryption Control,incident_log.txt,7,Database,17.0
+C0436,In Progress,7,Operations,John,2025-02-11,,HIPAA,Encryption Control,vuln_scan_report.pdf,30,Admin System,
+C0437,Completed,8,Finance,Jane,2025-02-16,2025-02-21,HIPAA,Firewall Configuration,incident_log.txt,7,Application,5.0
+C0438,In Progress,3,Finance,Susan,2025-02-06,,NIST,Incident Response,vuln_scan_report.pdf,14,Admin System,
+C0439,In Progress,4,Operations,David,2025-03-21,,HIPAA,Encryption Control,vuln_scan_report.pdf,14,Application,
+C0440,Completed,6,Operations,Jane,2025-01-22,2025-02-03,HIPAA,Vulnerability Scan,log_patch_001.pdf,7,Application,12.0
+C0441,Completed,7,Risk,Jane,2025-02-26,2025-03-04,PCI-DSS,User Access Review,firewall_config.png,30,Application,6.0
+C0442,In Progress,4,Operations,Mark,2025-03-25,,HIPAA,Patch Management,incident_log.txt,14,Application,
+C0443,Completed,8,Risk,Brian,2025-01-27,2025-02-18,HIPAA,Encryption Control,vuln_scan_report.pdf,14,Application,22.0
+C0444,Completed,5,HR,Mark,2025-02-10,2025-02-19,PCI-DSS,Vulnerability Scan,incident_log.txt,7,Database,9.0
+C0445,In Progress,1,Finance,Jane,2025-03-21,,NIST,Vulnerability Scan,incident_log.txt,14,Database,
+C0446,In Progress,4,Operations,Brian,2025-02-03,,NIST,Encryption Control,vuln_scan_report.pdf,14,Application,
+C0447,In Progress,3,Finance,Susan,2025-02-01,,PCI-DSS,Incident Response,access_review.xlsx,30,Database,
+C0448,In Progress,9,Finance,Mary,2025-03-31,,PCI-DSS,User Access Review,firewall_config.png,30,Admin System,
+C0449,Completed,8,Finance,Mary,2025-03-30,2025-04-19,NIST,Patch Management,firewall_config.png,30,Admin System,20.0
+C0450,Completed,1,HR,Jane,2025-03-07,2025-03-08,NIST,Encryption Control,log_patch_001.pdf,7,Admin System,1.0
+C0451,In Progress,6,IT,David,2025-01-12,,NIST,Patch Management,log_patch_001.pdf,14,Application,
+C0452,Failed,9,Operations,John,2025-02-09,2025-03-03,NIST,Firewall Configuration,log_patch_001.pdf,7,Application,22.0
+C0453,Completed,7,IT,Susan,2025-03-14,2025-03-29,NIST,Vulnerability Scan,firewall_config.png,14,Database,15.0
+C0454,In Progress,4,IT,Brian,2025-03-17,,PCI-DSS,Vulnerability Scan,access_review.xlsx,14,Database,
+C0455,Completed,1,IT,Jane,2025-03-31,2025-04-21,HIPAA,Encryption Control,firewall_config.png,14,Database,21.0
+C0456,Completed,2,Finance,Susan,2025-03-14,2025-03-20,NIST,Encryption Control,firewall_config.png,30,Admin System,6.0
+C0457,Completed,5,Risk,Jane,2025-01-10,2025-01-29,NIST,Firewall Configuration,firewall_config.png,7,Admin System,19.0
+C0458,Completed,5,Finance,David,2025-02-17,2025-03-07,HIPAA,Incident Response,firewall_config.png,7,Admin System,18.0
+C0459,Completed,8,Finance,Alice,2025-01-20,2025-01-26,HIPAA,Encryption Control,access_review.xlsx,14,Admin System,6.0
+C0460,Completed,6,IT,Alice,2025-02-08,2025-02-21,HIPAA,Vulnerability Scan,log_patch_001.pdf,7,Database,13.0
+C0461,Completed,8,Finance,David,2025-03-01,2025-03-02,HIPAA,Patch Management,incident_log.txt,30,Application,1.0
+C0462,Failed,2,IT,Brian,2025-03-07,2025-03-30,HIPAA,User Access Review,log_patch_001.pdf,7,Application,23.0
+C0463,In Progress,3,Risk,Mark,2025-03-06,,HIPAA,Patch Management,log_patch_001.pdf,14,Admin System,
+C0464,Failed,6,Operations,David,2025-02-20,2025-03-15,PCI-DSS,Incident Response,incident_log.txt,30,Application,23.0
+C0465,In Progress,3,IT,Jane,2025-02-05,,HIPAA,User Access Review,firewall_config.png,30,Application,
+C0466,Completed,6,Risk,Brian,2025-01-24,2025-02-06,HIPAA,Patch Management,access_review.xlsx,14,Application,13.0
+C0467,Completed,6,Operations,Mary,2025-01-27,2025-02-03,PCI-DSS,Patch Management,access_review.xlsx,7,Admin System,7.0
+C0468,In Progress,2,HR,David,2025-01-02,,HIPAA,Firewall Configuration,log_patch_001.pdf,14,Database,
+C0469,Completed,7,IT,Brian,2025-01-31,2025-02-15,NIST,Incident Response,incident_log.txt,7,Database,15.0
+C0470,In Progress,2,IT,David,2025-02-26,,NIST,Vulnerability Scan,vuln_scan_report.pdf,7,Application,
+C0471,Completed,6,HR,David,2025-03-19,2025-03-31,HIPAA,Firewall Configuration,firewall_config.png,30,Database,12.0
+C0472,In Progress,1,HR,Mark,2025-03-07,,PCI-DSS,User Access Review,log_patch_001.pdf,14,Database,
+C0473,Completed,3,IT,Mark,2025-01-29,2025-01-30,NIST,Vulnerability Scan,access_review.xlsx,30,Admin System,1.0
+C0474,In Progress,2,HR,Jane,2025-01-15,,PCI-DSS,Firewall Configuration,incident_log.txt,14,Admin System,
+C0475,Failed,7,Finance,Brian,2025-01-12,2025-01-27,NIST,Incident Response,incident_log.txt,14,Application,15.0
+C0476,In Progress,4,Operations,Brian,2025-01-28,,HIPAA,Encryption Control,log_patch_001.pdf,30,Application,
+C0477,Completed,8,Operations,John,2025-03-25,2025-03-29,PCI-DSS,Encryption Control,vuln_scan_report.pdf,14,Application,4.0
+C0478,Failed,6,Operations,David,2025-01-24,2025-02-06,PCI-DSS,User Access Review,access_review.xlsx,14,Admin System,13.0
+C0479,In Progress,4,Finance,Alice,2025-01-21,,PCI-DSS,Encryption Control,log_patch_001.pdf,7,Database,
+C0480,Failed,5,HR,David,2025-01-10,2025-02-02,NIST,Firewall Configuration,vuln_scan_report.pdf,14,Admin System,23.0
+C0481,Failed,9,Risk,David,2025-03-19,2025-03-24,NIST,User Access Review,incident_log.txt,14,Admin System,5.0
+C0482,Failed,7,HR,Brian,2025-01-18,2025-01-20,NIST,Vulnerability Scan,firewall_config.png,30,Database,2.0
+C0483,Completed,9,IT,David,2025-03-29,2025-04-21,HIPAA,Incident Response,access_review.xlsx,30,Database,23.0
+C0484,Failed,7,Operations,Susan,2025-01-14,2025-01-15,NIST,User Access Review,access_review.xlsx,14,Application,1.0
+C0485,Failed,1,HR,David,2025-02-03,2025-02-19,HIPAA,Vulnerability Scan,vuln_scan_report.pdf,7,Database,16.0
+C0486,In Progress,8,Risk,Susan,2025-02-27,,PCI-DSS,User Access Review,log_patch_001.pdf,7,Database,
+C0487,Completed,4,IT,Mark,2025-03-17,2025-04-09,PCI-DSS,Patch Management,incident_log.txt,30,Database,23.0
+C0488,Completed,3,Finance,Alice,2025-01-22,2025-01-28,HIPAA,Patch Management,vuln_scan_report.pdf,14,Database,6.0
+C0489,In Progress,7,Finance,Jane,2025-03-11,,NIST,User Access Review,firewall_config.png,14,Application,
+C0490,In Progress,3,Risk,Brian,2025-02-05,,HIPAA,Encryption Control,firewall_config.png,7,Application,
+C0491,Completed,8,IT,David,2025-02-14,2025-03-09,PCI-DSS,Patch Management,firewall_config.png,7,Database,23.0
+C0492,Failed,6,Operations,Susan,2025-02-05,2025-02-21,PCI-DSS,Incident Response,vuln_scan_report.pdf,7,Database,16.0
+C0493,Completed,5,HR,Susan,2025-01-22,2025-02-05,HIPAA,Vulnerability Scan,incident_log.txt,30,Application,14.0
+C0494,Completed,4,IT,Mark,2025-03-19,2025-03-22,NIST,Firewall Configuration,access_review.xlsx,14,Application,3.0
+C0495,Completed,8,Finance,Susan,2025-03-21,2025-04-05,NIST,Patch Management,log_patch_001.pdf,30,Database,15.0
+C0496,Completed,8,Risk,Jane,2025-03-02,2025-03-05,HIPAA,User Access Review,access_review.xlsx,14,Admin System,3.0
+C0497,Failed,1,Risk,Mary,2025-02-25,2025-03-20,HIPAA,Encryption Control,incident_log.txt,30,Application,23.0
+C0498,Completed,9,HR,John,2025-03-30,2025-04-01,NIST,Firewall Configuration,access_review.xlsx,14,Application,2.0
+C0499,In Progress,5,Risk,Jane,2025-02-02,,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,7,Application,
+C0500,In Progress,4,Risk,Alice,2025-02-14,,HIPAA,Vulnerability Scan,firewall_config.png,7,Database,
+C0501,Failed,6,IT,Jane,2025-02-05,2025-02-06,NIST,Patch Management,incident_log.txt,7,Database,1.0
+C0502,Failed,6,Operations,Mark,2025-01-20,2025-01-29,NIST,Vulnerability Scan,incident_log.txt,30,Application,9.0
+C0503,Completed,2,HR,Mark,2025-01-18,2025-01-27,PCI-DSS,Vulnerability Scan,access_review.xlsx,7,Database,9.0
+C0504,In Progress,8,IT,Jane,2025-02-07,,PCI-DSS,Encryption Control,vuln_scan_report.pdf,14,Database,
+C0505,Failed,7,Operations,David,2025-03-08,2025-03-31,PCI-DSS,Encryption Control,access_review.xlsx,30,Application,23.0
+C0506,Completed,1,IT,Mary,2025-01-23,2025-01-30,PCI-DSS,Encryption Control,access_review.xlsx,14,Database,7.0
+C0507,In Progress,5,IT,David,2025-01-16,,PCI-DSS,User Access Review,incident_log.txt,30,Admin System,
+C0508,In Progress,6,Risk,David,2025-02-28,,HIPAA,Vulnerability Scan,access_review.xlsx,14,Database,
+C0509,In Progress,4,Operations,Jane,2025-03-10,,NIST,Vulnerability Scan,firewall_config.png,14,Database,
+C0510,In Progress,2,HR,Brian,2025-03-09,,HIPAA,Vulnerability Scan,access_review.xlsx,30,Application,
+C0511,Failed,4,HR,Brian,2025-01-21,2025-01-24,HIPAA,Incident Response,firewall_config.png,30,Application,3.0
+C0512,Completed,1,Operations,Brian,2025-03-19,2025-04-06,HIPAA,Encryption Control,incident_log.txt,7,Admin System,18.0
+C0513,In Progress,7,Risk,Mary,2025-03-19,,HIPAA,Firewall Configuration,vuln_scan_report.pdf,7,Database,
+C0514,In Progress,2,Finance,David,2025-03-11,,HIPAA,Patch Management,firewall_config.png,14,Admin System,
+C0515,Completed,2,IT,John,2025-01-12,2025-01-23,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,14,Admin System,11.0
+C0516,Completed,9,Risk,Alice,2025-01-16,2025-01-23,PCI-DSS,User Access Review,vuln_scan_report.pdf,14,Application,7.0
+C0517,Completed,5,Operations,Brian,2025-03-22,2025-03-31,NIST,User Access Review,firewall_config.png,30,Database,9.0
+C0518,In Progress,2,IT,Brian,2025-03-28,,HIPAA,Vulnerability Scan,incident_log.txt,30,Application,
+C0519,In Progress,9,HR,Mark,2025-01-14,,NIST,Firewall Configuration,log_patch_001.pdf,7,Admin System,
+C0520,Completed,9,Finance,David,2025-03-02,2025-03-03,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,14,Admin System,1.0
+C0521,Failed,1,HR,David,2025-03-12,2025-03-26,PCI-DSS,Incident Response,vuln_scan_report.pdf,7,Application,14.0
+C0522,Completed,3,Operations,Mary,2025-02-15,2025-03-07,PCI-DSS,User Access Review,incident_log.txt,30,Application,20.0
+C0523,In Progress,4,IT,Mary,2025-02-01,,HIPAA,User Access Review,incident_log.txt,30,Application,
+C0524,In Progress,7,Operations,Brian,2025-01-15,,HIPAA,Firewall Configuration,access_review.xlsx,30,Application,
+C0525,In Progress,4,IT,David,2025-02-13,,PCI-DSS,User Access Review,incident_log.txt,7,Application,
+C0526,Completed,2,Risk,John,2025-01-17,2025-01-23,NIST,Incident Response,vuln_scan_report.pdf,30,Admin System,6.0
+C0527,Completed,7,Finance,Alice,2025-02-10,2025-02-17,NIST,Incident Response,firewall_config.png,14,Application,7.0
+C0528,Completed,6,Risk,Jane,2025-02-23,2025-03-05,PCI-DSS,Incident Response,log_patch_001.pdf,7,Database,10.0
+C0529,Completed,3,Risk,David,2025-02-13,2025-02-20,NIST,Patch Management,access_review.xlsx,30,Admin System,7.0
+C0530,In Progress,6,Operations,Mark,2025-01-05,,PCI-DSS,Incident Response,firewall_config.png,7,Admin System,
+C0531,In Progress,6,Finance,Jane,2025-01-27,,NIST,Incident Response,log_patch_001.pdf,7,Database,
+C0532,In Progress,5,IT,David,2025-03-28,,PCI-DSS,Patch Management,log_patch_001.pdf,30,Database,
+C0533,In Progress,4,IT,Susan,2025-03-19,,NIST,Vulnerability Scan,log_patch_001.pdf,30,Admin System,
+C0534,Failed,1,HR,Mary,2025-03-20,2025-03-22,HIPAA,Encryption Control,firewall_config.png,7,Application,2.0
+C0535,In Progress,6,IT,Mark,2025-02-12,,PCI-DSS,User Access Review,access_review.xlsx,7,Admin System,
+C0536,In Progress,2,Operations,Alice,2025-01-31,,PCI-DSS,Incident Response,access_review.xlsx,30,Admin System,
+C0537,In Progress,3,Risk,Brian,2025-01-17,,NIST,User Access Review,log_patch_001.pdf,14,Database,
+C0538,Completed,8,Risk,Mark,2025-03-24,2025-03-28,PCI-DSS,Firewall Configuration,firewall_config.png,7,Admin System,4.0
+C0539,Completed,6,Risk,David,2025-02-23,2025-03-16,PCI-DSS,User Access Review,log_patch_001.pdf,7,Application,21.0
+C0540,Completed,3,Finance,Brian,2025-03-03,2025-03-20,PCI-DSS,Vulnerability Scan,incident_log.txt,14,Database,17.0
+C0541,In Progress,7,IT,David,2025-03-28,,HIPAA,Patch Management,access_review.xlsx,30,Admin System,
+C0542,Failed,4,Operations,Brian,2025-02-01,2025-02-02,HIPAA,User Access Review,vuln_scan_report.pdf,30,Admin System,1.0
+C0543,Completed,9,Finance,Alice,2025-02-09,2025-02-19,NIST,User Access Review,log_patch_001.pdf,14,Application,10.0
+C0544,Failed,5,HR,Mary,2025-01-13,2025-02-01,HIPAA,User Access Review,incident_log.txt,30,Admin System,19.0
+C0545,Failed,3,Operations,Alice,2025-03-25,2025-04-09,NIST,Encryption Control,access_review.xlsx,30,Admin System,15.0
+C0546,Completed,2,Operations,Susan,2025-02-04,2025-02-14,HIPAA,Encryption Control,firewall_config.png,7,Admin System,10.0
+C0547,Completed,2,Operations,John,2025-01-05,2025-01-24,NIST,Firewall Configuration,access_review.xlsx,7,Admin System,19.0
+C0548,Failed,3,Risk,Mary,2025-03-14,2025-03-26,HIPAA,Patch Management,firewall_config.png,7,Application,12.0
+C0549,Failed,2,Operations,Alice,2025-01-29,2025-02-22,HIPAA,User Access Review,firewall_config.png,14,Admin System,24.0
+C0550,In Progress,4,IT,Susan,2025-03-11,,NIST,User Access Review,log_patch_001.pdf,30,Admin System,
+C0551,Failed,2,Operations,John,2025-01-25,2025-02-10,PCI-DSS,User Access Review,log_patch_001.pdf,30,Admin System,16.0
+C0552,In Progress,9,Risk,Susan,2025-01-22,,PCI-DSS,User Access Review,access_review.xlsx,7,Database,
+C0553,Failed,2,Operations,David,2025-03-07,2025-03-16,HIPAA,Encryption Control,incident_log.txt,7,Application,9.0
+C0554,Failed,9,HR,Jane,2025-02-14,2025-03-01,NIST,Vulnerability Scan,access_review.xlsx,14,Database,15.0
+C0555,In Progress,6,HR,David,2025-03-10,,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,30,Database,
+C0556,Completed,1,Risk,Brian,2025-03-30,2025-04-16,NIST,Firewall Configuration,firewall_config.png,14,Application,17.0
+C0557,Completed,4,IT,Mary,2025-03-13,2025-03-27,PCI-DSS,Incident Response,firewall_config.png,30,Database,14.0
+C0558,Completed,1,IT,David,2025-01-01,2025-01-19,NIST,Patch Management,log_patch_001.pdf,14,Database,18.0
+C0559,In Progress,6,Finance,Mark,2025-03-25,,HIPAA,Vulnerability Scan,incident_log.txt,7,Database,
+C0560,Failed,4,Risk,Susan,2025-02-13,2025-02-15,NIST,User Access Review,log_patch_001.pdf,14,Application,2.0
+C0561,In Progress,3,Operations,Mary,2025-03-28,,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,14,Admin System,
+C0562,Completed,3,Risk,Jane,2025-03-16,2025-03-20,HIPAA,Firewall Configuration,access_review.xlsx,7,Application,4.0
+C0563,Completed,9,Finance,Mark,2025-02-08,2025-02-26,NIST,Incident Response,access_review.xlsx,30,Application,18.0
+C0564,Completed,6,Risk,David,2025-02-23,2025-03-02,PCI-DSS,Vulnerability Scan,incident_log.txt,30,Application,7.0
+C0565,Completed,9,Risk,Brian,2025-03-29,2025-04-11,HIPAA,Firewall Configuration,log_patch_001.pdf,7,Database,13.0
+C0566,Failed,5,Finance,Alice,2025-03-16,2025-03-31,NIST,Encryption Control,log_patch_001.pdf,14,Admin System,15.0
+C0567,Completed,2,IT,Brian,2025-01-29,2025-02-21,PCI-DSS,Incident Response,vuln_scan_report.pdf,14,Application,23.0
+C0568,Completed,8,Operations,Mark,2025-02-23,2025-03-17,NIST,Firewall Configuration,access_review.xlsx,14,Application,22.0
+C0569,In Progress,5,Finance,John,2025-03-31,,NIST,Vulnerability Scan,log_patch_001.pdf,30,Admin System,
+C0570,Completed,2,HR,David,2025-01-16,2025-01-17,HIPAA,Encryption Control,incident_log.txt,14,Admin System,1.0
+C0571,Failed,4,IT,Mark,2025-01-20,2025-01-31,HIPAA,Firewall Configuration,access_review.xlsx,30,Admin System,11.0
+C0572,In Progress,9,HR,John,2025-02-15,,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,14,Database,
+C0573,Completed,4,IT,John,2025-03-08,2025-03-18,HIPAA,Vulnerability Scan,incident_log.txt,7,Admin System,10.0
+C0574,Failed,4,Operations,Susan,2025-03-06,2025-03-11,PCI-DSS,Incident Response,firewall_config.png,7,Database,5.0
+C0575,In Progress,2,Operations,Mary,2025-02-27,,NIST,Encryption Control,vuln_scan_report.pdf,30,Application,
+C0576,In Progress,6,Risk,Susan,2025-02-22,,NIST,User Access Review,incident_log.txt,30,Database,
+C0577,Completed,2,HR,David,2025-01-01,2025-01-17,PCI-DSS,Patch Management,log_patch_001.pdf,7,Admin System,16.0
+C0578,In Progress,7,IT,John,2025-03-22,,NIST,Incident Response,firewall_config.png,7,Database,
+C0579,Completed,3,Operations,Jane,2025-03-07,2025-03-18,HIPAA,Encryption Control,vuln_scan_report.pdf,14,Admin System,11.0
+C0580,Completed,3,Finance,Mark,2025-01-29,2025-02-19,NIST,Firewall Configuration,log_patch_001.pdf,7,Database,21.0
+C0581,Completed,5,Operations,Alice,2025-03-25,2025-03-31,HIPAA,Encryption Control,firewall_config.png,30,Application,6.0
+C0582,In Progress,3,Finance,John,2025-03-11,,PCI-DSS,Patch Management,access_review.xlsx,7,Database,
+C0583,Completed,2,IT,Mark,2025-01-08,2025-01-17,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,30,Application,9.0
+C0584,Completed,9,Operations,Jane,2025-01-29,2025-02-11,NIST,Patch Management,incident_log.txt,30,Admin System,13.0
+C0585,Failed,2,Operations,Alice,2025-02-20,2025-03-16,NIST,User Access Review,vuln_scan_report.pdf,14,Application,24.0
+C0586,Completed,2,IT,Susan,2025-02-02,2025-02-10,HIPAA,User Access Review,firewall_config.png,14,Admin System,8.0
+C0587,Completed,8,Operations,Susan,2025-01-03,2025-01-17,HIPAA,Patch Management,log_patch_001.pdf,14,Admin System,14.0
+C0588,Completed,9,Finance,Mary,2025-03-01,2025-03-25,NIST,Incident Response,access_review.xlsx,14,Application,24.0
+C0589,Completed,7,Operations,Mark,2025-02-04,2025-02-05,NIST,Incident Response,vuln_scan_report.pdf,7,Application,1.0
+C0590,Completed,3,HR,John,2025-03-10,2025-03-27,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,14,Database,17.0
+C0591,Completed,9,Risk,Brian,2025-03-17,2025-04-10,PCI-DSS,User Access Review,log_patch_001.pdf,7,Database,24.0
+C0592,Failed,3,Finance,Susan,2025-03-25,2025-03-30,PCI-DSS,Firewall Configuration,access_review.xlsx,14,Application,5.0
+C0593,Completed,5,HR,Susan,2025-01-20,2025-01-22,NIST,User Access Review,firewall_config.png,14,Application,2.0
+C0594,Completed,9,IT,Mary,2025-03-14,2025-04-07,NIST,Patch Management,log_patch_001.pdf,30,Application,24.0
+C0595,In Progress,3,Finance,Alice,2025-02-08,,NIST,Incident Response,firewall_config.png,7,Application,
+C0596,Completed,7,Risk,Mary,2025-01-04,2025-01-13,PCI-DSS,Incident Response,vuln_scan_report.pdf,30,Admin System,9.0
+C0597,Failed,1,Risk,Jane,2025-01-19,2025-01-23,NIST,Patch Management,firewall_config.png,14,Application,4.0
+C0598,Completed,4,IT,John,2025-02-14,2025-03-03,HIPAA,Firewall Configuration,access_review.xlsx,7,Application,17.0
+C0599,Completed,4,IT,Mark,2025-02-12,2025-03-01,NIST,Firewall Configuration,incident_log.txt,14,Application,17.0
+C0600,Completed,7,Finance,David,2025-01-13,2025-02-03,NIST,Encryption Control,access_review.xlsx,30,Application,21.0
+C0601,Completed,8,Operations,David,2025-01-13,2025-01-31,NIST,User Access Review,firewall_config.png,7,Admin System,18.0
+C0602,Completed,1,IT,Mark,2025-03-01,2025-03-17,NIST,Firewall Configuration,log_patch_001.pdf,30,Database,16.0
+C0603,Completed,5,Operations,Alice,2025-02-26,2025-03-06,NIST,Patch Management,vuln_scan_report.pdf,14,Database,8.0
+C0604,Completed,7,HR,Jane,2025-03-27,2025-04-07,HIPAA,Firewall Configuration,incident_log.txt,14,Database,11.0
+C0605,Completed,4,Risk,Susan,2025-02-21,2025-03-14,HIPAA,Incident Response,log_patch_001.pdf,14,Database,21.0
+C0606,Completed,4,Operations,Alice,2025-02-22,2025-03-15,NIST,User Access Review,log_patch_001.pdf,7,Database,21.0
+C0607,Completed,4,Risk,Susan,2025-03-27,2025-04-14,PCI-DSS,Vulnerability Scan,access_review.xlsx,30,Admin System,18.0
+C0608,Completed,6,Operations,Susan,2025-02-12,2025-03-07,NIST,Encryption Control,firewall_config.png,30,Database,23.0
+C0609,Failed,7,HR,David,2025-03-24,2025-04-17,NIST,User Access Review,access_review.xlsx,14,Admin System,24.0
+C0610,Failed,2,IT,Alice,2025-03-13,2025-03-23,NIST,Incident Response,firewall_config.png,30,Admin System,10.0
+C0611,Completed,5,HR,Jane,2025-03-13,2025-03-26,PCI-DSS,Incident Response,access_review.xlsx,7,Database,13.0
+C0612,In Progress,4,IT,Mary,2025-02-11,,PCI-DSS,Incident Response,log_patch_001.pdf,14,Database,
+C0613,Failed,3,IT,Susan,2025-03-31,2025-04-17,PCI-DSS,Incident Response,vuln_scan_report.pdf,14,Database,17.0
+C0614,Completed,7,Risk,Brian,2025-01-26,2025-02-13,HIPAA,Patch Management,firewall_config.png,14,Application,18.0
+C0615,In Progress,6,HR,Brian,2025-01-23,,PCI-DSS,Encryption Control,incident_log.txt,7,Admin System,
+C0616,In Progress,7,Operations,Mary,2025-02-12,,HIPAA,Vulnerability Scan,incident_log.txt,14,Database,
+C0617,Completed,5,HR,Brian,2025-03-18,2025-03-28,HIPAA,Incident Response,log_patch_001.pdf,14,Application,10.0
+C0618,Completed,6,Risk,John,2025-01-28,2025-02-13,PCI-DSS,Incident Response,access_review.xlsx,14,Admin System,16.0
+C0619,In Progress,5,IT,Susan,2025-01-09,,PCI-DSS,Firewall Configuration,access_review.xlsx,14,Application,
+C0620,In Progress,7,Risk,Mary,2025-01-20,,PCI-DSS,Encryption Control,log_patch_001.pdf,30,Application,
+C0621,Completed,2,Finance,Alice,2025-02-25,2025-03-17,HIPAA,User Access Review,incident_log.txt,14,Database,20.0
+C0622,Completed,5,Finance,Susan,2025-03-24,2025-03-29,NIST,Encryption Control,incident_log.txt,7,Admin System,5.0
+C0623,Completed,6,Operations,Mary,2025-02-08,2025-02-21,PCI-DSS,Encryption Control,access_review.xlsx,14,Application,13.0
+C0624,Completed,6,Risk,David,2025-02-20,2025-03-10,PCI-DSS,Vulnerability Scan,firewall_config.png,14,Admin System,18.0
+C0625,Failed,5,Operations,Jane,2025-01-12,2025-01-29,PCI-DSS,Encryption Control,vuln_scan_report.pdf,30,Database,17.0
+C0626,Completed,7,Operations,Alice,2025-03-20,2025-03-29,HIPAA,Vulnerability Scan,firewall_config.png,14,Admin System,9.0
+C0627,Completed,8,Finance,Jane,2025-02-24,2025-03-10,HIPAA,Incident Response,incident_log.txt,30,Application,14.0
+C0628,In Progress,7,Operations,David,2025-03-19,,NIST,Incident Response,firewall_config.png,7,Application,
+C0629,Completed,5,Finance,Susan,2025-01-11,2025-01-28,PCI-DSS,Patch Management,vuln_scan_report.pdf,30,Admin System,17.0
+C0630,Completed,1,IT,Alice,2025-01-26,2025-01-30,HIPAA,Vulnerability Scan,firewall_config.png,14,Application,4.0
+C0631,In Progress,5,Risk,Jane,2025-02-11,,NIST,Vulnerability Scan,firewall_config.png,7,Application,
+C0632,In Progress,2,Operations,Brian,2025-01-27,,PCI-DSS,User Access Review,firewall_config.png,14,Application,
+C0633,Failed,5,Finance,Jane,2025-01-11,2025-01-29,HIPAA,Firewall Configuration,firewall_config.png,30,Database,18.0
+C0634,Failed,5,HR,Mary,2025-02-07,2025-02-27,PCI-DSS,Encryption Control,log_patch_001.pdf,7,Database,20.0
+C0635,Completed,2,Operations,Susan,2025-02-12,2025-03-08,PCI-DSS,User Access Review,incident_log.txt,7,Application,24.0
+C0636,Completed,5,IT,John,2025-01-19,2025-02-12,HIPAA,Vulnerability Scan,vuln_scan_report.pdf,30,Admin System,24.0
+C0637,Failed,4,IT,Jane,2025-03-05,2025-03-20,HIPAA,User Access Review,incident_log.txt,30,Database,15.0
+C0638,Completed,1,HR,Alice,2025-01-06,2025-01-17,HIPAA,Patch Management,log_patch_001.pdf,7,Admin System,11.0
+C0639,Completed,3,Finance,Alice,2025-02-15,2025-02-27,PCI-DSS,Firewall Configuration,log_patch_001.pdf,7,Application,12.0
+C0640,Completed,1,Operations,Mark,2025-02-11,2025-02-20,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,30,Application,9.0
+C0641,Completed,5,Finance,Jane,2025-03-06,2025-03-19,NIST,Vulnerability Scan,log_patch_001.pdf,14,Admin System,13.0
+C0642,Completed,4,IT,Susan,2025-03-13,2025-03-28,PCI-DSS,Encryption Control,firewall_config.png,7,Database,15.0
+C0643,Completed,7,Finance,Susan,2025-02-28,2025-03-15,HIPAA,Firewall Configuration,incident_log.txt,30,Admin System,15.0
+C0644,Completed,5,IT,David,2025-02-21,2025-02-26,PCI-DSS,Patch Management,access_review.xlsx,14,Admin System,5.0
+C0645,Completed,4,Finance,Mark,2025-02-16,2025-03-11,NIST,Incident Response,vuln_scan_report.pdf,7,Application,23.0
+C0646,In Progress,2,HR,Jane,2025-01-07,,NIST,User Access Review,log_patch_001.pdf,7,Database,
+C0647,Failed,4,Risk,Brian,2025-01-11,2025-01-30,HIPAA,Encryption Control,incident_log.txt,30,Admin System,19.0
+C0648,Failed,2,HR,David,2025-03-02,2025-03-22,HIPAA,Vulnerability Scan,log_patch_001.pdf,14,Database,20.0
+C0649,In Progress,8,HR,Mark,2025-03-09,,NIST,Incident Response,log_patch_001.pdf,7,Application,
+C0650,Completed,3,Risk,Jane,2025-01-25,2025-02-08,NIST,Patch Management,log_patch_001.pdf,14,Database,14.0
+C0651,Completed,9,Risk,Jane,2025-01-12,2025-01-29,NIST,Firewall Configuration,log_patch_001.pdf,14,Application,17.0
+C0652,Failed,4,Operations,David,2025-01-26,2025-02-13,HIPAA,User Access Review,log_patch_001.pdf,7,Database,18.0
+C0653,Failed,6,Operations,Brian,2025-01-12,2025-02-02,NIST,Encryption Control,vuln_scan_report.pdf,14,Admin System,21.0
+C0654,In Progress,5,HR,Mark,2025-02-12,,NIST,Vulnerability Scan,incident_log.txt,7,Application,
+C0655,Completed,1,HR,Jane,2025-02-20,2025-02-23,HIPAA,Vulnerability Scan,log_patch_001.pdf,14,Admin System,3.0
+C0656,Completed,9,IT,Jane,2025-02-06,2025-02-08,PCI-DSS,Incident Response,log_patch_001.pdf,7,Application,2.0
+C0657,Completed,1,IT,Mark,2025-02-15,2025-02-16,PCI-DSS,Incident Response,log_patch_001.pdf,30,Database,1.0
+C0658,Completed,8,Operations,John,2025-02-22,2025-03-04,NIST,User Access Review,log_patch_001.pdf,7,Database,10.0
+C0659,Failed,9,Operations,David,2025-03-29,2025-04-17,PCI-DSS,Firewall Configuration,firewall_config.png,7,Application,19.0
+C0660,Failed,9,IT,David,2025-03-21,2025-04-07,PCI-DSS,Patch Management,firewall_config.png,7,Application,17.0
+C0661,Completed,1,IT,Alice,2025-01-13,2025-01-25,PCI-DSS,Firewall Configuration,access_review.xlsx,14,Application,12.0
+C0662,In Progress,2,Finance,Brian,2025-03-30,,PCI-DSS,Firewall Configuration,log_patch_001.pdf,30,Database,
+C0663,Failed,1,Finance,Mary,2025-02-23,2025-02-24,NIST,Firewall Configuration,access_review.xlsx,14,Application,1.0
+C0664,Completed,2,IT,John,2025-02-26,2025-03-10,PCI-DSS,User Access Review,vuln_scan_report.pdf,14,Application,12.0
+C0665,Completed,8,Finance,Mark,2025-01-04,2025-01-21,PCI-DSS,User Access Review,access_review.xlsx,7,Admin System,17.0
+C0666,Completed,5,Risk,Mark,2025-03-16,2025-04-09,HIPAA,Patch Management,incident_log.txt,14,Application,24.0
+C0667,Completed,7,Operations,Mark,2025-02-18,2025-02-21,NIST,Firewall Configuration,firewall_config.png,7,Admin System,3.0
+C0668,Completed,2,Operations,John,2025-01-07,2025-01-18,HIPAA,User Access Review,firewall_config.png,30,Admin System,11.0
+C0669,Completed,8,IT,Jane,2025-01-11,2025-01-28,HIPAA,Patch Management,log_patch_001.pdf,14,Admin System,17.0
+C0670,Completed,6,HR,Mark,2025-02-23,2025-03-18,NIST,Vulnerability Scan,log_patch_001.pdf,14,Database,23.0
+C0671,Completed,8,IT,Mark,2025-03-28,2025-03-31,PCI-DSS,Patch Management,vuln_scan_report.pdf,14,Admin System,3.0
+C0672,In Progress,1,Finance,Brian,2025-02-14,,HIPAA,Firewall Configuration,vuln_scan_report.pdf,7,Application,
+C0673,Completed,1,HR,Susan,2025-01-23,2025-01-31,NIST,Encryption Control,incident_log.txt,7,Database,8.0
+C0674,Failed,7,Finance,Susan,2025-01-28,2025-02-17,PCI-DSS,Firewall Configuration,log_patch_001.pdf,14,Database,20.0
+C0675,Completed,8,Risk,Alice,2025-02-26,2025-03-02,NIST,Encryption Control,log_patch_001.pdf,14,Database,4.0
+C0676,In Progress,3,Finance,Alice,2025-01-26,,HIPAA,Patch Management,vuln_scan_report.pdf,30,Database,
+C0677,Completed,5,Risk,Mark,2025-01-25,2025-02-15,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,30,Database,21.0
+C0678,Completed,1,Risk,Brian,2025-02-23,2025-03-17,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,30,Database,22.0
+C0679,In Progress,7,Finance,Mark,2025-01-29,,NIST,User Access Review,firewall_config.png,30,Database,
+C0680,In Progress,5,Finance,Alice,2025-03-24,,PCI-DSS,Vulnerability Scan,access_review.xlsx,30,Admin System,
+C0681,In Progress,8,Risk,John,2025-02-05,,HIPAA,Incident Response,access_review.xlsx,7,Application,
+C0682,Completed,8,HR,John,2025-01-14,2025-01-21,HIPAA,Patch Management,log_patch_001.pdf,30,Application,7.0
+C0683,Completed,9,Risk,Jane,2025-03-19,2025-04-02,HIPAA,User Access Review,firewall_config.png,30,Admin System,14.0
+C0684,Failed,7,Operations,Mary,2025-02-04,2025-02-18,NIST,Vulnerability Scan,vuln_scan_report.pdf,14,Admin System,14.0
+C0685,In Progress,1,Risk,Susan,2025-01-30,,PCI-DSS,Patch Management,log_patch_001.pdf,7,Database,
+C0686,Failed,3,HR,Brian,2025-01-17,2025-01-21,PCI-DSS,Firewall Configuration,firewall_config.png,30,Database,4.0
+C0687,Failed,8,Operations,David,2025-03-08,2025-03-24,PCI-DSS,Vulnerability Scan,incident_log.txt,30,Admin System,16.0
+C0688,Completed,3,IT,Susan,2025-03-21,2025-04-14,HIPAA,Encryption Control,firewall_config.png,30,Database,24.0
+C0689,In Progress,8,IT,David,2025-01-30,,PCI-DSS,Patch Management,log_patch_001.pdf,14,Application,
+C0690,Completed,1,HR,Mary,2025-02-14,2025-03-08,HIPAA,User Access Review,access_review.xlsx,14,Application,22.0
+C0691,Completed,5,Risk,Mary,2025-03-20,2025-03-21,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,14,Database,1.0
+C0692,Completed,4,Finance,Mark,2025-03-30,2025-04-16,HIPAA,Incident Response,incident_log.txt,30,Database,17.0
+C0693,Failed,5,HR,Alice,2025-02-20,2025-03-02,PCI-DSS,Firewall Configuration,firewall_config.png,14,Database,10.0
+C0694,Completed,8,Operations,Mary,2025-02-16,2025-03-10,NIST,Vulnerability Scan,log_patch_001.pdf,30,Application,22.0
+C0695,Completed,4,Operations,Mary,2025-02-22,2025-03-10,NIST,Encryption Control,log_patch_001.pdf,7,Database,16.0
+C0696,Failed,4,IT,David,2025-03-05,2025-03-21,HIPAA,Firewall Configuration,vuln_scan_report.pdf,30,Admin System,16.0
+C0697,Completed,3,Operations,Alice,2025-02-07,2025-02-15,HIPAA,Incident Response,log_patch_001.pdf,14,Database,8.0
+C0698,Failed,7,HR,Mary,2025-03-05,2025-03-12,PCI-DSS,User Access Review,log_patch_001.pdf,7,Admin System,7.0
+C0699,Completed,3,Operations,Susan,2025-03-28,2025-04-03,PCI-DSS,Patch Management,vuln_scan_report.pdf,30,Database,6.0
+C0700,Completed,3,HR,Jane,2025-03-30,2025-04-15,NIST,Encryption Control,incident_log.txt,7,Database,16.0
+C0701,Failed,5,Finance,Mary,2025-01-07,2025-01-27,PCI-DSS,Incident Response,access_review.xlsx,7,Application,20.0
+C0702,Completed,5,IT,Jane,2025-01-22,2025-02-07,HIPAA,Vulnerability Scan,access_review.xlsx,7,Admin System,16.0
+C0703,Completed,6,Operations,Alice,2025-03-22,2025-03-29,HIPAA,Vulnerability Scan,firewall_config.png,30,Admin System,7.0
+C0704,Completed,8,HR,Mark,2025-03-23,2025-04-01,HIPAA,Vulnerability Scan,incident_log.txt,14,Admin System,9.0
+C0705,Completed,6,Risk,Brian,2025-02-10,2025-02-24,HIPAA,Encryption Control,firewall_config.png,30,Application,14.0
+C0706,In Progress,1,IT,Alice,2025-03-15,,HIPAA,Firewall Configuration,access_review.xlsx,14,Admin System,
+C0707,Completed,8,Finance,David,2025-01-10,2025-01-21,NIST,Encryption Control,vuln_scan_report.pdf,30,Application,11.0
+C0708,In Progress,8,HR,Brian,2025-02-26,,NIST,Vulnerability Scan,log_patch_001.pdf,30,Database,
+C0709,Completed,9,Finance,Susan,2025-01-07,2025-01-21,HIPAA,Incident Response,access_review.xlsx,30,Database,14.0
+C0710,Failed,9,Finance,John,2025-02-19,2025-02-26,PCI-DSS,Patch Management,incident_log.txt,14,Admin System,7.0
+C0711,In Progress,2,Operations,Jane,2025-02-21,,HIPAA,Patch Management,access_review.xlsx,30,Database,
+C0712,Failed,2,Operations,Jane,2025-02-02,2025-02-03,NIST,Encryption Control,incident_log.txt,7,Database,1.0
+C0713,Completed,3,HR,Jane,2025-01-01,2025-01-14,HIPAA,Vulnerability Scan,incident_log.txt,30,Admin System,13.0
+C0714,Completed,1,Risk,Alice,2025-02-22,2025-03-14,NIST,User Access Review,incident_log.txt,7,Database,20.0
+C0715,Completed,4,HR,Jane,2025-03-01,2025-03-04,NIST,Encryption Control,firewall_config.png,14,Admin System,3.0
+C0716,In Progress,4,Risk,Mark,2025-02-03,,HIPAA,Vulnerability Scan,vuln_scan_report.pdf,14,Admin System,
+C0717,In Progress,9,Finance,Jane,2025-01-04,,HIPAA,Firewall Configuration,access_review.xlsx,30,Database,
+C0718,In Progress,9,IT,David,2025-01-17,,PCI-DSS,Patch Management,vuln_scan_report.pdf,30,Database,
+C0719,Completed,9,HR,Susan,2025-01-04,2025-01-24,NIST,Patch Management,log_patch_001.pdf,30,Database,20.0
+C0720,In Progress,7,HR,Jane,2025-02-12,,PCI-DSS,Patch Management,access_review.xlsx,7,Database,
+C0721,In Progress,2,Risk,Jane,2025-03-31,,HIPAA,User Access Review,vuln_scan_report.pdf,14,Database,
+C0722,Completed,5,Finance,Brian,2025-01-04,2025-01-08,NIST,Vulnerability Scan,vuln_scan_report.pdf,7,Application,4.0
+C0723,Completed,4,Finance,Susan,2025-01-01,2025-01-12,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,7,Database,11.0
+C0724,In Progress,8,Risk,Jane,2025-03-12,,PCI-DSS,Vulnerability Scan,incident_log.txt,30,Application,
+C0725,Failed,2,Finance,Alice,2025-02-19,2025-02-21,PCI-DSS,Vulnerability Scan,access_review.xlsx,30,Admin System,2.0
+C0726,In Progress,6,Operations,Mary,2025-03-14,,HIPAA,User Access Review,access_review.xlsx,7,Database,
+C0727,Completed,5,IT,Mark,2025-03-02,2025-03-16,HIPAA,Incident Response,log_patch_001.pdf,7,Database,14.0
+C0728,In Progress,2,HR,Alice,2025-02-04,,HIPAA,Encryption Control,incident_log.txt,30,Database,
+C0729,Completed,1,IT,John,2025-01-08,2025-01-20,NIST,Encryption Control,access_review.xlsx,30,Admin System,12.0
+C0730,Completed,8,HR,Alice,2025-01-24,2025-02-10,HIPAA,Vulnerability Scan,access_review.xlsx,7,Application,17.0
+C0731,Completed,2,Operations,Brian,2025-03-24,2025-04-05,NIST,Firewall Configuration,access_review.xlsx,30,Application,12.0
+C0732,In Progress,7,Finance,Brian,2025-02-05,,PCI-DSS,Patch Management,incident_log.txt,30,Database,
+C0733,Failed,9,Risk,Jane,2025-02-19,2025-03-03,PCI-DSS,User Access Review,log_patch_001.pdf,7,Database,12.0
+C0734,Failed,9,Operations,Alice,2025-02-12,2025-02-13,HIPAA,Firewall Configuration,access_review.xlsx,7,Database,1.0
+C0735,Completed,8,IT,Brian,2025-01-27,2025-02-09,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,14,Database,13.0
+C0736,In Progress,9,Risk,Mary,2025-02-01,,HIPAA,Vulnerability Scan,incident_log.txt,7,Admin System,
+C0737,Completed,2,Finance,Susan,2025-03-19,2025-04-02,NIST,User Access Review,firewall_config.png,30,Database,14.0
+C0738,In Progress,6,Operations,Alice,2025-01-18,,PCI-DSS,Encryption Control,log_patch_001.pdf,7,Admin System,
+C0739,Completed,4,Risk,Mark,2025-01-28,2025-02-21,HIPAA,Patch Management,vuln_scan_report.pdf,7,Database,24.0
+C0740,Completed,4,Operations,Mary,2025-01-29,2025-01-31,PCI-DSS,Encryption Control,access_review.xlsx,7,Application,2.0
+C0741,Completed,5,Operations,Jane,2025-01-16,2025-01-28,PCI-DSS,Firewall Configuration,firewall_config.png,14,Application,12.0
+C0742,Completed,3,Finance,Susan,2025-02-16,2025-03-09,HIPAA,Patch Management,log_patch_001.pdf,14,Database,21.0
+C0743,In Progress,1,HR,Mark,2025-02-28,,PCI-DSS,Incident Response,incident_log.txt,30,Database,
+C0744,Failed,8,Risk,Jane,2025-01-31,2025-02-16,PCI-DSS,Firewall Configuration,firewall_config.png,14,Admin System,16.0
+C0745,Completed,5,Finance,Mark,2025-01-04,2025-01-08,PCI-DSS,Encryption Control,firewall_config.png,7,Database,4.0
+C0746,In Progress,3,Operations,Jane,2025-02-06,,PCI-DSS,Encryption Control,vuln_scan_report.pdf,14,Database,
+C0747,Completed,7,Finance,Mark,2025-01-17,2025-01-25,NIST,Vulnerability Scan,log_patch_001.pdf,7,Database,8.0
+C0748,Failed,7,HR,Susan,2025-02-08,2025-02-10,PCI-DSS,Encryption Control,vuln_scan_report.pdf,14,Application,2.0
+C0749,In Progress,1,Risk,Mary,2025-02-17,,PCI-DSS,User Access Review,vuln_scan_report.pdf,14,Admin System,
+C0750,Failed,9,HR,Mark,2025-02-15,2025-02-25,HIPAA,Firewall Configuration,access_review.xlsx,14,Application,10.0
+C0751,Completed,2,IT,Mark,2025-03-31,2025-04-09,NIST,Patch Management,incident_log.txt,7,Admin System,9.0
+C0752,In Progress,5,Risk,David,2025-02-17,,HIPAA,Encryption Control,firewall_config.png,14,Application,
+C0753,Failed,5,HR,Alice,2025-02-08,2025-03-03,HIPAA,Vulnerability Scan,log_patch_001.pdf,7,Database,23.0
+C0754,Completed,8,Operations,Susan,2025-01-04,2025-01-19,HIPAA,Vulnerability Scan,incident_log.txt,7,Application,15.0
+C0755,Completed,8,Risk,Jane,2025-01-30,2025-02-12,NIST,Encryption Control,incident_log.txt,30,Application,13.0
+C0756,In Progress,7,Risk,Susan,2025-01-30,,HIPAA,User Access Review,log_patch_001.pdf,14,Admin System,
+C0757,Failed,7,Finance,Brian,2025-01-22,2025-02-14,HIPAA,Vulnerability Scan,incident_log.txt,30,Admin System,23.0
+C0758,Failed,6,Operations,Jane,2025-03-16,2025-04-02,HIPAA,Patch Management,access_review.xlsx,30,Application,17.0
+C0759,In Progress,6,IT,Susan,2025-03-07,,PCI-DSS,Firewall Configuration,incident_log.txt,7,Admin System,
+C0760,In Progress,9,HR,Mary,2025-01-12,,HIPAA,Incident Response,access_review.xlsx,14,Admin System,
+C0761,Completed,6,Finance,Jane,2025-02-05,2025-02-21,NIST,User Access Review,firewall_config.png,7,Admin System,16.0
+C0762,Completed,2,HR,Jane,2025-01-18,2025-01-20,NIST,Vulnerability Scan,firewall_config.png,7,Admin System,2.0
+C0763,Completed,2,IT,Susan,2025-03-31,2025-04-20,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,14,Admin System,20.0
+C0764,In Progress,5,IT,Jane,2025-02-22,,NIST,Incident Response,access_review.xlsx,7,Application,
+C0765,Completed,4,Risk,David,2025-03-12,2025-04-01,NIST,Encryption Control,firewall_config.png,14,Admin System,20.0
+C0766,Failed,2,IT,Alice,2025-01-01,2025-01-15,PCI-DSS,Encryption Control,incident_log.txt,14,Database,14.0
+C0767,In Progress,3,HR,Jane,2025-02-27,,HIPAA,Patch Management,log_patch_001.pdf,7,Application,
+C0768,In Progress,7,Operations,Alice,2025-03-31,,PCI-DSS,Incident Response,log_patch_001.pdf,7,Application,
+C0769,Completed,8,Operations,Susan,2025-03-28,2025-03-31,HIPAA,Encryption Control,access_review.xlsx,30,Application,3.0
+C0770,In Progress,6,Risk,Mark,2025-03-31,,HIPAA,Encryption Control,vuln_scan_report.pdf,7,Admin System,
+C0771,Completed,5,HR,John,2025-01-06,2025-01-29,NIST,Vulnerability Scan,incident_log.txt,14,Database,23.0
+C0772,In Progress,1,HR,John,2025-03-11,,PCI-DSS,Patch Management,access_review.xlsx,30,Admin System,
+C0773,Completed,8,IT,Mark,2025-02-13,2025-02-25,NIST,Firewall Configuration,log_patch_001.pdf,14,Application,12.0
+C0774,Completed,3,HR,Mark,2025-03-13,2025-03-21,NIST,Encryption Control,access_review.xlsx,30,Application,8.0
+C0775,In Progress,6,Finance,Mark,2025-01-24,,HIPAA,User Access Review,incident_log.txt,7,Application,
+C0776,Completed,3,IT,Mary,2025-03-27,2025-03-29,NIST,User Access Review,firewall_config.png,7,Application,2.0
+C0777,Completed,7,Finance,John,2025-01-19,2025-01-23,PCI-DSS,Firewall Configuration,incident_log.txt,7,Admin System,4.0
+C0778,In Progress,7,Risk,Mark,2025-01-18,,NIST,Incident Response,firewall_config.png,14,Database,
+C0779,In Progress,9,Operations,Mary,2025-01-30,,NIST,Patch Management,firewall_config.png,30,Database,
+C0780,Failed,5,Risk,Brian,2025-02-11,2025-02-25,HIPAA,Vulnerability Scan,firewall_config.png,14,Application,14.0
+C0781,Failed,8,Operations,Jane,2025-02-02,2025-02-18,PCI-DSS,User Access Review,access_review.xlsx,30,Database,16.0
+C0782,Failed,8,Risk,Mary,2025-03-15,2025-04-03,NIST,User Access Review,log_patch_001.pdf,7,Application,19.0
+C0783,Completed,1,HR,John,2025-01-12,2025-01-14,HIPAA,Firewall Configuration,access_review.xlsx,14,Application,2.0
+C0784,Completed,5,Finance,Susan,2025-01-27,2025-02-08,NIST,Incident Response,log_patch_001.pdf,7,Database,12.0
+C0785,Completed,3,Operations,Brian,2025-02-08,2025-02-22,PCI-DSS,Incident Response,incident_log.txt,14,Application,14.0
+C0786,In Progress,1,IT,John,2025-01-09,,NIST,Firewall Configuration,vuln_scan_report.pdf,7,Database,
+C0787,Failed,4,Finance,Jane,2025-01-21,2025-01-27,NIST,User Access Review,incident_log.txt,14,Application,6.0
+C0788,Completed,8,IT,Mary,2025-03-17,2025-03-30,HIPAA,Patch Management,access_review.xlsx,14,Database,13.0
+C0789,Completed,3,Finance,David,2025-01-29,2025-02-02,NIST,User Access Review,access_review.xlsx,30,Application,4.0
+C0790,In Progress,2,Finance,Alice,2025-02-02,,HIPAA,Incident Response,log_patch_001.pdf,7,Database,
+C0791,Completed,9,Risk,Jane,2025-03-03,2025-03-25,PCI-DSS,Vulnerability Scan,access_review.xlsx,30,Application,22.0
+C0792,Failed,5,Operations,John,2025-01-15,2025-02-02,NIST,User Access Review,firewall_config.png,30,Application,18.0
+C0793,Failed,7,Operations,Mark,2025-01-02,2025-01-14,PCI-DSS,Patch Management,access_review.xlsx,7,Application,12.0
+C0794,Failed,2,Finance,Mary,2025-02-21,2025-03-13,PCI-DSS,Encryption Control,log_patch_001.pdf,14,Database,20.0
+C0795,Completed,9,HR,Mark,2025-02-13,2025-03-07,NIST,User Access Review,log_patch_001.pdf,30,Admin System,22.0
+C0796,In Progress,9,HR,Mark,2025-02-23,,HIPAA,Firewall Configuration,firewall_config.png,7,Application,
+C0797,In Progress,4,IT,Mark,2025-01-18,,PCI-DSS,Encryption Control,log_patch_001.pdf,14,Application,
+C0798,Failed,4,IT,Mark,2025-01-03,2025-01-24,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,30,Database,21.0
+C0799,Failed,6,Risk,Mark,2025-01-07,2025-01-26,NIST,Firewall Configuration,incident_log.txt,30,Application,19.0
+C0800,In Progress,6,Finance,Brian,2025-02-12,,NIST,Firewall Configuration,access_review.xlsx,30,Application,
+C0801,In Progress,1,IT,John,2025-03-23,,NIST,User Access Review,vuln_scan_report.pdf,14,Application,
+C0802,Completed,9,IT,Jane,2025-02-07,2025-02-15,NIST,Incident Response,access_review.xlsx,30,Application,8.0
+C0803,Failed,2,Finance,John,2025-02-06,2025-02-13,NIST,Encryption Control,vuln_scan_report.pdf,14,Admin System,7.0
+C0804,Failed,5,Risk,Jane,2025-02-27,2025-03-15,NIST,Patch Management,access_review.xlsx,30,Admin System,16.0
+C0805,Completed,9,IT,Alice,2025-02-02,2025-02-21,HIPAA,Incident Response,firewall_config.png,7,Application,19.0
+C0806,In Progress,4,Risk,Mary,2025-02-28,,PCI-DSS,User Access Review,log_patch_001.pdf,30,Application,
+C0807,In Progress,3,Operations,David,2025-01-11,,HIPAA,Firewall Configuration,log_patch_001.pdf,7,Application,
+C0808,In Progress,7,Risk,Brian,2025-03-09,,HIPAA,Patch Management,firewall_config.png,7,Admin System,
+C0809,Completed,6,HR,Mary,2025-03-23,2025-03-29,NIST,Encryption Control,vuln_scan_report.pdf,7,Admin System,6.0
+C0810,Completed,8,HR,Brian,2025-03-09,2025-03-29,PCI-DSS,Incident Response,incident_log.txt,14,Database,20.0
+C0811,In Progress,3,Risk,Jane,2025-03-29,,HIPAA,Vulnerability Scan,vuln_scan_report.pdf,7,Database,
+C0812,In Progress,5,HR,John,2025-01-22,,NIST,Incident Response,log_patch_001.pdf,30,Application,
+C0813,Completed,4,Operations,Mark,2025-03-07,2025-03-28,NIST,Patch Management,incident_log.txt,14,Application,21.0
+C0814,In Progress,4,Finance,Alice,2025-02-13,,PCI-DSS,User Access Review,access_review.xlsx,7,Admin System,
+C0815,In Progress,4,HR,Alice,2025-01-06,,HIPAA,Encryption Control,incident_log.txt,14,Application,
+C0816,Failed,8,HR,Susan,2025-02-11,2025-02-22,HIPAA,Patch Management,vuln_scan_report.pdf,14,Application,11.0
+C0817,Failed,6,Risk,David,2025-01-25,2025-01-30,HIPAA,Firewall Configuration,firewall_config.png,14,Admin System,5.0
+C0818,Completed,3,Operations,Alice,2025-02-26,2025-03-14,NIST,Encryption Control,access_review.xlsx,30,Admin System,16.0
+C0819,Completed,5,Finance,Mark,2025-03-26,2025-04-02,PCI-DSS,Incident Response,vuln_scan_report.pdf,7,Admin System,7.0
+C0820,Completed,6,Risk,John,2025-02-24,2025-03-01,PCI-DSS,Patch Management,access_review.xlsx,14,Admin System,5.0
+C0821,In Progress,5,Risk,David,2025-01-16,,HIPAA,Incident Response,incident_log.txt,14,Database,
+C0822,Completed,6,Operations,Jane,2025-01-14,2025-01-25,NIST,Incident Response,log_patch_001.pdf,14,Admin System,11.0
+C0823,Completed,8,Finance,Mary,2025-02-08,2025-02-23,HIPAA,Incident Response,vuln_scan_report.pdf,7,Admin System,15.0
+C0824,Completed,7,Operations,Jane,2025-01-28,2025-01-31,PCI-DSS,User Access Review,firewall_config.png,14,Application,3.0
+C0825,Failed,5,Finance,Mark,2025-02-20,2025-02-25,NIST,Incident Response,incident_log.txt,14,Application,5.0
+C0826,In Progress,6,Operations,Mark,2025-02-18,,HIPAA,Firewall Configuration,vuln_scan_report.pdf,30,Application,
+C0827,Completed,4,Risk,Alice,2025-01-09,2025-02-01,HIPAA,Firewall Configuration,firewall_config.png,7,Database,23.0
+C0828,Completed,9,Risk,David,2025-02-27,2025-03-20,NIST,Encryption Control,vuln_scan_report.pdf,30,Admin System,21.0
+C0829,In Progress,4,IT,John,2025-02-14,,PCI-DSS,Vulnerability Scan,incident_log.txt,7,Admin System,
+C0830,Completed,1,HR,Jane,2025-01-22,2025-01-27,NIST,Incident Response,vuln_scan_report.pdf,7,Database,5.0
+C0831,Completed,7,Operations,Susan,2025-02-01,2025-02-10,HIPAA,Incident Response,access_review.xlsx,7,Admin System,9.0
+C0832,Completed,7,IT,Jane,2025-03-10,2025-03-25,HIPAA,Patch Management,incident_log.txt,30,Application,15.0
+C0833,Completed,4,HR,Brian,2025-03-28,2025-03-31,HIPAA,User Access Review,vuln_scan_report.pdf,30,Database,3.0
+C0834,Completed,3,Operations,Brian,2025-03-10,2025-03-16,HIPAA,Vulnerability Scan,log_patch_001.pdf,30,Admin System,6.0
+C0835,Completed,8,Finance,John,2025-02-11,2025-02-28,PCI-DSS,Encryption Control,vuln_scan_report.pdf,30,Database,17.0
+C0836,Completed,5,HR,John,2025-02-22,2025-03-15,PCI-DSS,Vulnerability Scan,access_review.xlsx,14,Database,21.0
+C0837,In Progress,7,Risk,Brian,2025-02-28,,HIPAA,Incident Response,firewall_config.png,14,Admin System,
+C0838,Completed,4,IT,Susan,2025-03-15,2025-03-23,PCI-DSS,Patch Management,firewall_config.png,14,Application,8.0
+C0839,Failed,4,HR,David,2025-02-08,2025-03-01,PCI-DSS,User Access Review,firewall_config.png,7,Admin System,21.0
+C0840,Failed,8,HR,Brian,2025-01-15,2025-01-26,PCI-DSS,Encryption Control,log_patch_001.pdf,14,Admin System,11.0
+C0841,Completed,8,Risk,John,2025-03-12,2025-03-18,HIPAA,Vulnerability Scan,access_review.xlsx,7,Application,6.0
+C0842,Failed,2,Operations,Alice,2025-01-29,2025-02-06,NIST,Encryption Control,incident_log.txt,30,Admin System,8.0
+C0843,Completed,2,Finance,Mary,2025-01-03,2025-01-13,NIST,Incident Response,firewall_config.png,7,Admin System,10.0
+C0844,In Progress,3,Risk,Susan,2025-03-24,,NIST,Encryption Control,access_review.xlsx,7,Admin System,
+C0845,Completed,3,Finance,Mark,2025-01-10,2025-02-03,HIPAA,Patch Management,vuln_scan_report.pdf,14,Database,24.0
+C0846,Completed,1,Operations,Susan,2025-01-29,2025-02-01,PCI-DSS,Encryption Control,log_patch_001.pdf,30,Database,3.0
+C0847,Completed,3,HR,Alice,2025-03-20,2025-04-12,PCI-DSS,Firewall Configuration,access_review.xlsx,30,Database,23.0
+C0848,In Progress,6,Finance,Alice,2025-02-04,,HIPAA,Patch Management,access_review.xlsx,14,Admin System,
+C0849,Failed,8,IT,Mark,2025-01-06,2025-01-20,HIPAA,Vulnerability Scan,incident_log.txt,30,Application,14.0
+C0850,Failed,6,IT,Jane,2025-01-12,2025-02-04,NIST,User Access Review,access_review.xlsx,30,Database,23.0
+C0851,Completed,5,Risk,John,2025-02-07,2025-02-21,NIST,User Access Review,incident_log.txt,30,Application,14.0
+C0852,In Progress,4,Operations,Brian,2025-03-18,,HIPAA,Incident Response,log_patch_001.pdf,14,Admin System,
+C0853,Completed,3,Risk,Jane,2025-01-19,2025-01-29,NIST,Incident Response,log_patch_001.pdf,30,Database,10.0
+C0854,In Progress,4,Risk,David,2025-03-08,,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,7,Admin System,
+C0855,Completed,7,Risk,Susan,2025-01-08,2025-01-20,HIPAA,Vulnerability Scan,incident_log.txt,7,Application,12.0
+C0856,Completed,1,IT,Mark,2025-01-08,2025-01-14,HIPAA,User Access Review,incident_log.txt,30,Database,6.0
+C0857,Completed,7,IT,Susan,2025-03-25,2025-04-06,PCI-DSS,User Access Review,firewall_config.png,14,Database,12.0
+C0858,Completed,1,Risk,Jane,2025-02-16,2025-03-11,PCI-DSS,User Access Review,firewall_config.png,14,Database,23.0
+C0859,Failed,2,IT,Alice,2025-01-04,2025-01-18,PCI-DSS,User Access Review,vuln_scan_report.pdf,14,Database,14.0
+C0860,Completed,4,Operations,Brian,2025-02-20,2025-02-22,NIST,Encryption Control,log_patch_001.pdf,30,Application,2.0
+C0861,In Progress,1,Risk,Susan,2025-03-26,,HIPAA,Vulnerability Scan,firewall_config.png,30,Database,
+C0862,Completed,9,IT,David,2025-03-08,2025-03-17,NIST,Patch Management,access_review.xlsx,7,Admin System,9.0
+C0863,Failed,6,Finance,Alice,2025-02-14,2025-02-24,PCI-DSS,Patch Management,log_patch_001.pdf,14,Database,10.0
+C0864,Completed,1,Risk,David,2025-01-08,2025-01-25,NIST,Firewall Configuration,access_review.xlsx,7,Application,17.0
+C0865,Completed,1,Risk,Brian,2025-03-28,2025-04-14,PCI-DSS,Encryption Control,incident_log.txt,7,Database,17.0
+C0866,Failed,6,Operations,Susan,2025-01-16,2025-01-19,NIST,User Access Review,log_patch_001.pdf,14,Application,3.0
+C0867,Completed,4,HR,Mary,2025-03-18,2025-04-06,NIST,User Access Review,vuln_scan_report.pdf,30,Application,19.0
+C0868,Completed,4,HR,Jane,2025-03-08,2025-03-09,PCI-DSS,Incident Response,incident_log.txt,30,Admin System,1.0
+C0869,In Progress,6,Operations,Susan,2025-01-09,,NIST,Incident Response,incident_log.txt,7,Database,
+C0870,In Progress,7,Operations,Jane,2025-03-01,,HIPAA,Firewall Configuration,access_review.xlsx,7,Database,
+C0871,Completed,9,Operations,Brian,2025-03-19,2025-03-31,NIST,User Access Review,incident_log.txt,7,Database,12.0
+C0872,Completed,5,HR,Susan,2025-03-18,2025-03-25,NIST,Firewall Configuration,firewall_config.png,7,Admin System,7.0
+C0873,Failed,9,Operations,Jane,2025-03-12,2025-03-16,HIPAA,Encryption Control,log_patch_001.pdf,14,Admin System,4.0
+C0874,Completed,4,IT,Mark,2025-01-15,2025-01-25,PCI-DSS,Patch Management,firewall_config.png,7,Application,10.0
+C0875,Completed,2,Risk,Jane,2025-03-12,2025-03-25,HIPAA,User Access Review,access_review.xlsx,7,Application,13.0
+C0876,Completed,3,Risk,Susan,2025-02-10,2025-02-12,NIST,Vulnerability Scan,access_review.xlsx,30,Application,2.0
+C0877,In Progress,1,Finance,John,2025-01-22,,PCI-DSS,Encryption Control,log_patch_001.pdf,30,Admin System,
+C0878,Failed,6,Finance,Susan,2025-01-24,2025-02-03,NIST,User Access Review,incident_log.txt,30,Admin System,10.0
+C0879,Completed,6,Risk,Susan,2025-02-13,2025-03-06,NIST,Vulnerability Scan,vuln_scan_report.pdf,14,Admin System,21.0
+C0880,Completed,1,IT,Jane,2025-01-01,2025-01-23,HIPAA,Incident Response,access_review.xlsx,14,Application,22.0
+C0881,Completed,3,HR,David,2025-01-10,2025-01-14,HIPAA,Firewall Configuration,log_patch_001.pdf,30,Admin System,4.0
+C0882,Failed,5,HR,Mary,2025-03-21,2025-04-08,PCI-DSS,Incident Response,vuln_scan_report.pdf,30,Application,18.0
+C0883,Completed,3,IT,David,2025-03-13,2025-03-18,PCI-DSS,Patch Management,incident_log.txt,7,Application,5.0
+C0884,Completed,3,HR,Jane,2025-02-25,2025-03-16,PCI-DSS,Incident Response,access_review.xlsx,7,Database,19.0
+C0885,In Progress,3,Operations,David,2025-03-30,,NIST,User Access Review,log_patch_001.pdf,14,Database,
+C0886,Completed,5,Risk,Alice,2025-02-19,2025-02-21,HIPAA,Vulnerability Scan,log_patch_001.pdf,14,Database,2.0
+C0887,Failed,5,Risk,John,2025-01-12,2025-01-24,HIPAA,Incident Response,log_patch_001.pdf,7,Application,12.0
+C0888,Completed,4,IT,David,2025-03-30,2025-04-16,HIPAA,User Access Review,access_review.xlsx,30,Database,17.0
+C0889,Completed,1,HR,Mark,2025-03-22,2025-04-01,PCI-DSS,Patch Management,vuln_scan_report.pdf,7,Database,10.0
+C0890,Completed,5,Finance,Brian,2025-03-01,2025-03-03,HIPAA,Vulnerability Scan,log_patch_001.pdf,14,Database,2.0
+C0891,In Progress,5,Finance,Mark,2025-01-26,,HIPAA,Incident Response,incident_log.txt,14,Admin System,
+C0892,In Progress,4,HR,Brian,2025-03-19,,HIPAA,Firewall Configuration,log_patch_001.pdf,7,Application,
+C0893,In Progress,6,Finance,Susan,2025-02-10,,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,7,Database,
+C0894,Completed,4,IT,Alice,2025-02-05,2025-02-11,HIPAA,Vulnerability Scan,access_review.xlsx,7,Admin System,6.0
+C0895,Failed,7,IT,John,2025-01-23,2025-01-31,PCI-DSS,Firewall Configuration,log_patch_001.pdf,14,Admin System,8.0
+C0896,Completed,7,HR,Mark,2025-02-12,2025-03-03,HIPAA,Incident Response,log_patch_001.pdf,30,Admin System,19.0
+C0897,Completed,2,Finance,John,2025-01-06,2025-01-17,HIPAA,Incident Response,incident_log.txt,7,Database,11.0
+C0898,In Progress,3,IT,Mark,2025-03-10,,HIPAA,Vulnerability Scan,incident_log.txt,14,Admin System,
+C0899,Completed,1,IT,Susan,2025-02-12,2025-02-24,PCI-DSS,Incident Response,log_patch_001.pdf,14,Application,12.0
+C0900,Completed,8,Operations,Brian,2025-01-25,2025-02-03,PCI-DSS,User Access Review,log_patch_001.pdf,14,Admin System,9.0
+C0901,Completed,9,Operations,Mary,2025-01-18,2025-01-20,HIPAA,Patch Management,incident_log.txt,7,Admin System,2.0
+C0902,Completed,4,IT,Alice,2025-03-03,2025-03-11,NIST,Firewall Configuration,vuln_scan_report.pdf,7,Admin System,8.0
+C0903,Completed,6,HR,Mark,2025-01-13,2025-01-24,PCI-DSS,User Access Review,firewall_config.png,30,Admin System,11.0
+C0904,Failed,9,Risk,Mark,2025-02-12,2025-03-05,PCI-DSS,Vulnerability Scan,firewall_config.png,14,Application,21.0
+C0905,Completed,6,Risk,Susan,2025-03-19,2025-03-23,HIPAA,Firewall Configuration,log_patch_001.pdf,7,Database,4.0
+C0906,In Progress,9,IT,Alice,2025-01-28,,NIST,User Access Review,incident_log.txt,14,Application,
+C0907,In Progress,4,IT,Brian,2025-01-18,,HIPAA,Incident Response,access_review.xlsx,14,Application,
+C0908,Completed,8,IT,Brian,2025-02-28,2025-03-10,PCI-DSS,Vulnerability Scan,access_review.xlsx,30,Database,10.0
+C0909,Completed,9,HR,Mark,2025-03-01,2025-03-22,PCI-DSS,Vulnerability Scan,firewall_config.png,7,Admin System,21.0
+C0910,Completed,4,Operations,Mary,2025-03-04,2025-03-24,HIPAA,Firewall Configuration,vuln_scan_report.pdf,7,Database,20.0
+C0911,Failed,5,IT,Mary,2025-02-26,2025-03-14,HIPAA,Incident Response,firewall_config.png,14,Database,16.0
+C0912,Completed,8,IT,John,2025-02-20,2025-02-28,NIST,Firewall Configuration,log_patch_001.pdf,14,Application,8.0
+C0913,Failed,6,Finance,Alice,2025-02-25,2025-03-01,NIST,Encryption Control,vuln_scan_report.pdf,30,Database,4.0
+C0914,Completed,7,HR,Alice,2025-01-27,2025-02-06,PCI-DSS,User Access Review,access_review.xlsx,30,Admin System,10.0
+C0915,Failed,3,IT,Brian,2025-02-01,2025-02-13,NIST,Encryption Control,incident_log.txt,30,Application,12.0
+C0916,Completed,7,Finance,John,2025-01-09,2025-01-23,NIST,User Access Review,incident_log.txt,30,Admin System,14.0
+C0917,Completed,8,Risk,Susan,2025-03-25,2025-04-10,PCI-DSS,Patch Management,log_patch_001.pdf,30,Application,16.0
+C0918,In Progress,6,IT,Alice,2025-03-09,,PCI-DSS,Vulnerability Scan,firewall_config.png,30,Admin System,
+C0919,In Progress,9,IT,John,2025-02-15,,PCI-DSS,Firewall Configuration,log_patch_001.pdf,14,Database,
+C0920,Completed,6,Finance,John,2025-03-08,2025-03-30,PCI-DSS,Patch Management,incident_log.txt,30,Database,22.0
+C0921,In Progress,9,HR,Mark,2025-01-26,,HIPAA,Patch Management,access_review.xlsx,14,Database,
+C0922,Completed,4,IT,Brian,2025-01-08,2025-01-26,PCI-DSS,Vulnerability Scan,incident_log.txt,14,Admin System,18.0
+C0923,In Progress,8,Risk,John,2025-01-06,,PCI-DSS,Vulnerability Scan,vuln_scan_report.pdf,7,Application,
+C0924,In Progress,4,IT,Jane,2025-03-21,,PCI-DSS,User Access Review,incident_log.txt,14,Application,
+C0925,Completed,2,Risk,Mary,2025-01-24,2025-02-14,NIST,Encryption Control,incident_log.txt,14,Application,21.0
+C0926,Completed,9,Operations,Jane,2025-02-17,2025-03-11,PCI-DSS,Incident Response,vuln_scan_report.pdf,30,Database,22.0
+C0927,Completed,5,Operations,Mary,2025-02-14,2025-03-07,HIPAA,User Access Review,firewall_config.png,14,Admin System,21.0
+C0928,Failed,4,Risk,David,2025-01-13,2025-01-25,HIPAA,Incident Response,incident_log.txt,30,Application,12.0
+C0929,Failed,2,HR,Brian,2025-03-10,2025-03-28,PCI-DSS,Patch Management,log_patch_001.pdf,30,Admin System,18.0
+C0930,Completed,1,IT,Mark,2025-01-25,2025-02-01,HIPAA,Incident Response,incident_log.txt,30,Application,7.0
+C0931,Completed,7,IT,Susan,2025-01-20,2025-02-09,NIST,Encryption Control,log_patch_001.pdf,7,Database,20.0
+C0932,In Progress,6,Operations,Jane,2025-03-23,,PCI-DSS,User Access Review,vuln_scan_report.pdf,30,Admin System,
+C0933,In Progress,2,Risk,Jane,2025-03-23,,HIPAA,Vulnerability Scan,incident_log.txt,14,Application,
+C0934,Failed,8,IT,David,2025-03-07,2025-03-31,HIPAA,Encryption Control,vuln_scan_report.pdf,30,Application,24.0
+C0935,Completed,4,IT,Mary,2025-03-15,2025-04-07,PCI-DSS,Encryption Control,vuln_scan_report.pdf,30,Application,23.0
+C0936,Completed,8,HR,Mark,2025-02-14,2025-02-21,HIPAA,User Access Review,firewall_config.png,30,Application,7.0
+C0937,Completed,7,Finance,David,2025-02-16,2025-02-25,PCI-DSS,Vulnerability Scan,incident_log.txt,7,Database,9.0
+C0938,In Progress,5,Operations,Brian,2025-03-04,,HIPAA,Encryption Control,log_patch_001.pdf,14,Application,
+C0939,Completed,8,Operations,Mark,2025-03-17,2025-03-18,NIST,Vulnerability Scan,log_patch_001.pdf,7,Application,1.0
+C0940,Failed,9,Finance,Brian,2025-03-18,2025-03-24,HIPAA,Firewall Configuration,incident_log.txt,14,Database,6.0
+C0941,Completed,5,IT,John,2025-02-24,2025-03-02,HIPAA,Firewall Configuration,firewall_config.png,7,Application,6.0
+C0942,Failed,5,HR,Alice,2025-03-16,2025-04-07,PCI-DSS,Firewall Configuration,firewall_config.png,14,Admin System,22.0
+C0943,Failed,2,HR,John,2025-01-19,2025-01-31,HIPAA,Incident Response,firewall_config.png,7,Admin System,12.0
+C0944,In Progress,5,Operations,Brian,2025-02-04,,PCI-DSS,Encryption Control,log_patch_001.pdf,30,Application,
+C0945,Completed,3,HR,Jane,2025-02-22,2025-03-16,NIST,User Access Review,vuln_scan_report.pdf,7,Database,22.0
+C0946,Completed,7,Finance,Mark,2025-01-26,2025-02-07,PCI-DSS,User Access Review,firewall_config.png,7,Database,12.0
+C0947,Completed,5,IT,Mary,2025-01-14,2025-01-24,PCI-DSS,Incident Response,log_patch_001.pdf,30,Database,10.0
+C0948,In Progress,8,Finance,Susan,2025-02-14,,HIPAA,User Access Review,log_patch_001.pdf,30,Application,
+C0949,In Progress,1,Risk,Mary,2025-02-13,,NIST,Firewall Configuration,vuln_scan_report.pdf,14,Application,
+C0950,Failed,3,Operations,Mark,2025-03-29,2025-04-21,PCI-DSS,Encryption Control,incident_log.txt,14,Admin System,23.0
+C0951,Failed,3,HR,John,2025-03-06,2025-03-12,HIPAA,User Access Review,incident_log.txt,14,Database,6.0
+C0952,Failed,9,Risk,Susan,2025-02-20,2025-03-09,HIPAA,User Access Review,firewall_config.png,7,Application,17.0
+C0953,Completed,5,HR,Mark,2025-02-12,2025-03-03,PCI-DSS,Patch Management,firewall_config.png,14,Application,19.0
+C0954,In Progress,9,IT,Brian,2025-03-27,,HIPAA,Patch Management,vuln_scan_report.pdf,7,Application,
+C0955,Completed,9,IT,Jane,2025-01-23,2025-02-10,PCI-DSS,Patch Management,firewall_config.png,7,Database,18.0
+C0956,Completed,1,IT,Mary,2025-02-25,2025-03-03,PCI-DSS,Encryption Control,vuln_scan_report.pdf,14,Database,6.0
+C0957,Failed,2,HR,Brian,2025-01-19,2025-02-12,PCI-DSS,Firewall Configuration,log_patch_001.pdf,14,Admin System,24.0
+C0958,Completed,5,Risk,Susan,2025-03-23,2025-04-11,NIST,Vulnerability Scan,firewall_config.png,7,Database,19.0
+C0959,Completed,4,IT,Susan,2025-03-17,2025-03-27,PCI-DSS,Firewall Configuration,log_patch_001.pdf,30,Application,10.0
+C0960,In Progress,9,Risk,Mary,2025-02-24,,HIPAA,Firewall Configuration,access_review.xlsx,30,Admin System,
+C0961,Completed,7,HR,Brian,2025-03-01,2025-03-25,NIST,Encryption Control,vuln_scan_report.pdf,7,Database,24.0
+C0962,Failed,6,Risk,David,2025-02-28,2025-03-08,HIPAA,Encryption Control,access_review.xlsx,14,Database,8.0
+C0963,Completed,7,HR,Brian,2025-02-02,2025-02-23,NIST,Patch Management,firewall_config.png,7,Database,21.0
+C0964,Completed,1,HR,Susan,2025-01-19,2025-02-12,NIST,User Access Review,log_patch_001.pdf,7,Database,24.0
+C0965,Completed,1,Operations,Brian,2025-01-28,2025-02-03,NIST,Incident Response,firewall_config.png,14,Application,6.0
+C0966,Completed,8,HR,Jane,2025-02-21,2025-03-14,NIST,Incident Response,access_review.xlsx,30,Database,21.0
+C0967,In Progress,2,HR,Mark,2025-02-18,,HIPAA,Vulnerability Scan,firewall_config.png,7,Application,
+C0968,Completed,9,Finance,John,2025-02-06,2025-02-13,PCI-DSS,User Access Review,incident_log.txt,30,Application,7.0
+C0969,Failed,7,IT,Jane,2025-01-26,2025-02-19,HIPAA,Vulnerability Scan,access_review.xlsx,30,Application,24.0
+C0970,Completed,6,Operations,David,2025-02-09,2025-02-10,PCI-DSS,Patch Management,firewall_config.png,14,Admin System,1.0
+C0971,Failed,1,Operations,Alice,2025-03-21,2025-04-08,HIPAA,Vulnerability Scan,log_patch_001.pdf,7,Application,18.0
+C0972,In Progress,1,Operations,Mark,2025-02-07,,NIST,User Access Review,firewall_config.png,7,Database,
+C0973,In Progress,2,Finance,John,2025-03-18,,NIST,User Access Review,log_patch_001.pdf,30,Admin System,
+C0974,Completed,6,HR,Alice,2025-03-28,2025-04-21,PCI-DSS,Incident Response,incident_log.txt,30,Database,24.0
+C0975,Completed,6,IT,Mary,2025-02-23,2025-03-15,PCI-DSS,Patch Management,firewall_config.png,14,Application,20.0
+C0976,Completed,2,Risk,Alice,2025-01-22,2025-02-03,HIPAA,Encryption Control,incident_log.txt,30,Database,12.0
+C0977,Failed,1,HR,Mark,2025-01-16,2025-02-01,PCI-DSS,Vulnerability Scan,access_review.xlsx,14,Admin System,16.0
+C0978,Completed,5,Finance,Brian,2025-01-28,2025-02-07,HIPAA,Incident Response,log_patch_001.pdf,7,Admin System,10.0
+C0979,Completed,5,HR,Mark,2025-02-04,2025-02-14,PCI-DSS,Vulnerability Scan,access_review.xlsx,14,Database,10.0
+C0980,Failed,2,HR,Jane,2025-03-01,2025-03-15,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,30,Database,14.0
+C0981,Completed,6,Finance,Alice,2025-02-14,2025-03-06,PCI-DSS,Encryption Control,incident_log.txt,7,Database,20.0
+C0982,In Progress,9,Operations,Susan,2025-02-15,,NIST,Patch Management,vuln_scan_report.pdf,14,Admin System,
+C0983,Completed,2,Operations,John,2025-03-13,2025-03-23,NIST,User Access Review,firewall_config.png,7,Application,10.0
+C0984,Completed,2,IT,John,2025-02-24,2025-03-06,HIPAA,Firewall Configuration,incident_log.txt,14,Database,10.0
+C0985,In Progress,3,IT,Alice,2025-03-27,,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,30,Application,
+C0986,Completed,7,Operations,John,2025-03-26,2025-04-06,HIPAA,Firewall Configuration,log_patch_001.pdf,30,Admin System,11.0
+C0987,Failed,6,Risk,Susan,2025-01-26,2025-02-18,PCI-DSS,Patch Management,log_patch_001.pdf,7,Database,23.0
+C0988,Completed,8,HR,Mark,2025-03-26,2025-03-28,NIST,Firewall Configuration,log_patch_001.pdf,7,Database,2.0
+C0989,Completed,8,Risk,John,2025-01-25,2025-02-14,NIST,Vulnerability Scan,firewall_config.png,7,Admin System,20.0
+C0990,In Progress,6,HR,Alice,2025-03-06,,PCI-DSS,Encryption Control,access_review.xlsx,14,Database,
+C0991,In Progress,3,Operations,David,2025-01-06,,PCI-DSS,Firewall Configuration,vuln_scan_report.pdf,30,Application,
+C0992,Failed,3,IT,David,2025-01-23,2025-01-31,NIST,Patch Management,firewall_config.png,7,Admin System,8.0
+C0993,Completed,1,IT,Mary,2025-03-05,2025-03-28,NIST,Patch Management,log_patch_001.pdf,7,Admin System,23.0
+C0994,Failed,7,Risk,Jane,2025-03-28,2025-04-04,HIPAA,Encryption Control,firewall_config.png,7,Database,7.0
+C0995,Completed,5,IT,John,2025-02-12,2025-02-20,NIST,Firewall Configuration,incident_log.txt,14,Admin System,8.0
+C0996,Completed,4,Operations,Jane,2025-01-23,2025-01-24,PCI-DSS,Firewall Configuration,log_patch_001.pdf,7,Database,1.0
+C0997,In Progress,4,Risk,Mark,2025-01-30,,HIPAA,User Access Review,vuln_scan_report.pdf,7,Database,
+C0998,Completed,4,HR,Alice,2025-03-18,2025-04-08,PCI-DSS,Incident Response,log_patch_001.pdf,14,Admin System,21.0
+C0999,In Progress,6,IT,John,2025-01-18,,HIPAA,Patch Management,vuln_scan_report.pdf,14,Database,
+C1000,Completed,8,Finance,Brian,2025-03-28,2025-03-30,PCI-DSS,User Access Review,vuln_scan_report.pdf,7,Application,2.0
+C1001,Completed,8,IT,Susan,2025-03-20,2025-04-07,NIST,Patch Management,access_review.xlsx,7,Application,18.0
+C1002,Failed,5,HR,John,2025-01-21,2025-02-05,PCI-DSS,User Access Review,access_review.xlsx,14,Database,15.0
+C1003,In Progress,6,Risk,John,2025-02-26,,HIPAA,Incident Response,firewall_config.png,30,Application,
+C1004,In Progress,4,HR,Jane,2025-01-23,,PCI-DSS,User Access Review,firewall_config.png,14,Database,
+C1005,In Progress,9,Finance,Jane,2025-02-14,,HIPAA,Patch Management,vuln_scan_report.pdf,30,Application,
+C1006,Failed,8,Operations,David,2025-02-13,2025-02-14,PCI-DSS,Firewall Configuration,log_patch_001.pdf,7,Admin System,1.0
+C1007,Failed,1,IT,Susan,2025-03-23,2025-03-28,NIST,Patch Management,incident_log.txt,7,Database,5.0
+C1008,In Progress,2,Risk,Alice,2025-03-29,,NIST,Vulnerability Scan,incident_log.txt,30,Database,
+C1009,Completed,9,Operations,John,2025-02-16,2025-02-18,PCI-DSS,Encryption Control,log_patch_001.pdf,14,Database,2.0
+C1010,Completed,8,HR,David,2025-02-09,2025-03-01,PCI-DSS,Encryption Control,log_patch_001.pdf,7,Database,20.0
+C1011,Completed,3,Risk,Jane,2025-02-20,2025-02-23,PCI-DSS,Vulnerability Scan,access_review.xlsx,30,Database,3.0
+C1012,In Progress,8,Operations,Mary,2025-02-11,,HIPAA,Encryption Control,incident_log.txt,14,Database,
+C1013,In Progress,1,Risk,Susan,2025-01-07,,PCI-DSS,Encryption Control,vuln_scan_report.pdf,30,Admin System,
+C1014,Completed,4,Finance,David,2025-02-19,2025-03-10,PCI-DSS,Incident Response,firewall_config.png,14,Admin System,19.0
+C1015,In Progress,3,Finance,David,2025-02-17,,HIPAA,Firewall Configuration,access_review.xlsx,14,Application,
+C1016,In Progress,6,IT,Mark,2025-03-25,,NIST,Firewall Configuration,incident_log.txt,14,Database,
+C1017,Completed,7,IT,David,2025-01-06,2025-01-24,PCI-DSS,Patch Management,log_patch_001.pdf,14,Application,18.0
+C1018,Failed,4,Finance,Mark,2025-01-09,2025-01-31,PCI-DSS,Vulnerability Scan,incident_log.txt,30,Application,22.0
+C1019,In Progress,7,Risk,John,2025-02-26,,NIST,User Access Review,vuln_scan_report.pdf,30,Admin System,
+C1020,Completed,9,Finance,John,2025-01-31,2025-02-18,NIST,Patch Management,access_review.xlsx,30,Application,18.0
+C1021,Failed,2,IT,Jane,2025-01-21,2025-02-04,HIPAA,Patch Management,log_patch_001.pdf,30,Admin System,14.0
+C1022,Completed,3,Finance,Mary,2025-03-31,2025-04-24,PCI-DSS,Patch Management,vuln_scan_report.pdf,30,Application,24.0
+C1023,In Progress,5,Finance,Brian,2025-02-09,,PCI-DSS,Patch Management,firewall_config.png,14,Database,
+C1024,In Progress,3,Risk,Brian,2025-02-14,,HIPAA,Firewall Configuration,access_review.xlsx,7,Application,
+C1025,In Progress,8,Operations,Brian,2025-03-18,,NIST,User Access Review,vuln_scan_report.pdf,7,Admin System,
+C1026,Completed,8,IT,Jane,2025-02-18,2025-02-26,HIPAA,Patch Management,vuln_scan_report.pdf,30,Admin System,8.0
+C1027,In Progress,8,Risk,Mark,2025-03-28,,NIST,Firewall Configuration,log_patch_001.pdf,30,Admin System,
+C1028,In Progress,9,Finance,Jane,2025-01-20,,HIPAA,Patch Management,firewall_config.png,7,Application,
+C1029,Completed,4,Finance,Susan,2025-01-17,2025-01-29,NIST,Encryption Control,vuln_scan_report.pdf,14,Application,12.0
+C1030,In Progress,5,Operations,Susan,2025-01-28,,HIPAA,Patch Management,access_review.xlsx,30,Admin System,
+C1031,Completed,5,IT,Mary,2025-02-10,2025-03-03,NIST,Vulnerability Scan,vuln_scan_report.pdf,14,Database,21.0
+C1032,Failed,8,IT,Susan,2025-03-07,2025-03-17,NIST,Vulnerability Scan,incident_log.txt,7,Database,10.0
+C1033,Completed,7,HR,Brian,2025-01-25,2025-02-17,NIST,Patch Management,access_review.xlsx,7,Application,23.0
+C1034,Completed,9,IT,Brian,2025-02-27,2025-03-19,NIST,Incident Response,access_review.xlsx,30,Application,20.0
+C1035,Completed,8,Operations,Jane,2025-02-10,2025-02-27,NIST,Encryption Control,vuln_scan_report.pdf,14,Admin System,17.0
+C1036,Failed,2,HR,David,2025-01-06,2025-01-17,PCI-DSS,User Access Review,log_patch_001.pdf,30,Application,11.0
+C1037,Completed,4,HR,Susan,2025-03-16,2025-03-18,NIST,Patch Management,access_review.xlsx,7,Application,2.0
+C1038,In Progress,6,Finance,Jane,2025-02-07,,PCI-DSS,User Access Review,incident_log.txt,14,Admin System,
+C1039,Completed,2,Finance,John,2025-01-06,2025-01-10,NIST,Encryption Control,log_patch_001.pdf,30,Admin System,4.0
+C1040,Completed,7,IT,John,2025-02-14,2025-02-15,PCI-DSS,Patch Management,log_patch_001.pdf,30,Application,1.0
+C1041,Failed,3,HR,David,2025-03-16,2025-03-31,PCI-DSS,Incident Response,log_patch_001.pdf,30,Database,15.0
+C1042,In Progress,3,Finance,David,2025-01-14,,HIPAA,Firewall Configuration,access_review.xlsx,7,Application,
+C1043,Completed,2,Operations,David,2025-03-07,2025-03-20,NIST,Incident Response,log_patch_001.pdf,30,Database,13.0
+C1044,Failed,8,Finance,Jane,2025-02-09,2025-02-17,HIPAA,Incident Response,vuln_scan_report.pdf,14,Database,8.0
+C1045,In Progress,6,Finance,John,2025-01-03,,HIPAA,Firewall Configuration,log_patch_001.pdf,30,Database,
+C1046,Failed,1,HR,Brian,2025-01-24,2025-01-28,NIST,Firewall Configuration,incident_log.txt,7,Admin System,4.0
+C1047,Completed,1,HR,David,2025-01-19,2025-01-29,HIPAA,Vulnerability Scan,firewall_config.png,30,Admin System,10.0
+C1048,Completed,7,Risk,Mary,2025-01-18,2025-02-06,NIST,Firewall Configuration,incident_log.txt,7,Admin System,19.0
+C1049,In Progress,8,Operations,Mark,2025-03-05,,HIPAA,Patch Management,access_review.xlsx,7,Application,
+C1050,Completed,5,HR,Jane,2025-03-29,2025-04-16,NIST,User Access Review,log_patch_001.pdf,14,Admin System,18.0
+C1051,In Progress,5,IT,David,2025-02-04,,NIST,Vulnerability Scan,log_patch_001.pdf,14,Admin System,
+C1052,Failed,4,Operations,Mark,2025-03-03,2025-03-08,NIST,Vulnerability Scan,vuln_scan_report.pdf,30,Application,5.0
+C1053,In Progress,6,Operations,Alice,2025-01-01,,PCI-DSS,User Access Review,log_patch_001.pdf,7,Application,
+C1054,In Progress,6,HR,David,2025-01-25,,HIPAA,Vulnerability Scan,incident_log.txt,7,Database,
+C1055,In Progress,3,Operations,John,2025-02-14,,PCI-DSS,Firewall Configuration,access_review.xlsx,14,Application,
+C1056,Completed,9,HR,Susan,2025-02-18,2025-03-09,HIPAA,Incident Response,firewall_config.png,14,Application,19.0
+C1057,In Progress,7,Finance,David,2025-03-30,,HIPAA,Encryption Control,log_patch_001.pdf,30,Admin System,
+C1058,Completed,1,Risk,Jane,2025-01-16,2025-02-08,HIPAA,Firewall Configuration,firewall_config.png,7,Database,23.0
+C1059,Completed,7,Finance,Susan,2025-01-19,2025-02-10,PCI-DSS,Incident Response,log_patch_001.pdf,14,Database,22.0
+C1060,Failed,5,HR,Alice,2025-01-23,2025-02-08,HIPAA,Incident Response,access_review.xlsx,30,Application,16.0
+C1061,In Progress,5,HR,Mary,2025-03-24,,PCI-DSS,Vulnerability Scan,incident_log.txt,7,Admin System,
+C1062,In Progress,2,Finance,Susan,2025-01-25,,NIST,Patch Management,access_review.xlsx,7,Admin System,
+C1063,In Progress,4,IT,Mark,2025-01-16,,HIPAA,Patch Management,firewall_config.png,14,Admin System,
+C1064,Completed,6,IT,Brian,2025-02-23,2025-02-24,HIPAA,Vulnerability Scan,log_patch_001.pdf,30,Admin System,1.0
+C1065,Completed,7,IT,David,2025-03-14,2025-03-26,NIST,Vulnerability Scan,firewall_config.png,14,Application,12.0
+C1066,In Progress,5,HR,Alice,2025-01-01,,NIST,User Access Review,incident_log.txt,30,Admin System,
+C1067,Completed,9,Operations,Alice,2025-02-11,2025-03-07,HIPAA,User Access Review,access_review.xlsx,7,Database,24.0
+C1068,Completed,3,HR,Susan,2025-01-19,2025-01-21,NIST,Encryption Control,firewall_config.png,30,Database,2.0
+C1069,Completed,1,Operations,Mary,2025-02-03,2025-02-24,PCI-DSS,Encryption Control,firewall_config.png,30,Application,21.0
+C1070,Completed,4,Finance,John,2025-03-21,2025-03-29,PCI-DSS,Encryption Control,incident_log.txt,30,Admin System,8.0
+C1071,Completed,9,Risk,David,2025-02-24,2025-03-14,HIPAA,Encryption Control,log_patch_001.pdf,30,Admin System,18.0
+C1072,Completed,4,Operations,Alice,2025-01-18,2025-02-03,PCI-DSS,Incident Response,firewall_config.png,30,Admin System,16.0
+C1073,Completed,2,IT,Mary,2025-02-03,2025-02-08,PCI-DSS,Incident Response,incident_log.txt,14,Admin System,5.0
+C1074,Completed,5,HR,Brian,2025-03-30,2025-04-21,HIPAA,User Access Review,log_patch_001.pdf,30,Application,22.0
+C1075,In Progress,3,Finance,Alice,2025-02-14,,NIST,Patch Management,log_patch_001.pdf,30,Admin System,
+C1076,Completed,9,IT,Mary,2025-01-06,2025-01-19,HIPAA,Vulnerability Scan,access_review.xlsx,7,Application,13.0
+C1077,Completed,4,Finance,Jane,2025-01-21,2025-02-09,PCI-DSS,Patch Management,incident_log.txt,30,Admin System,19.0
+C1078,Failed,6,Risk,John,2025-03-11,2025-03-14,HIPAA,Firewall Configuration,log_patch_001.pdf,7,Admin System,3.0
+C1079,Completed,2,HR,John,2025-02-17,2025-02-25,HIPAA,Incident Response,access_review.xlsx,14,Database,8.0
+C1080,In Progress,6,HR,Alice,2025-02-08,,PCI-DSS,Encryption Control,vuln_scan_report.pdf,14,Application,
+C1081,In Progress,3,Risk,Mark,2025-01-31,,PCI-DSS,Encryption Control,incident_log.txt,30,Database,
+C1082,Completed,9,HR,Alice,2025-01-10,2025-01-22,HIPAA,Firewall Configuration,vuln_scan_report.pdf,14,Application,12.0
+C1083,Completed,2,Operations,Susan,2025-01-30,2025-02-01,PCI-DSS,Patch Management,log_patch_001.pdf,30,Admin System,2.0
+C1084,In Progress,9,Finance,David,2025-01-18,,PCI-DSS,Encryption Control,incident_log.txt,14,Admin System,
+C1085,In Progress,5,IT,Mary,2025-03-01,,PCI-DSS,Patch Management,access_review.xlsx,30,Application,
+C1086,Completed,8,Risk,Alice,2025-03-29,2025-04-09,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,30,Database,11.0
+C1087,Failed,2,Operations,David,2025-03-14,2025-03-26,PCI-DSS,Firewall Configuration,incident_log.txt,7,Application,12.0
+C1088,Completed,6,IT,Susan,2025-01-15,2025-02-02,PCI-DSS,Patch Management,incident_log.txt,7,Application,18.0
+C1089,In Progress,3,IT,Jane,2025-01-04,,NIST,Vulnerability Scan,vuln_scan_report.pdf,7,Admin System,
+C1090,Completed,5,Risk,Jane,2025-03-04,2025-03-17,HIPAA,Patch Management,log_patch_001.pdf,7,Database,13.0
+C1091,In Progress,8,Operations,David,2025-02-09,,PCI-DSS,Patch Management,access_review.xlsx,30,Application,
+C1092,Failed,1,IT,Alice,2025-01-09,2025-01-14,HIPAA,Encryption Control,access_review.xlsx,14,Database,5.0
+C1093,Failed,5,IT,John,2025-01-09,2025-01-31,NIST,User Access Review,log_patch_001.pdf,30,Database,22.0
+C1094,Failed,3,Operations,Mary,2025-01-26,2025-02-07,PCI-DSS,Incident Response,log_patch_001.pdf,7,Application,12.0
+C1095,Completed,4,HR,Mary,2025-01-04,2025-01-06,HIPAA,Patch Management,firewall_config.png,7,Database,2.0
+C1096,Completed,2,IT,Jane,2025-03-22,2025-03-27,PCI-DSS,Patch Management,vuln_scan_report.pdf,14,Admin System,5.0
+C1097,Completed,9,Finance,Jane,2025-01-16,2025-01-23,PCI-DSS,Patch Management,log_patch_001.pdf,7,Admin System,7.0
+C1098,Completed,3,Operations,John,2025-01-15,2025-02-08,PCI-DSS,User Access Review,log_patch_001.pdf,30,Admin System,24.0
+C1099,In Progress,2,IT,Mark,2025-02-21,,PCI-DSS,Vulnerability Scan,firewall_config.png,30,Admin System,
+C1100,Completed,9,Risk,Alice,2025-03-10,2025-03-22,PCI-DSS,Firewall Configuration,firewall_config.png,30,Database,12.0
+C1101,Completed,7,Finance,Jane,2025-01-05,2025-01-21,PCI-DSS,Encryption Control,incident_log.txt,30,Admin System,16.0
+C1102,In Progress,6,IT,Jane,2025-01-20,,PCI-DSS,User Access Review,access_review.xlsx,30,Application,
+C1103,In Progress,1,Finance,Jane,2025-03-20,,NIST,Vulnerability Scan,vuln_scan_report.pdf,14,Admin System,
+C1104,In Progress,5,Finance,Mary,2025-01-18,,NIST,Patch Management,incident_log.txt,30,Application,
+C1105,In Progress,3,HR,Alice,2025-01-02,,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,7,Application,
+C1106,Completed,1,Finance,Susan,2025-01-13,2025-02-05,PCI-DSS,User Access Review,firewall_config.png,7,Admin System,23.0
+C1107,Completed,4,HR,Alice,2025-01-04,2025-01-12,NIST,User Access Review,access_review.xlsx,7,Admin System,8.0
+C1108,In Progress,2,Operations,David,2025-02-11,,NIST,User Access Review,incident_log.txt,7,Database,
+C1109,Failed,2,HR,John,2025-03-15,2025-03-24,NIST,Firewall Configuration,access_review.xlsx,14,Application,9.0
+C1110,Completed,3,Risk,Mark,2025-03-02,2025-03-17,PCI-DSS,Incident Response,firewall_config.png,7,Admin System,15.0
+C1111,In Progress,8,IT,Jane,2025-01-08,,HIPAA,Encryption Control,incident_log.txt,14,Database,
+C1112,Completed,8,Operations,Jane,2025-03-08,2025-03-13,HIPAA,Firewall Configuration,incident_log.txt,7,Admin System,5.0
+C1113,Completed,7,Operations,Alice,2025-03-04,2025-03-17,HIPAA,Firewall Configuration,access_review.xlsx,14,Admin System,13.0
+C1114,Failed,6,Risk,Mark,2025-01-09,2025-01-14,HIPAA,Incident Response,firewall_config.png,14,Admin System,5.0
+C1115,Failed,9,HR,Jane,2025-01-11,2025-01-22,PCI-DSS,Firewall Configuration,log_patch_001.pdf,14,Application,11.0
+C1116,Failed,4,IT,Mark,2025-02-11,2025-02-21,HIPAA,User Access Review,incident_log.txt,7,Admin System,10.0
+C1117,Completed,1,HR,Susan,2025-01-13,2025-02-02,NIST,User Access Review,log_patch_001.pdf,14,Database,20.0
+C1118,In Progress,8,Finance,Brian,2025-02-05,,NIST,Vulnerability Scan,firewall_config.png,30,Admin System,
+C1119,Completed,7,HR,John,2025-01-13,2025-01-26,HIPAA,Patch Management,incident_log.txt,30,Admin System,13.0
+C1120,Completed,7,Operations,Mark,2025-01-12,2025-01-21,NIST,Firewall Configuration,incident_log.txt,7,Database,9.0
+C1121,In Progress,3,IT,Mary,2025-02-06,,PCI-DSS,Patch Management,log_patch_001.pdf,30,Database,
+C1122,In Progress,4,HR,David,2025-03-15,,HIPAA,Encryption Control,vuln_scan_report.pdf,30,Application,
+C1123,In Progress,9,IT,Mary,2025-03-14,,HIPAA,User Access Review,log_patch_001.pdf,30,Application,
+C1124,In Progress,6,IT,Jane,2025-02-21,,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,7,Application,
+C1125,Failed,5,Finance,Susan,2025-03-12,2025-04-02,NIST,Encryption Control,vuln_scan_report.pdf,7,Application,21.0
+C1126,Failed,3,Finance,Susan,2025-01-02,2025-01-16,PCI-DSS,Vulnerability Scan,firewall_config.png,30,Database,14.0
+C1127,Completed,9,Operations,Mary,2025-02-25,2025-03-15,PCI-DSS,Incident Response,firewall_config.png,7,Admin System,18.0
+C1128,Completed,5,Risk,John,2025-03-01,2025-03-16,NIST,User Access Review,incident_log.txt,14,Admin System,15.0
+C1129,Completed,5,IT,Mary,2025-01-23,2025-02-02,PCI-DSS,Encryption Control,access_review.xlsx,30,Admin System,10.0
+C1130,Completed,4,Risk,Alice,2025-02-09,2025-03-05,NIST,Incident Response,access_review.xlsx,7,Application,24.0
+C1131,In Progress,4,Operations,Jane,2025-03-05,,NIST,Encryption Control,incident_log.txt,7,Database,
+C1132,Completed,1,IT,Jane,2025-03-26,2025-04-02,PCI-DSS,Vulnerability Scan,access_review.xlsx,30,Database,7.0
+C1133,Completed,7,IT,Mary,2025-01-23,2025-01-31,NIST,Incident Response,log_patch_001.pdf,7,Database,8.0
+C1134,Completed,9,Risk,David,2025-01-29,2025-02-01,PCI-DSS,Incident Response,log_patch_001.pdf,30,Admin System,3.0
+C1135,Failed,3,HR,David,2025-03-19,2025-04-03,NIST,User Access Review,vuln_scan_report.pdf,7,Application,15.0
+C1136,Completed,2,Finance,Jane,2025-03-31,2025-04-16,HIPAA,Patch Management,vuln_scan_report.pdf,14,Database,16.0
+C1137,In Progress,3,HR,Brian,2025-02-20,,NIST,Vulnerability Scan,incident_log.txt,30,Application,
+C1138,Completed,1,Risk,David,2025-03-10,2025-03-14,NIST,Vulnerability Scan,incident_log.txt,14,Database,4.0
+C1139,Completed,6,Finance,Mary,2025-03-30,2025-04-20,PCI-DSS,Incident Response,incident_log.txt,30,Application,21.0
+C1140,Failed,7,HR,David,2025-01-31,2025-02-06,NIST,Incident Response,log_patch_001.pdf,7,Database,6.0
+C1141,In Progress,2,Finance,Jane,2025-02-19,,HIPAA,User Access Review,access_review.xlsx,14,Application,
+C1142,Completed,8,IT,John,2025-01-20,2025-01-21,HIPAA,Patch Management,incident_log.txt,7,Database,1.0
+C1143,Failed,6,HR,Mark,2025-02-24,2025-02-28,NIST,Vulnerability Scan,incident_log.txt,30,Database,4.0
+C1144,Failed,4,Finance,David,2025-03-22,2025-04-02,NIST,Firewall Configuration,log_patch_001.pdf,30,Application,11.0
+C1145,Completed,5,Finance,Alice,2025-01-02,2025-01-14,HIPAA,Firewall Configuration,log_patch_001.pdf,30,Application,12.0
+C1146,In Progress,8,Finance,John,2025-01-25,,PCI-DSS,Patch Management,log_patch_001.pdf,30,Admin System,
+C1147,In Progress,3,HR,Brian,2025-01-13,,HIPAA,Encryption Control,access_review.xlsx,30,Application,
+C1148,Failed,3,Operations,Alice,2025-03-11,2025-03-16,HIPAA,User Access Review,incident_log.txt,14,Database,5.0
+C1149,In Progress,4,HR,Mary,2025-03-08,,NIST,Patch Management,firewall_config.png,30,Database,
+C1150,In Progress,1,Risk,Mark,2025-02-27,,NIST,Firewall Configuration,firewall_config.png,7,Application,
+C1151,In Progress,9,HR,Mary,2025-03-23,,HIPAA,Incident Response,incident_log.txt,14,Admin System,
+C1152,In Progress,8,Finance,Mark,2025-03-16,,PCI-DSS,Firewall Configuration,incident_log.txt,7,Application,
+C1153,Failed,8,IT,Mark,2025-03-25,2025-04-17,HIPAA,Incident Response,incident_log.txt,30,Database,23.0
+C1154,Failed,6,HR,Mary,2025-03-05,2025-03-26,HIPAA,User Access Review,incident_log.txt,7,Database,21.0
+C1155,Failed,7,HR,Alice,2025-03-10,2025-03-26,PCI-DSS,Incident Response,access_review.xlsx,14,Admin System,16.0
+C1156,In Progress,6,Finance,Alice,2025-03-24,,HIPAA,Patch Management,firewall_config.png,14,Application,
+C1157,Completed,9,IT,Mark,2025-03-27,2025-04-09,HIPAA,Incident Response,vuln_scan_report.pdf,14,Database,13.0
+C1158,In Progress,3,IT,Alice,2025-02-28,,NIST,Encryption Control,firewall_config.png,7,Database,
+C1159,In Progress,3,Risk,Mark,2025-03-01,,PCI-DSS,Patch Management,firewall_config.png,14,Database,
+C1160,Completed,3,HR,Jane,2025-03-24,2025-04-06,NIST,User Access Review,log_patch_001.pdf,7,Application,13.0
+C1161,In Progress,3,IT,Mark,2025-03-03,,NIST,Patch Management,incident_log.txt,30,Application,
+C1162,Completed,9,IT,Jane,2025-01-16,2025-02-02,PCI-DSS,Encryption Control,incident_log.txt,30,Admin System,17.0
+C1163,Completed,4,Operations,John,2025-03-29,2025-04-05,PCI-DSS,User Access Review,incident_log.txt,7,Database,7.0
+C1164,In Progress,7,Operations,Susan,2025-03-09,,HIPAA,Firewall Configuration,log_patch_001.pdf,14,Database,
+C1165,Completed,9,IT,John,2025-01-15,2025-01-23,NIST,Encryption Control,access_review.xlsx,7,Admin System,8.0
+C1166,In Progress,7,Risk,Mary,2025-03-30,,PCI-DSS,User Access Review,access_review.xlsx,7,Database,
+C1167,In Progress,9,IT,Susan,2025-02-24,,NIST,Incident Response,vuln_scan_report.pdf,7,Admin System,
+C1168,Failed,3,Finance,David,2025-02-04,2025-02-17,NIST,Patch Management,access_review.xlsx,30,Admin System,13.0
+C1169,Completed,4,HR,Mary,2025-02-24,2025-03-19,PCI-DSS,User Access Review,access_review.xlsx,7,Database,23.0
+C1170,Completed,8,Risk,Brian,2025-01-14,2025-01-30,HIPAA,Patch Management,incident_log.txt,30,Application,16.0
+C1171,Failed,6,Finance,John,2025-02-18,2025-02-22,NIST,Incident Response,firewall_config.png,7,Application,4.0
+C1172,In Progress,5,Risk,Alice,2025-03-24,,PCI-DSS,User Access Review,access_review.xlsx,30,Application,
+C1173,Failed,4,Finance,John,2025-01-07,2025-01-15,HIPAA,Firewall Configuration,access_review.xlsx,7,Application,8.0
+C1174,Completed,8,HR,Alice,2025-01-30,2025-02-15,NIST,Encryption Control,log_patch_001.pdf,7,Database,16.0
+C1175,Failed,1,HR,Susan,2025-03-24,2025-04-14,PCI-DSS,User Access Review,vuln_scan_report.pdf,14,Admin System,21.0
+C1176,Failed,9,Operations,Brian,2025-02-18,2025-02-28,NIST,Incident Response,log_patch_001.pdf,14,Admin System,10.0
+C1177,In Progress,1,Finance,Susan,2025-03-30,,PCI-DSS,User Access Review,incident_log.txt,7,Database,
+C1178,Completed,8,Operations,Brian,2025-01-16,2025-01-28,PCI-DSS,Patch Management,firewall_config.png,7,Application,12.0
+C1179,In Progress,4,Finance,John,2025-02-20,,NIST,Vulnerability Scan,vuln_scan_report.pdf,7,Admin System,
+C1180,Failed,9,Operations,Alice,2025-03-13,2025-03-25,NIST,User Access Review,log_patch_001.pdf,7,Database,12.0
+C1181,In Progress,5,HR,Susan,2025-03-23,,PCI-DSS,Firewall Configuration,access_review.xlsx,14,Database,
+C1182,Completed,3,Risk,Brian,2025-03-21,2025-03-26,HIPAA,User Access Review,access_review.xlsx,30,Application,5.0
+C1183,Failed,9,Operations,Mark,2025-03-24,2025-04-09,NIST,Encryption Control,vuln_scan_report.pdf,7,Database,16.0
+C1184,In Progress,9,Finance,Mary,2025-02-11,,PCI-DSS,User Access Review,access_review.xlsx,14,Admin System,
+C1185,Completed,4,Finance,Mary,2025-01-17,2025-01-18,PCI-DSS,Vulnerability Scan,log_patch_001.pdf,7,Admin System,1.0
+C1186,In Progress,4,HR,Susan,2025-03-04,,HIPAA,Patch Management,log_patch_001.pdf,7,Database,
+C1187,Failed,8,Finance,Alice,2025-02-14,2025-02-23,HIPAA,User Access Review,access_review.xlsx,30,Admin System,9.0
+C1188,Completed,2,IT,Mark,2025-03-18,2025-03-30,HIPAA,Firewall Configuration,access_review.xlsx,7,Database,12.0
+C1189,Completed,9,Risk,Susan,2025-01-07,2025-01-12,NIST,Incident Response,incident_log.txt,7,Admin System,5.0
+C1190,In Progress,6,Operations,John,2025-01-27,,PCI-DSS,User Access Review,firewall_config.png,30,Application,
+C1191,Completed,9,Risk,Brian,2025-01-10,2025-02-01,PCI-DSS,User Access Review,vuln_scan_report.pdf,30,Admin System,22.0
+C1192,Failed,8,HR,Jane,2025-02-03,2025-02-23,PCI-DSS,Encryption Control,log_patch_001.pdf,30,Application,20.0
+C1193,Completed,7,Operations,John,2025-02-05,2025-02-27,HIPAA,Firewall Configuration,vuln_scan_report.pdf,30,Application,22.0
+C1194,Failed,1,Operations,Mary,2025-01-25,2025-02-18,PCI-DSS,Vulnerability Scan,incident_log.txt,14,Database,24.0
+C1195,Completed,3,IT,Brian,2025-01-06,2025-01-09,NIST,Incident Response,log_patch_001.pdf,14,Application,3.0
+C1196,In Progress,2,HR,Susan,2025-01-24,,HIPAA,Patch Management,incident_log.txt,14,Admin System,
+C1197,In Progress,5,Finance,John,2025-01-18,,HIPAA,User Access Review,incident_log.txt,7,Admin System,
+C1198,In Progress,5,IT,David,2025-03-28,,HIPAA,Vulnerability Scan,access_review.xlsx,30,Application,
+C1199,In Progress,5,IT,Jane,2025-01-06,,HIPAA,Incident Response,vuln_scan_report.pdf,30,Database,
+C1200,Completed,4,Risk,Alice,2025-01-29,2025-02-03,NIST,Patch Management,vuln_scan_report.pdf,14,Application,5.0

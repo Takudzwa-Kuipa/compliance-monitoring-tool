@@ -1,239 +1,220 @@
 import streamlit as st
-from datetime import datetime
-import os
 import pandas as pd
-from reportlab.platypus import SimpleDocTemplate, Paragraph
-from reportlab.lib.styles import getSampleStyleSheet
+import numpy as np
+import os
+from datetime import datetime
 from io import BytesIO
+import plotly.express as px
 
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet
 
-st.set_page_config(page_title="Compliance Dashboard", layout="wide")
+st.set_page_config(page_title="Enterprise Compliance Dashboard", layout="wide")
 
+st.markdown("""
+<style>
+body {background: linear-gradient(135deg, #0E1117, #1a1f2b); color: white;}
 
-# st.markdown("""
-# <style>
-# body {background-color: #0E1117;}
-#
-# [data-testid="stSidebar"] {
-#     background-color: #ff2b2b;
-# }
-#
-# .metric-box {
-#     background-color: #1c1f26;
-#     padding: 20px;
-#     border-radius: 15px;
-#     text-align: center;
-# }
-# </style>
-# """, unsafe_allow_html=True)
+.card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
 
+.metric {font-size: 30px; font-weight: bold; color: #ff4d4d;}
+
+[data-testid="stSidebar"] {background: linear-gradient(180deg, #ff2b2b, #990000);}
+
+.badge {padding: 6px 12px; border-radius: 10px; font-weight: bold;}
+
+.critical {background: #ff1a1a;}
+.high {background: #ff6600;}
+.medium {background: #ffcc00; color:black;}
+.low {background: #33cc33;}
+
+/* MTTR */
+.mttr-container {display:flex; justify-content:space-around; margin-top:20px;}
+.mttr-bar {width:60px; height:150px; border-radius:30px; background:rgba(255,255,255,0.1); display:flex; align-items:flex-end;}
+.mttr-fill {width:100%; border-radius:30px;}
+.low-bar {height:30%; background:#ffb3b3;}
+.medium-bar {height:60%; background:#ff6666;}
+.high-bar {height:90%; background:#ff1a1a;}
+</style>
+""", unsafe_allow_html=True)
+
+USERS = {
+    "admin": {"password": "admin", "role": "Admin"},
+    "risk": {"password": "risk", "role": "Risk"},
+    "audit": {"password": "audit", "role": "Audit"}
+}
 
 def login():
-    st.sidebar.title("Login")
-    username = st.sidebar.text_input("Username")
-    password = st.sidebar.text_input("Password", type="password")
-
-    if username == "admin" and password == "admin":
-        return True
-    elif username and password:
+    st.sidebar.title("🔐 Login")
+    u = st.sidebar.text_input("Username")
+    p = st.sidebar.text_input("Password", type="password")
+    if u in USERS and USERS[u]["password"] == p:
+        return USERS[u]["role"]
+    elif u and p:
         st.sidebar.error("Invalid credentials")
-    return False
-
-
-if not login():
-    st.stop()
-
-
-
-def load_excel():
-    file = os.path.join("evidence_files", "Integrated_Compliance_Control_Model_With_Ownership (1).xlsx")
-    if os.path.exists(file):
-        return pd.read_excel(file)
-    return pd.DataFrame()
-
-
-# -----------------------------
-# AUTO COLUMN DETECTION
-# -----------------------------
-def detect_column(df, names):
-    for col in df.columns:
-        if col.lower().strip() in names:
-            return col
     return None
 
+role = login()
+if not role:
+    st.stop()
 
-# -----------------------------
-# ADVANCED METRICS FUNCTION
-# -----------------------------
-def calculate_metrics(df):
+def load_data():
+    file = "evidence_files/compliance_large_dataset.csv"
+    if os.path.exists(file):
+        df = pd.read_csv(file)
+        df.columns = df.columns.str.lower().str.strip()
+        return df
+    else:
+        st.error("Dataset not found")
+        return pd.DataFrame()
 
-    if df.empty:
-        return 0, 0
+df = load_data()
 
-    df.columns = df.columns.str.strip()
+# ============================
+#  FILTERS
+# ============================
+st.sidebar.title("Filters")
 
-    status_col = detect_column(df, ["status", "task_status", "control_status"])
-    risk_col = detect_column(df, ["risk_score", "risk", "risk level"])
+if "framework" in df.columns:
+    fw = st.sidebar.selectbox("Framework", ["All"] + list(df["framework"].unique()))
+    if fw != "All":
+        df = df[df["framework"] == fw]
 
-    # Normalize status
-    if status_col:
-        df[status_col] = df[status_col].astype(str).str.lower().str.strip()
+if "department" in df.columns:
+    dept = st.sidebar.selectbox("Department", ["All"] + list(df["department"].unique()))
+    if dept != "All":
+        df = df[df["department"] == dept]
 
-    # -------------------
-    # ADVANCED COMPLIANCE
-    # -------------------
-    compliance = 0
+# ============================
+# CALCULATIONS
+# ============================
+df["risk score"] = pd.to_numeric(df["risk score"], errors="coerce").fillna(0)
 
-    if status_col:
-        total = len(df)
+def classify_risk(x):
+    if x >= 8: return "Critical"
+    elif x >= 6: return "High"
+    elif x >= 4: return "Medium"
+    return "Low"
 
-        completed = len(df[df[status_col].isin(["completed", "done", "closed"])])
-        partial = len(df[df[status_col].isin(["in progress", "ongoing"])])
-        failed = len(df[df[status_col].isin(["failed", "overdue"])])
+df["risk_level"] = df["risk score"].apply(classify_risk)
 
-        # Weighted scoring
-        compliance_score = (
-            (completed * 1.0) +
-            (partial * 0.5) +
-            (failed * 0.0)
-        )
+df["mttr days"] = pd.to_numeric(df["mttr days"], errors="coerce")
+df["sla days"] = pd.to_numeric(df["sla days"], errors="coerce")
+df["sla_breach"] = df["mttr days"] > df["sla days"]
 
-        compliance = round((compliance_score / total) * 100, 2)
+def compliance_score(df):
+    total = len(df)
+    completed = len(df[df["status"].str.lower()=="completed"])
+    progress = len(df[df["status"].str.lower()=="in progress"])
+    return round(((completed + 0.5*progress)/total)*100,2)
 
-    # -------------------
-    # RISK SCORE
-    # -------------------
-    risk = 0
+compliance = compliance_score(df)
+var_score = round(np.percentile(df["risk score"],95),2)
 
-    if risk_col:
-        risk = pd.to_numeric(df[risk_col], errors="coerce").fillna(0).sum()
-    elif status_col:
-        for status in df[status_col]:
-            if status in ["pending", "open", "in progress"]:
-                risk += 5
-            elif status in ["failed", "overdue"]:
-                risk += 10
+# Framework scores
+def framework_scores(df):
+    res={}
+    for fw in df["framework"].unique():
+        subset=df[df["framework"]==fw]
+        res[fw]=compliance_score(subset)
+    return res
 
-    return compliance, int(risk)
+fw_scores = framework_scores(df)
+
+# ============================
+# ALERTS
+# ============================
+LOW=80
+CRIT=60
+
+st.subheader("🚨 Alerts")
+
+if compliance < CRIT:
+    st.error("Critical Compliance Risk")
+elif compliance < LOW:
+    st.warning("Compliance Warning")
+else:
+    st.success("Compliance Healthy")
+
+for k,v in fw_scores.items():
+    if v < CRIT:
+        st.error(f"{k} Critical ({v}%)")
+    elif v < LOW:
+        st.warning(f"{k} Warning ({v}%)")
 
 
-# -----------------------------
-# REPORT FUNCTION
-# -----------------------------
-def generate_report(score, risk):
-    buffer = BytesIO()
-    doc = SimpleDocTemplate(buffer)
-    styles = getSampleStyleSheet()
+c1,c2,c3,c4 = st.columns(4)
+c1.metric("VaR", var_score)
+c2.metric("Compliance", f"{compliance}%")
+c3.metric("Controls", len(df))
+c4.metric("SLA Breaches", len(df[df["sla_breach"]]))
 
-    content = [
-        Paragraph("<b>Compliance Report</b>", styles["Title"]),
-        Paragraph(f"Compliance Score: {score}%", styles["Normal"]),
-        Paragraph(f"Risk Score: {risk}", styles["Normal"]),
-        Paragraph(f"Generated: {datetime.now()}", styles["Normal"])
-    ]
+# ============================
+# Framework Scores
+# ============================
+st.subheader("Framework Compliance")
+st.bar_chart(pd.DataFrame(fw_scores.values(), index=fw_scores.keys()))
 
-    doc.build(content)
+# ============================
+# Charts
+# ============================
+col1,col2=st.columns(2)
+
+with col1:
+    st.plotly_chart(px.histogram(df,x="risk score"))
+
+with col2:
+    trend=df.copy()
+    trend["date"]=pd.date_range(end=pd.Timestamp.today(), periods=len(df))
+    st.plotly_chart(px.line(trend,x="date",y="risk score"))
+
+# ============================
+# Heatmap
+# ============================
+heat=df.groupby(["department","risk_level"]).size().unstack(fill_value=0)
+st.plotly_chart(px.imshow(heat,text_auto=True))
+
+# ============================
+# MTTR VISUAL
+# ============================
+st.subheader("MTTR Visual")
+
+b1=len(df[df["mttr days"]<=7])
+b2=len(df[(df["mttr days"]>7)&(df["mttr days"]<=14)])
+b3=len(df[df["mttr days"]>14])
+
+st.markdown(f"""
+<div class="mttr-container">
+<div><div class="mttr-bar"><div class="mttr-fill low-bar"></div></div>1-7<br>{b1}</div>
+<div><div class="mttr-bar"><div class="mttr-fill medium-bar"></div></div>8-14<br>{b2}</div>
+<div><div class="mttr-bar"><div class="mttr-fill high-bar"></div></div>15-30<br>{b3}</div>
+</div>
+""", unsafe_allow_html=True)
+
+# ============================
+# Control Evidence
+# ============================
+st.subheader("Control → Evidence")
+st.dataframe(df[["control","control description","evidence"]].head(20))
+
+# ============================
+# PDF REPORT
+# ============================
+def generate_pdf():
+    buffer=BytesIO()
+    doc=SimpleDocTemplate(buffer)
+    styles=getSampleStyleSheet()
+    elements=[Paragraph("Compliance Report",styles["Title"])]
+    doc.build(elements)
     buffer.seek(0)
     return buffer
 
-
-excel_data = load_excel()
-score, risk = calculate_metrics(excel_data)
-
-
-# -----------------------------
-# SIDEBAR
-# -----------------------------
-st.sidebar.title("Compliance System")
-page = st.sidebar.radio("Navigation", [
-    "Dashboard",
-    "Data View",
-    "Reports"
-])
-
-
-# =============================
-# DASHBOARD
-# =============================
-if page == "Dashboard":
-
-    st.title("🏦 Executive Compliance Dashboard")
-
-    col1, col2, col3 = st.columns(3)
-
-    col1.markdown(f'<div class="metric-box">📋 Controls<br><h2>{len(excel_data)}</h2></div>', unsafe_allow_html=True)
-    col2.markdown(f'<div class="metric-box">📈 Compliance<br><h2>{score}%</h2></div>', unsafe_allow_html=True)
-    col3.markdown(f'<div class="metric-box">⚠️ Risk Score<br><h2>{risk}</h2></div>', unsafe_allow_html=True)
-
-    st.divider()
-
-    status_col = detect_column(excel_data, ["status", "task_status", "control_status"])
-    framework_col = detect_column(excel_data, ["framework"])
-    owner_col = detect_column(excel_data, ["owner"])
-
-    colA, colB = st.columns(2)
-
-    with colA:
-        st.subheader("📊 Task Status")
-        if status_col:
-            st.bar_chart(excel_data[status_col].value_counts())
-
-    with colB:
-        st.subheader("🎯 Framework Breakdown")
-        if framework_col:
-            st.bar_chart(excel_data[framework_col].value_counts())
-
-    st.divider()
-
-    if owner_col:
-        st.subheader("👤 Ownership")
-        st.bar_chart(excel_data[owner_col].value_counts())
-
-    st.divider()
-
-    st.subheader("🔔 Notifications")
-
-    st.markdown("""
-    <div style="background-color:#5c1f1f; padding:15px; border-radius:10px; margin-bottom:10px;">
-        🔴 <b>Critical:</b> High-risk controls detected
-    </div>
-
-    <div style="background-color:#5a5c1f; padding:15px; border-radius:10px; margin-bottom:10px;">
-        🟡 <b>Warning:</b> Pending compliance tasks
-    </div>
-
-    <div style="background-color:#1f3c5c; padding:15px; border-radius:10px;">
-        🔵 <b>Info:</b> Monitoring ongoing
-    </div>
-    """, unsafe_allow_html=True)
-
-
-# =============================
-# DATA VIEW
-# =============================
-elif page == "Data View":
-
-    st.title("📊 Full Dataset")
-
-    if not excel_data.empty:
-        st.dataframe(excel_data)
-    else:
-        st.warning("Excel file not found")
-
-
-# =============================
-# REPORTS
-# =============================
-elif page == "Reports":
-
-    st.title("📄 Generate Report")
-
-    if st.button("Generate PDF"):
-        pdf = generate_report(score, risk)
-
-        st.download_button(
-            label="📥 Download Report",
-            data=pdf,
-            file_name="compliance_report.pdf",
-            mime="application/pdf"
-        )
+if st.button("Generate PDF"):
+    st.download_button("Download", generate_pdf())
