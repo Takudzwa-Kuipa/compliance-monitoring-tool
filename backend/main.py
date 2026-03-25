@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, Depends
 from sqlalchemy.orm import Session
 import shutil
 import os
@@ -14,7 +14,9 @@ app = FastAPI()
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-
+# ============================
+# ✅ DB SESSION (FIXED)
+# ============================
 def get_db():
     db = SessionLocal()
     try:
@@ -27,9 +29,7 @@ def get_db():
 # CREATE CONTROL
 # ============================
 @app.post("/controls")
-def create_control(control_id: str, framework: str, owner: str):
-    db = SessionLocal()
-
+def create_control(control_id: str, framework: str, owner: str, db: Session = Depends(get_db)):
     control = Control(
         control_id=control_id,
         framework=framework,
@@ -44,18 +44,15 @@ def create_control(control_id: str, framework: str, owner: str):
 # GET CONTROLS
 # ============================
 @app.get("/controls")
-def get_controls():
-    db = SessionLocal()
-    controls = db.query(Control).all()
-    return controls
+def get_controls(db: Session = Depends(get_db)):
+    return db.query(Control).all()
 
 
 # ============================
 # UPLOAD EVIDENCE
 # ============================
 @app.post("/evidence/{control_id}")
-def upload_evidence(control_id: str, file: UploadFile = File(...)):
-    db = SessionLocal()
+def upload_evidence(control_id: str, file: UploadFile = File(...), db: Session = Depends(get_db)):
 
     file_path = os.path.join(UPLOAD_DIR, file.filename)
 
@@ -73,22 +70,28 @@ def upload_evidence(control_id: str, file: UploadFile = File(...)):
 # RUN COMPLIANCE ENGINE
 # ============================
 @app.get("/evaluate")
-def run_evaluation():
-    db = SessionLocal()
+def run_evaluation(db: Session = Depends(get_db)):
 
     controls = db.query(Control).all()
-
     results = []
 
     for control in controls:
-        evidence = db.query(Evidence).filter(Evidence.control_id == control.control_id).first()
+        evidence = db.query(Evidence).filter(
+            Evidence.control_id == control.control_id
+        ).first()
 
         status = evaluate_control(control, evidence)
 
-        db.add(ComplianceStatus(control_id=control.control_id, status=status))
+        db.add(ComplianceStatus(
+            control_id=control.control_id,
+            status=status
+        ))
 
         if status == "FAILED":
-            db.add(Alert(message=f"{control.control_id} failed", severity="CRITICAL"))
+            db.add(Alert(
+                message=f"{control.control_id} failed",
+                severity="CRITICAL"
+            ))
 
         results.append({
             "control": control.control_id,
@@ -103,16 +106,15 @@ def run_evaluation():
 # GET ALERTS
 # ============================
 @app.get("/alerts")
-def get_alerts():
-    db = SessionLocal()
+def get_alerts(db: Session = Depends(get_db)):
     return db.query(Alert).all()
 
 
+# ============================
+# CLEAR ALERTS
+# ============================
 @app.delete("/alerts")
-def clear_alerts():
-    db = SessionLocal()
-
+def clear_alerts(db: Session = Depends(get_db)):
     db.query(Alert).delete()
     db.commit()
-
     return {"message": "All alerts cleared"}
