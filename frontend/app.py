@@ -2,225 +2,223 @@ import streamlit as st
 import requests
 import pandas as pd
 import plotly.express as px
+import json
 
-API = "http://localhost:8000"
+API_URL = "http://localhost:8000"
 
-st.set_page_config(layout="wide")
-
-st.markdown("""
-<style>
-
-/* GLOBAL */
-html, body {
-    background: linear-gradient(135deg, #0E1117, #1a1f2b);
-    font-family: 'Segoe UI', sans-serif;
-    color: white;
-}
-
-/* SIDEBAR */
-[data-testid="stSidebar"] {
-background: linear-gradient(180deg, #0e1117, #07080a);}
-
-/* HEADER */
-.header {
-    display: flex;
-    justify-content: space-between;
-    background: rgba(255,255,255,0.05);
-    padding: 15px 25px;
-    border-radius: 20px;
-    margin-bottom: 25px;
-}
-
-/* CARD */
-.card {
-    background: rgba(255,255,255,0.06);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* METRIC */
-.metric {
-    font-size: 32px;
-    font-weight: bold;
-    color: #ff4d4d;
-}
-
-/* BUTTON */
-.stButton button {
-    background: linear-gradient(90deg, #ff1a1a, #ff4d4d);
-    border-radius: 20px;
-    color: white;
-    border: none;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
-
-st.sidebar.title("📊 Navigation")
-
-page = st.sidebar.radio(
-    "Navigation",
-    ["Dashboard", "IT Operations", "Alerts"],
-    label_visibility="collapsed"
+st.set_page_config(
+    page_title="Compliance Monitor",
+    page_icon="🛡️",
+    layout="wide"
 )
 
+if "evaluation_results" not in st.session_state:
+    st.session_state.evaluation_results = None
 
-st.markdown("""
-<div class="header">
-    <h2>🛡 Compliance Monitoring</h2>
-    <div>🔍 User Profile</div>
-</div>
-""", unsafe_allow_html=True)
+st.title("🛡️ Compliance Monitoring System")
 
+# Sidebar
+with st.sidebar:
+    st.header(" Navigation")
+    page = st.radio("Go to", ["Dashboard", "Upload Files", "Evaluation Results", "Alerts"])
 
-controls = requests.get(f"{API}/controls").json()
-alerts = requests.get(f"{API}/alerts").json()
+    st.divider()
 
-df = pd.DataFrame(controls)
-
-
-if page == "Dashboard":
-
-    st.title("📊 Executive Dashboard")
-
-    total = len(df)
-
-    col1, col2, col3 = st.columns(3)
-
-    col1.markdown(f"""
-    <div class="card">
-        Total Controls
-        <div class="metric">{total}</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    col2.markdown("""
-    <div class="card">
-        Compliance Score
-        <div class="metric">--%</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    col3.markdown("""
-    <div class="card">
-        Risk Level
-        <div class="metric">Medium</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Alerts Section
-    st.subheader("🚨 Alerts")
-
-    col1, col2 = st.columns([4, 1])
-
-    with col1:
-        if alerts:
-            for alert in alerts:
-                st.error(f"{alert['message']} ({alert['severity']})")
+    # API Status
+    try:
+        response = requests.get(f"{API_URL}/", timeout=2)
+        if response.status_code == 200:
+            st.success(" API Connected")
         else:
-            st.success("No active alerts")
+            st.error(" API Error")
+    except:
+        st.error(" API Not Running")
+        st.info("Start backend: uvicorn main:app --reload")
 
-    with col2:
-        if st.button("🧹 Clear Alerts"):
-            response = requests.delete(f"{API}/alerts")
+# Main content
+if page == "Dashboard":
+    st.header("📊 Compliance Dashboard")
 
-            if response.status_code == 200:
-                st.success("Alerts cleared!")
-                st.rerun()
-            else:
-                st.error("Failed to clear alerts")
+    # Get statistics
+    try:
+        stats = requests.get(f"{API_URL}/statistics").json()
+        score = requests.get(f"{API_URL}/compliance-score").json()
+        alerts = requests.get(f"{API_URL}/alerts").json()
 
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.metric("Total Controls", stats.get("total_controls", 0))
+        with col2:
+            st.metric("Evidence Files", stats.get("evidence_files", 0))
+        with col3:
+            st.metric("Compliance Score", f"{score.get('compliance_score', 0)}%")
+        with col4:
+            st.metric("Active Alerts", len(alerts))
 
-elif page == "IT Operations":
+        st.divider()
 
-    st.title("🛠 IT Operations")
+        # Run evaluation button
+        if st.button(" Run Complete Compliance Check", type="primary", use_container_width=True):
+            with st.spinner("Evaluating all controls..."):
+                response = requests.post(f"{API_URL}/evaluate-all")
+                if response.status_code == 200:
+                    st.session_state.evaluation_results = response.json()
+                    st.success("Evaluation complete!")
+                    st.rerun()
+                else:
+                    st.error("Evaluation failed")
 
-    st.dataframe(df, width='stretch')
+    except Exception as e:
+        st.error(f"Error connecting to API: {e}")
 
-    st.subheader("📎 Upload Evidence")
+elif page == "Upload Files":
+    st.header("📎 Upload Evidence Files")
 
-    control_id = st.selectbox(
-        "Select Control",
-        df["control_id"] if not df.empty else []
-    )
+    tab1, tab2 = st.tabs(["Single File Upload", "Batch Upload"])
 
-    uploaded_file = st.file_uploader("Upload File")
+    with tab1:
+        st.subheader("Upload for Specific Control")
 
-    if uploaded_file is not None:
-        files = {
-            "file": (uploaded_file.name, uploaded_file.getvalue())
-        }
+        # Get controls
+        controls = requests.get(f"{API_URL}/controls").json()
+        if controls:
+            control_options = {c["control_id"]: f"{c['control_id']} - {c['framework']}" for c in controls}
+            selected_control = st.selectbox("Select Control", list(control_options.keys()),
+                                            format_func=lambda x: control_options[x])
 
-        response = requests.post(
-            f"{API}/evidence/{control_id}",
-            files=files
+            uploaded_file = st.file_uploader(
+                "Choose file",
+                type=['csv', 'xlsx', 'xls', 'json', 'pdf', 'txt'],
+                key="single_upload"
+            )
+
+            if uploaded_file and st.button("Upload"):
+                files = {"file": uploaded_file}
+                response = requests.post(f"{API_URL}/evidence/{selected_control}", files=files)
+
+                if response.status_code == 200:
+                    st.success(f" File uploaded successfully for {selected_control}")
+                    st.json(response.json())
+                else:
+                    st.error(f"Upload failed: {response.json().get('detail', 'Unknown error')}")
+        else:
+            st.warning("No controls found")
+
+    with tab2:
+        st.subheader("Batch Upload Multiple Files")
+        st.info("Upload multiple files at once. The system will auto-detect control IDs from filenames.")
+
+        uploaded_files = st.file_uploader(
+            "Choose multiple files",
+            type=['csv', 'xlsx', 'xls', 'json', 'pdf', 'txt'],
+            accept_multiple_files=True,
+            key="batch_upload"
         )
 
-        if response.status_code == 200:
-            st.success("Uploaded successfully")
-        else:
-            st.error("Upload failed")
+        if uploaded_files and st.button("Upload All Files"):
+            files = [("files", file) for file in uploaded_files]
+            response = requests.post(f"{API_URL}/evidence/batch", files=files)
 
-# ============================
-# 🚨 ALERTS PAGE
-# ============================
+            if response.status_code == 200:
+                result = response.json()
+                st.success(f" Uploaded {len(result.get('files', []))} files")
+                for f in result.get('files', []):
+                    st.info(f" {f['file_name']} → Control: {f['control_id']}")
+            else:
+                st.error("Batch upload failed")
+
+elif page == "Evaluation Results":
+    st.header(" Compliance Evaluation Results")
+
+    # Button to run evaluation
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        if st.button(" Run Evaluation", type="primary"):
+            with st.spinner("Evaluating..."):
+                response = requests.post(f"{API_URL}/evaluate-all")
+                if response.status_code == 200:
+                    st.session_state.evaluation_results = response.json()
+                    st.success("Evaluation complete!")
+                else:
+                    st.error("Evaluation failed")
+
+    # Display results
+    if st.session_state.evaluation_results:
+        results = st.session_state.evaluation_results
+
+        # Summary metrics
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.metric("Total Evaluated", results.get("total", 0))
+        with col2:
+            st.metric("Compliant", results.get("compliant", 0), delta="")
+        with col3:
+            st.metric("Failed", results.get("failed", 0), delta="")
+        with col4:
+            score = results.get("compliance_score", 0)
+            color = "🟢" if score >= 80 else "🟡" if score >= 50 else "🔴"
+            st.metric("Score", f"{score}% {color}")
+
+        st.divider()
+
+        # Detailed results
+        st.subheader("Detailed Results")
+
+        for result in results.get("results", []):
+            status = result["status"]
+            if status == "COMPLIANT":
+                with st.expander(f" {result['control']} - {result['framework']}"):
+                    st.success(f"**Reason:** {result['reason']}")
+                    if result.get('details'):
+                        st.json(result['details'])
+            else:
+                with st.expander(f" {result['control']} - {result['framework']}", expanded=True):
+                    st.error(f"**Reason:** {result['reason']}")
+                    if result.get('details'):
+                        st.json(result['details'])
+
+        # Charts
+        if results.get("results"):
+            df = pd.DataFrame(results["results"])
+            col1, col2 = st.columns(2)
+            with col1:
+                fig = px.pie(df, names="status", title="Compliance Distribution", color="status",
+                             color_discrete_map={"COMPLIANT": "#00ff88", "FAILED": "#ff4444"})
+                fig.update_layout(template="plotly_dark")
+                st.plotly_chart(fig, use_container_width=True)
+            with col2:
+                fig = px.bar(df, x="control", y="status", title="Control Status", color="status",
+                             color_discrete_map={"COMPLIANT": "#00ff88", "FAILED": "#ff4444"})
+                fig.update_layout(template="plotly_dark", xaxis_tickangle=-45)
+                st.plotly_chart(fig, use_container_width=True)
+
+    else:
+        st.info("Click 'Run Evaluation' to check compliance of uploaded files")
+
 elif page == "Alerts":
+    st.header(" Alerts")
 
-    st.title("🚨 Alerts Center")
+    alerts = requests.get(f"{API_URL}/alerts").json()
 
     if alerts:
+        st.warning(f" {len(alerts)} Active Alerts")
+
         for alert in alerts:
-            st.error(f"{alert['message']} ({alert['severity']})")
-    else:
-        st.success("No alerts")
+            with st.container():
+                st.error(f"**{alert['severity']}** - {alert['message']}")
+                if alert.get('control_id'):
+                    st.caption(f"Control: {alert['control_id']}")
+                st.caption(f"Time: {alert['created_at'][:19] if alert.get('created_at') else 'N/A'}")
+                st.divider()
 
-# ============================
-# 🚀 RUN COMPLIANCE
-# ============================
+        if st.button("🗑️ Clear All Alerts"):
+            response = requests.delete(f"{API_URL}/alerts")
+            if response.status_code == 200:
+                st.success("All alerts cleared")
+                st.rerun()
+    else:
+        st.success(" No active alerts")
+
+# Footer
 st.divider()
-
-if st.button("Run Compliance Check"):
-
-    with st.spinner("Running compliance engine..."):
-        results = requests.get(f"{API}/evaluate").json()
-
-    df_results = pd.DataFrame(results)
-
-    st.subheader("📊 Compliance Results")
-
-    st.dataframe(df_results, width='stretch')
-
-    total = len(df_results)
-    compliant = len(df_results[df_results["status"] == "COMPLIANT"])
-    failed = len(df_results[df_results["status"] == "FAILED"])
-
-    col1, col2, col3 = st.columns(3)
-
-    col1.metric("Total", total)
-    col2.metric("Compliant", compliant)
-    col3.metric("Failed", failed)
-
-    # Charts
-    colA, colB = st.columns(2)
-
-    with colA:
-        fig = px.pie(df_results, names="status")
-        fig.update_layout(template="plotly_dark")
-        st.plotly_chart(fig, width='stretch')
-
-    with colB:
-        fig2 = px.histogram(df_results, x="status")
-        fig2.update_layout(template="plotly_dark")
-        st.plotly_chart(fig2, width='stretch')
-
-    if failed > 0:
-        st.error(f" {failed} controls failed")
-    else:
-        st.success(" All controls compliant")
+st.caption("🔒Enterprise Compliance Management System | Supports CSV, Excel, JSON, PDF, TXT")
