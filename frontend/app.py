@@ -221,4 +221,4 @@ elif page == "Alerts":
 
 # Footer
 st.divider()
-st.caption("🔒Enterprise Compliance Management System | Supports CSV, Excel, JSON, PDF, TXT")
+st.caption("🔒  Enterprise Compliance Management System | Supports CSV, Excel, JSON, PDF, TXT")
