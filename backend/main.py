@@ -308,3 +308,20 @@ def report(db: Session = Depends(get_db)):
     doc.build(content)
 
     return FileResponse(path)
+
+
+@app.on_event("startup")
+def create_default_admin():
+    db = SessionLocal()
+    admin = db.query(User).filter(User.username == "admin").first()
+    if not admin:
+        from auth.security import hash_password
+        admin = User(
+            username="admin",
+            password=hash_password("admin123"),
+            role="ADMIN"
+        )
+        db.add(admin)
+        db.commit()
+        print("Default admin created: admin / admin123")
+    db.close()
