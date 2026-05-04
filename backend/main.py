@@ -1,22 +1,35 @@
 from fastapi import FastAPI, UploadFile, File, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import OAuth2PasswordRequestForm
+from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
-import shutil
-import os
-import pandas as pd
+import shutil, os, json
 from datetime import datetime
-from typing import List
-import json
+import pandas as pd
 
 from database import SessionLocal, engine as db_engine, Base
-from models import Control, Evidence, ComplianceStatus, Alert
-from compliance_engine import evaluate_control
+from models import Control, Evidence, ComplianceStatus, Alert, User
+from compliance_engine import engine as compliance_engine
+from auth.security import require_role, authenticate_user, create_access_token
+
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
 
 Base.metadata.create_all(bind=db_engine)
 
-app = FastAPI(title="Compliance Monitoring System", version="2.0")
+app = FastAPI(title="Compliance Monitoring System", version="6.0")
 
-# CORS for Streamlit
+UPLOAD_DIR = "uploads"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+
+FRAMEWORK_SIGNATURES = {
+    "HIPAA": {"patient_id", "record_date", "access_type", "user_id"},
+    "PCI-DSS": {"transaction_id", "amount", "card_last4", "timestamp"},
+    "NIST": {"event_id", "timestamp", "event_type", "source_ip"},
+}
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -24,9 +37,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-UPLOAD_DIR = "uploads"
-os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 
 def get_db():
@@ -37,312 +47,264 @@ def get_db():
         db.close()
 
 
-def seed_controls():
-    db = SessionLocal()
-
-    try:
-        existing_count = db.query(Control).count()
-        if existing_count > 0:
-            print(f" Controls already exist ({existing_count} controls)")
-            db.close()
-            return
-
-        default_controls = [
-            ("CTRL-001", "HIPAA", "IT", "Patient data privacy and security controls", 100),
-            ("CTRL-002", "PCI-DSS", "IT", "Payment card data security", 50),
-            ("CTRL-003", "NIST", "HR", "Security incident logging", 100),
-            ("CTRL-004", "HIPAA", "Finance", "Financial data privacy", 100),
-            ("CTRL-005", "PCI-DSS", "Operations", "Transaction processing security", 50),
-            ("CTRL-006", "NIST", "Risk", "Risk assessment documentation", 100),
-        ]
-
-        for control_id, framework, owner, desc, min_records in default_controls:
-            control = Control(
-                control_id=control_id,
-                framework=framework,
-                owner=owner,
-                description=desc,
-                min_records=min_records
-            )
-            db.add(control)
-
-        db.commit()
-        print(f" Seeded {len(default_controls)} controls")
-
-    except Exception as e:
-        print(f" Error seeding controls: {e}")
-    finally:
-        db.close()
+def clean_json(data):
+    import numpy as np
+    if isinstance(data, dict):
+        return {k: clean_json(v) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [clean_json(i) for i in data]
+    elif isinstance(data, np.integer):
+        return int(data)
+    elif isinstance(data, np.floating):
+        return float(data)
+    return data
 
 
-@app.on_event("startup")
-def startup_event():
-    print("\n" + "=" * 50)
-    print(" Starting Compliance Monitoring System v2.0")
-    print("=" * 50)
-    seed_controls()
-    print(" Startup complete!\n")
+def calculate_risk(status, details):
+    if status == "FAILED":
+        return "HIGH"
+    if isinstance(details, dict) and ("missing_columns" in details or "null_counts" in details):
+        return "MEDIUM"
+    return "LOW"
 
 
+def classify_issue(details):
+    if not isinstance(details, dict):
+        return "GENERAL"
 
-@app.get("/")
-def root():
+    if "missing_columns" in details:
+        return "DATA_QUALITY"
+    if "negative_count" in details:
+        return "DATA_VALIDATION"
+    if "null_counts" in details:
+        return "DATA_COMPLETENESS"
+
+    return "GENERAL"
+
+def extract_issue_count(details):
+    if not isinstance(details, dict):
+        return 0
+
+    return (
+        details.get("negative_count", 0)
+        or details.get("missing_count", 0)
+        or details.get("null_count", 0)
+        or 0
+    )
+
+
+AUDIT_LOG = []
+
+def log_action(user, action, detail):
+    AUDIT_LOG.append({
+        "user": user.username if user else "system",
+        "action": action,
+        "detail": detail,
+        "time": datetime.utcnow().isoformat()
+    })
+
+
+def detect_framework(df):
+    cols = set(df.columns.str.lower())
+    for fw, req in FRAMEWORK_SIGNATURES.items():
+        if req.issubset(cols):
+            return fw
+    return "UNKNOWN"
+
+
+@app.post("/validate-dataset")
+def validate_dataset(file: UploadFile = File(...)):
+    df = pd.read_csv(file.file)
+    cols = set(df.columns.str.lower())
+
+    detected = "UNKNOWN"
+    required = set()
+
+    for fw, req in FRAMEWORK_SIGNATURES.items():
+        if req.issubset(cols):
+            detected = fw
+            required = req
+            break
+
+    missing = list(required - cols) if required else []
+    completeness = round((len(cols & required) / len(required)) * 100, 2) if required else 0
+
     return {
-        "message": "Compliance Monitoring API",
-        "status": "running",
-        # "version": "2.0"
+        "detected_framework": detected,
+        "missing_fields": missing,
+        "completeness": completeness,
+        "is_valid": len(missing) == 0
     }
 
 
-@app.get("/controls")
-def get_controls(db: Session = Depends(get_db)):
-    return db.query(Control).all()
+@app.post("/login")
+def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    user = authenticate_user(form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(401, "Invalid credentials")
+
+    return {
+        "access_token": create_access_token({"sub": user.username}),
+        "role": user.role
+    }
 
 
-@app.post("/evidence/{control_id}")
-def upload_evidence(control_id: str, file: UploadFile = File(...), db: Session = Depends(get_db)):
+@app.post("/upload-auto")
+def upload_auto(
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    user=Depends(require_role(["ADMIN", "AUDITOR"]))
+):
+    path = os.path.join(UPLOAD_DIR, f"{datetime.now().timestamp()}_{file.filename}")
 
-    control = db.query(Control).filter(Control.control_id == control_id).first()
-    if not control:
-        raise HTTPException(status_code=404, detail=f"Control {control_id} not found")
+    with open(path, "wb") as f:
+        shutil.copyfileobj(file.file, f)
 
-    # Validate file size
-    file.file.seek(0, 2)
-    file_size = file.file.tell()
-    file.file.seek(0)
+    df = pd.read_csv(path)
+    fw = detect_framework(df)
 
-    if file_size > 200 * 1024 * 1024:
-        raise HTTPException(status_code=400, detail="File too large (max 200MB)")
+    if fw == "UNKNOWN":
+        os.remove(path)
+        raise HTTPException(400, "Unknown dataset")
 
-    # Save file
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    file_ext = os.path.splitext(file.filename)[1]
-    safe_filename = f"{control_id}_{timestamp}{file_ext}"
-    file_path = os.path.join(UPLOAD_DIR, safe_filename)
+    control = db.query(Control).filter(Control.framework == fw).first()
 
-    with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+    db.query(Evidence).filter(Evidence.control_id == control.control_id).delete()
 
-    old_evidence = db.query(Evidence).filter(Evidence.control_id == control_id).all()
-    for old in old_evidence:
-        if os.path.exists(old.file_path):
-            os.remove(old.file_path)
-        db.delete(old)
-
-    # Save new evidence
-    evidence = Evidence(
-        control_id=control_id,
-        file_path=file_path,
-        file_name=file.filename,
-        file_size=file_size,
-        file_type=file_ext
-    )
-    db.add(evidence)
+    db.add(Evidence(control_id=control.control_id, file_path=path, file_name=file.filename))
     db.commit()
 
+    log_action(user, "UPLOAD", f"{file.filename} → {fw}")
+
     return {
-        "message": "Evidence uploaded successfully",
-        "control_id": control_id,
-        "file": file.filename,
-        "size": file_size
+        "framework": fw,
+        "control": control.control_id
     }
-
-
-@app.post("/evidence/batch")
-def upload_batch_evidence(files: List[UploadFile] = File(...), db: Session = Depends(get_db)):
-
-    results = []
-
-    for file in files:
-        file_name = file.filename
-        file_ext = os.path.splitext(file_name)[1]
-
-        control_id = None
-        for control in db.query(Control).all():
-            if control.control_id.lower() in file_name.lower():
-                control_id = control.control_id
-                break
-
-        if not control_id:
-            control_id = f"FILE_{len(results) + 1}"
-
-        file.file.seek(0, 2)
-        file_size = file.file.tell()
-        file.file.seek(0)
-
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        safe_filename = f"{control_id}_{timestamp}{file_ext}"
-        file_path = os.path.join(UPLOAD_DIR, safe_filename)
-
-        with open(file_path, "wb") as buffer:
-            shutil.copyfileobj(file.file, buffer)
-
-        control = db.query(Control).filter(Control.control_id == control_id).first()
-        if not control:
-            control = Control(
-                control_id=control_id,
-                framework="GENERIC",
-                owner="Unknown",
-                description=f"Auto-created from file: {file_name}"
-            )
-            db.add(control)
-            db.commit()
-
-        evidence = Evidence(
-            control_id=control_id,
-            file_path=file_path,
-            file_name=file_name,
-            file_size=file_size,
-            file_type=file_ext
-        )
-        db.add(evidence)
-        db.commit()
-
-        results.append({
-            "control_id": control_id,
-            "file_name": file_name,
-            "size": file_size,
-            "status": "uploaded"
-        })
-
-    return {"message": f"Uploaded {len(results)} files", "files": results}
 
 
 @app.post("/evaluate-all")
-def evaluate_all_controls(db: Session = Depends(get_db)):
-
+def evaluate_all(
+    db: Session = Depends(get_db),
+    user=Depends(require_role(["ADMIN"]))
+):
     db.query(ComplianceStatus).delete()
     db.query(Alert).delete()
-    db.commit()
 
     controls = db.query(Control).all()
-    results = []
+    results, detailed = [], []
 
-    for control in controls:
-        evidence = db.query(Evidence).filter(
-            Evidence.control_id == control.control_id
-        ).first()
+    for c in controls:
+        ev = db.query(Evidence).filter(Evidence.control_id == c.control_id).first()
 
-        status, reason, details = evaluate_control_with_details(control, evidence)
+        status, reason, details = compliance_engine.evaluate_file(c, ev)
 
-        compliance_record = ComplianceStatus(
-            control_id=control.control_id,
+        details = clean_json(details)
+        risk = calculate_risk(status, details)
+
+        db.add(ComplianceStatus(
+            control_id=c.control_id,
             status=status,
+            risk=risk,
             reason=reason,
-            details=json.dumps(details) if details else None
-        )
-        db.add(compliance_record)
+            details=json.dumps(details)
+        ))
 
         if status == "FAILED":
-            alert = Alert(
-                control_id=control.control_id,
-                message=f"{control.control_id}: {reason[:200]}",
-                severity="CRITICAL"
-            )
-            db.add(alert)
+            issue_type = classify_issue(details)
+            issue_count = extract_issue_count(details)
 
-        results.append({
-            "control": control.control_id,
-            "framework": control.framework,
-            "owner": control.owner,
+            message = f"{c.control_id} FAILED | {risk} risk"
+
+            if issue_count > 0:
+                message += f" | {issue_count} records affected"
+
+            db.add(Alert(
+                control_id=c.control_id,
+                message=message,
+                severity="CRITICAL" if risk == "HIGH" else "WARNING"
+            ))
+
+        results.append(status)
+
+        detailed.append({
+            "control": c.control_id,
             "status": status,
-            "reason": reason,
-            "details": details
+            "risk": risk
         })
 
     db.commit()
 
-    compliant = len([r for r in results if r["status"] == "COMPLIANT"])
-    failed = len([r for r in results if r["status"] == "FAILED"])
+    total = len(results)
+    compliant = results.count("COMPLIANT")
+    failed = results.count("FAILED")
+
+    score = round((compliant / total) * 100, 2) if total else 0
+
+    log_action(user, "EVALUATE", f"Score {score}%")
 
     return {
-        "total": len(results),
+        "score": score,
+        "total_controls": total,
         "compliant": compliant,
         "failed": failed,
-        "compliance_score": round((compliant / len(results)) * 100, 2) if results else 0,
-        "results": results
-    }
-
-
-def evaluate_control_with_details(control, evidence):
-
-    if evidence is None:
-        return "FAILED", f"No file uploaded for {control.control_id}", {}
-
-    if not os.path.exists(evidence.file_path):
-        return "FAILED", f"File not found: {evidence.file_path}", {}
-
-    # Use the compliance engine to validate the file
-    from compliance_engine import engine
-    return engine.evaluate_file(control, evidence)
-
-
-@app.post("/evaluate-single/{control_id}")
-def evaluate_single_control(control_id: str, db: Session = Depends(get_db)):
-    """Evaluate a single control"""
-
-    control = db.query(Control).filter(Control.control_id == control_id).first()
-    if not control:
-        raise HTTPException(status_code=404, detail="Control not found")
-
-    evidence = db.query(Evidence).filter(Evidence.control_id == control_id).first()
-    status, reason, details = evaluate_control_with_details(control, evidence)
-
-    return {
-        "control": control.control_id,
-        "framework": control.framework,
-        "status": status,
-        "reason": reason,
-        "details": details
-    }
-
-
-@app.get("/compliance-score")
-def get_compliance_score(db: Session = Depends(get_db)):
-    """Get overall compliance score"""
-    statuses = db.query(ComplianceStatus).all()
-
-    if not statuses:
-        return {
-            "compliance_score": 0,
-            "total": 0,
-            "compliant": 0,
-            "failed": 0
-        }
-
-    total = len(statuses)
-    compliant = len([s for s in statuses if s.status == "COMPLIANT"])
-    failed = len([s for s in statuses if s.status == "FAILED"])
-    score = round((compliant / total) * 100, 2) if total > 0 else 0
-
-    return {
-        "compliance_score": score,
-        "total": total,
-        "compliant": compliant,
-        "failed": failed
+        "details": detailed
     }
 
 
 @app.get("/alerts")
-def get_alerts(db: Session = Depends(get_db)):
-    return db.query(Alert).order_by(Alert.created_at.desc()).all()
+def alerts(db: Session = Depends(get_db)):
+    return db.query(Alert).all()
+
+@app.get("/alerts-summary")
+def alerts_summary(db: Session = Depends(get_db)):
+    alerts = db.query(Alert).all()
+
+    summary = {"CRITICAL": 0, "WARNING": 0, "INFO": 0}
+
+    for a in alerts:
+        if a.severity in summary:
+            summary[a.severity] += 1
+
+    return summary
+
+@app.get("/alerts-by-control/{control_id}")
+def alerts_by_control(control_id: str, db: Session = Depends(get_db)):
+    return db.query(Alert).filter(Alert.control_id == control_id).all()
 
 
-@app.delete("/alerts")
-def clear_alerts(db: Session = Depends(get_db)):
-    db.query(Alert).delete()
-    db.commit()
-    return {"message": "All alerts cleared"}
+@app.get("/trend")
+def trend(db: Session = Depends(get_db)):
+    data = db.query(ComplianceStatus).all()
+
+    return [
+        {
+            "time": d.evaluated_at.isoformat(),
+            "status": d.status
+        }
+        for d in data
+    ]
 
 
-@app.get("/statistics")
-def get_statistics(db: Session = Depends(get_db)):
-    controls = db.query(Control).count()
-    evidence = db.query(Evidence).count()
-    alerts = db.query(Alert).count()
+@app.get("/audit-logs")
+def audit_logs():
+    return AUDIT_LOG
 
-    return {
-        "total_controls": controls,
-        "evidence_files": evidence,
-        "active_alerts": alerts
-    }
+
+@app.get("/download-report")
+def report(db: Session = Depends(get_db)):
+    data = db.query(ComplianceStatus).all()
+
+    path = "report.pdf"
+    doc = SimpleDocTemplate(path)
+    styles = getSampleStyleSheet()
+
+    content = [Paragraph("Compliance Report", styles["Title"]), Spacer(1, 20)]
+
+    for d in data:
+        content.append(
+            Paragraph(f"{d.control_id} - {d.status} ({d.risk})", styles["Normal"])
+        )
+
+    doc.build(content)
+
+    return FileResponse(path)
